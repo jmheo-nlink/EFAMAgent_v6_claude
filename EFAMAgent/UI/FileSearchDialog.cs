@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
+using System.IO.Compression;
+using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
@@ -228,8 +230,15 @@ namespace Link.EFAM.Agent.UI
         {
             try
             {
-                // 텍스트 파일 확장자만 검색
                 string extension = Path.GetExtension(filePath).ToLower();
+
+                // Excel 파일 검색
+                if (extension == ".xlsx" || extension == ".xls")
+                {
+                    return SearchExcelFile(filePath, keyword);
+                }
+
+                // 텍스트 파일 확장자만 검색
                 string[] textExtensions = { ".txt", ".log", ".csv", ".xml", ".json",
                     ".cs", ".cpp", ".h", ".java", ".py", ".js", ".html", ".css",
                     ".sql", ".md", ".ini", ".config", ".bat", ".ps1" };
@@ -252,12 +261,109 @@ namespace Link.EFAM.Agent.UI
                 if (fileInfo.Length > 10 * 1024 * 1024)
                     return false;
 
-                // 파일 내용 검색
-                using (StreamReader reader = new StreamReader(filePath))
+                // 다양한 인코딩으로 파일 내용 읽기 시도
+                string content = ReadTextFileWithEncoding(filePath);
+                if (content != null)
                 {
-                    string content = reader.ReadToEnd();
                     return content.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0;
                 }
+
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// 다양한 인코딩으로 텍스트 파일을 읽습니다.
+        /// </summary>
+        private string ReadTextFileWithEncoding(string filePath)
+        {
+            // 시도할 인코딩 목록
+            System.Text.Encoding[] encodings = {
+                System.Text.Encoding.UTF8,
+                System.Text.Encoding.Default,  // 시스템 기본 인코딩 (EUC-KR 등)
+                System.Text.Encoding.GetEncoding("euc-kr"),
+                System.Text.Encoding.Unicode,
+                System.Text.Encoding.ASCII
+            };
+
+            foreach (var encoding in encodings)
+            {
+                try
+                {
+                    using (StreamReader reader = new StreamReader(filePath, encoding))
+                    {
+                        string content = reader.ReadToEnd();
+                        // 읽은 내용이 유효한지 간단히 확인
+                        if (!string.IsNullOrEmpty(content))
+                        {
+                            return content;
+                        }
+                    }
+                }
+                catch
+                {
+                    continue;
+                }
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// Excel 파일의 내용을 검색합니다. (간단한 XML 기반 검색)
+        /// </summary>
+        private bool SearchExcelFile(string filePath, string keyword)
+        {
+            try
+            {
+                // .xlsx는 ZIP 압축된 XML 파일
+                if (Path.GetExtension(filePath).ToLower() == ".xlsx")
+                {
+                    // 파일 크기 제한 (20MB 이하만 검색)
+                    FileInfo fileInfo = new FileInfo(filePath);
+                    if (fileInfo.Length > 20 * 1024 * 1024)
+                        return false;
+
+                    // ZIP으로 열어서 XML 내용 검색
+                    using (var archive = System.IO.Compression.ZipFile.OpenRead(filePath))
+                    {
+                        // sharedStrings.xml에서 텍스트 검색 (셀 값들이 저장됨)
+                        var sharedStringsEntry = archive.Entries
+                            .FirstOrDefault(e => e.FullName.Contains("sharedStrings.xml"));
+
+                        if (sharedStringsEntry != null)
+                        {
+                            using (StreamReader reader = new StreamReader(
+                                sharedStringsEntry.Open(), System.Text.Encoding.UTF8))
+                            {
+                                string content = reader.ReadToEnd();
+                                if (content.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0)
+                                    return true;
+                            }
+                        }
+
+                        // sheet XML 파일들도 검색
+                        foreach (var entry in archive.Entries)
+                        {
+                            if (entry.FullName.Contains("worksheets/sheet"))
+                            {
+                                using (StreamReader reader = new StreamReader(
+                                    entry.Open(), System.Text.Encoding.UTF8))
+                                {
+                                    string content = reader.ReadToEnd();
+                                    if (content.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0)
+                                        return true;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                return false;
             }
             catch
             {
