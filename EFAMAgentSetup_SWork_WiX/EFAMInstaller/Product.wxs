@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+
+  <Product Id="*" Name="EFAM" Language="1042" Version="1.0.0"
+           Manufacturer="(c) LINK Co., Ltd." UpgradeCode="{PUT-UPGRADE-CODE-HERE}">
+    <Package InstallerVersion="500" Compressed="yes" InstallScope="perMachine" />
+    <MajorUpgrade DowngradeErrorMessage="이미 최신 버전이 설치되어 있습니다." />
+    <MediaTemplate />
+
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="ManufacturerFolder" Name="LINK">
+          <Directory Id="INSTALLFOLDER" Name="EFAM" />
+        </Directory>
+      </Directory>
+    </Directory>
+
+    <Feature Id="MainFeature" Title="주 기능" Level="1">
+      <!-- heat.exe로 생성한 파일 묶음을 포함시킵니다. 아래 ComponentGroupRef Id는 heat 결과와 일치해야 합니다. -->
+      <ComponentGroupRef Id="AppFiles" />
+    </Feature>
+
+  </Product>
+</Wix>

@@ -1,0 +1,50 @@
+#pragma once
+
+#include "FacFilterMessaging.h"
+
+using namespace System;
+using namespace System::Threading;
+// log4net 라이브러리
+using namespace log4net;
+
+DEFAULT_NAMESPACE_BEGIN
+{
+    /// <summary>
+    /// 액세스 제어(remote File Access Control) 미니필터 드라이버와 통신하면서
+    /// 미니필터 드라이버에서 요청한 작업을 처리하는 작업 스레드를 나타낸다.
+    /// </summary>
+    public ref class FacFilterWorker : FacFilterMessaging
+    {
+        ILog^ m_logger;
+
+        IntPtr m_completionPort;
+        ManualResetEvent^ m_waitEvent;
+
+#pragma region 속성
+
+    public:
+        /// <summary>
+        /// 동기화 개체를 가져온다.
+        /// </summary>
+        /// <value>동기화 개체를 나타내는 <see cref="ManualResetEvent"/></value>
+        property ManualResetEvent^ WaitHandle
+        {
+            ManualResetEvent^ get() { return m_waitEvent; }
+        private:
+            void set(ManualResetEvent^ value) { m_waitEvent = value; }
+        }
+
+#pragma endregion
+
+    public:
+        FacFilterWorker(IntPtr commPort, IntPtr completionPort);
+
+	public:
+        void DoWork();
+
+    private:
+        bool ProcessMessage(IntPtr messagePtr, IntPtr replyPtr);
+        static String^ SendFileToRecycleBin(String^ path);
+    };
+}
+DEFAULT_NAMESPACE_END

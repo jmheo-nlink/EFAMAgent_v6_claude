@@ -1,0 +1,12 @@
+<Project Sdk="WixToolset.Sdk/4.0.6">
+  <PropertyGroup>
+    <OutputType>Package</OutputType>
+    <Platform>x64</Platform>
+    <GeneratePackageArchitecture>true</GeneratePackageArchitecture>
+    <FinalOutputName>EFAMAgent_v6_x64</FinalOutputName>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="WixToolset.UI.wixext" Version="4.0.*" />
+    <PackageReference Include="WixToolset.Util.wixext" Version="4.0.*" />
+  </ItemGroup>
+</Project>

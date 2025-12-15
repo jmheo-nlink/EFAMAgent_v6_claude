@@ -1,0 +1,4 @@
+﻿조건부 컴파일 기호
+- 소프트캠프 S-Work 연동: INTEROP_SWORK
+- 소프트캠프 S-Work 연동 (현대중공업 조선사업부): INTEROP_SWORK_HHISB, HHISB
+- 후성그룹: FOOSUNG

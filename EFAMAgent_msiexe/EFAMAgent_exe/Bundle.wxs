@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+	 xmlns:bal="http://schemas.microsoft.com/wix/BalExtension">
+	<Bundle Name="EFAM" Version="6.0.7.4" Manufacturer="(c) LINK Co., Ltd. All rights reserved" UpgradeCode="1dd62a90-9882-4107-a579-0eb9f36c754f" IconSourceFile="..\..\EFAMAgent\ResourceFiles\efam_icon.ico">
+
+		<WixVariable Id="WixBundleUILevel" Value="2" />
+		<WixVariable Id="WixStdbaLicenseUrl" Value="" />
+		<WixVariable Id="WixStdbaLogo"         Value="..\..\EFAMAgent\ResourceFiles\efam_icon_68x68.png" />
+		<BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.HyperlinkLicense">
+
+		</BootstrapperApplicationRef>
+
+		<Chain>
+
+			<!-- TODO: Define the list of chained packages. -->
+			<!-- <MsiPackage SourceFile="path\to\your.msi" /> -->
+			<MsiPackage
+			 SourceFile="..\..\EFAMAgent_msiexe\EFAMAgent_msi\bin\Debug\EFAMAgent_msi.msi"
+			 DisplayInternalUI="no" />
+		</Chain>
+	</Bundle>
+</Wix>

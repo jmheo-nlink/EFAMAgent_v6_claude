@@ -1,0 +1,570 @@
+﻿#region 변경 이력
+/*
+ * Author : Link mskoo (2011. 6. 1)
+ * 
+ * ====================================================================================================================
+ * Date         Name            Description of Change
+ * --------------------------------------------------------------------------------------------------------------------
+ * 2011-06-01   mskoo           최초 작성.
+ * 
+ * 2011-09-23   mskoo           5.0 버전 릴리즈. (변경 이력 정리)
+ * 
+ * 2012-04-20   mskoo           로컬 컴퓨터의 IP 주소와 MAC 주소를 사용하도록 수정.
+ *                              - FacFilterAdapter(Credential)
+ *                              
+ * 2013-01-02   mskoo           권한이 설정된 디렉토리가 삭제되거나 이름이 변경된 경우 권한 정책을 재설정하도록 수정.
+ *                              - WriteLog(int, string, string, FileAction)
+ * ====================================================================================================================
+ */
+#endregion
+
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Diagnostics;
+using System.IO;
+using System.Net.NetworkInformation;
+using System.Text;
+// log4net 라이브러리
+using log4net;
+// .NET용 개발 라이브러리
+//using Link.DLK.Net;
+using Link.Core.Net;
+using Link.Core.IO;
+
+namespace Link.EFAM.Engine
+{
+    using Link.EFAM.Core;
+    using Link.EFAM.Common;
+    using Link.EFAM.Engine.Caching;
+    //using Link.EFAM.Engine.Filter;
+    using Link.EFAM.Engine.InternalServices;
+    using Link.EFAM.Security;
+    using Resource = Link.EFAM.Engine.Properties.Resources;
+    using Win32Exception = System.ComponentModel.Win32Exception;
+
+    /// <summary>
+    /// 액세스 제어(remote File Access Control) 미니필터 드라이버에서 요청하는 작업을 처리한다.
+    /// </summary>
+    public class FacFilterAdapter : IFacFilterAdapter
+    {
+        //
+        // 추적/로그
+        //
+        private static BooleanSwitch m_tracing = new BooleanSwitch("traceSwitch", "Engine Module");
+        private ILog m_logger = LogManager.GetLogger(typeof(FacFilterAdapter));
+
+        private Credential m_credential = null;
+        private EFAMAgentWebService m_webService = null;
+        private ProcessInfoManager m_infoManager = null;
+        private IAccessControlBehavior m_behavior = null;
+        private string m_ipAddr = null;
+        private char[] m_trimChars = { ' ', Path.DirectorySeparatorChar };
+
+        #region 속성
+
+        /// <summary>
+        /// 액세스 제어와 연결된 동작을 가져오거나 설정한다.
+        /// </summary>
+        /// <value>액세스 제어와 연결된 <see cref="IAccessControlBehavior"/> 개체</value>
+        public IAccessControlBehavior Behavior
+        {
+            get { return m_behavior; }
+            set { m_behavior = value; }
+        }
+
+        #endregion
+
+        #region 이벤트
+
+        /// <summary>
+        /// 작업 스레드들이 종료될 때 발생한다.
+        /// </summary>
+        public event EventHandler WorkersExited;
+
+        /// <summary>
+        /// 작업 스레드들이 시작될 때 발생한다.
+        /// </summary>
+        public event EventHandler WorkersStarted;
+
+        #endregion
+
+        #region 생성자
+
+        /// <summary>
+        /// 지정한 사용자 자격 증명을 사용하여 <see cref="FacFilterAdapter"/> 클래스의 새 인스턴스를 초기화한다.
+        /// </summary>
+        /// <param name="credential">사용자 자격 증명을 나타내는 <see cref="Credential"/> 개체</param>
+        /// 
+        /// <exception cref="ArgumentNullException">credential이 null인 경우</exception>
+        internal FacFilterAdapter(Credential credential)
+        {
+            if (credential == null) throw new ArgumentNullException("credential");
+
+            m_credential = credential;
+            m_webService = WSClientProxyFactory.CreateAgentWSClientProxy(credential.ServerUrl);
+            m_infoManager = ProcessInfoManager.GetProcessInfoManager();
+            m_ipAddr = NetworkUtility.GetIPAddress();
+        }
+
+        #endregion
+
+        #region 메소드
+
+        /// <summary>
+        /// 파일 또는 디렉토리에 대해 수행된 작업을 나타내는 문자열을 반환한다.
+        /// </summary>
+        /// <param name="action">
+        /// 파일 또는 디렉토리에 대해 수행된 작업을 지정하는 <see cref="FileAction"/> 값 중 하나
+        /// </param>
+        /// <returns>파일 또는 디렉토리에 대해 수행된 작업을 나타내는 문자열</returns>
+        private string GetActionString(FileAction action)
+        {
+            string actStr = String.Empty;
+
+            switch (action)
+            {
+                case FileAction.FileOpened:
+                    actStr = "OPEN";
+                    break;
+
+                case FileAction.FileModified:
+                    actStr = "MODIFY";
+                    break;
+
+                case FileAction.FileCreated:
+                case FileAction.DirectoryCreated:
+                    actStr = "CREATE";
+                    break;
+
+                case FileAction.FileDeleted:
+                case FileAction.DirectoryDeleted:
+                    actStr = "DELETE";
+                    break;
+
+                case FileAction.FileMoved:
+                case FileAction.DirectoryMoved:
+                    actStr = "MOVE";
+                    break;
+
+                case FileAction.FileRenamed:
+                case FileAction.DirectoryRenamed:
+                    actStr = "RENAME";
+                    break;
+
+                case FileAction.FileCopied:
+                    actStr = "COPY";
+                    break;
+            } // switch (action)
+
+            return actStr;
+        }
+
+        #endregion
+
+        #region IFacFilterAdapter 멤버
+
+        /// <summary>
+        /// 지정한 경로에 대해 허용되거나 거부된 액세스 권한을 가져온다.
+        /// </summary>
+        /// <param name="processId">액세스 권한을 요청한 프로세스에 할당된 프로세스 ID</param>
+        /// <param name="path">액세스 권한을 가져올 경로</param>
+        /// <param name="isDir">디렉토리의 경로이면 true, 파일의 경로이면 false</param>
+        /// <returns>허용되거나 거부된 액세스 권한을 나타내는 <see cref="FileAccessRights"/> 개체</returns>
+        /// 
+        /// <exception cref="ArgumentNullException">path가 null인 경우</exception>
+        public FileAccessRights GetPermissions(int processId, string path, bool isDir)
+        {
+            if (path == null) throw new ArgumentNullException("path");
+            //
+            // TODO: 인증된 사용자가 아닐 경우 처리할 코드를 추가
+            //
+
+            AccessManager accManager = AccessManager.GetManager();
+            PermissionCache cache = PermissionCache.GetPermissionCache();
+            ProcessInfo procInfo = m_infoManager.Get(processId);
+            FileAccessRights fileRights = null;
+            string dirPath = null;
+
+            try
+            {
+                // 디렉토리 경로를 작성한다.
+                dirPath = isDir ? path.TrimEnd(m_trimChars) : NtPath.GetDirectoryName(path);
+
+                // 캐시된 액세스 권한을 가져온다.
+                fileRights = cache[dirPath];
+                if (fileRights == null)
+                {
+                    /*
+                    FilePermission permission;
+
+                    // 서버에서 액세스 권한을 가져온다.
+                    permission = m_webService.GetPermissions(m_credential.UserId, dirPath);
+
+                    fileRights = new FileAccessRights();
+                    fileRights.AllowRead = permission.AllowRead;
+                    fileRights.AllowWrite = permission.AllowWrite;
+                    fileRights.AllowCopyFiles = permission.AllowCopy;
+                    fileRights.AllowListDirectory = permission.AllowList;
+                    fileRights.AllowCreateDirectories = permission.AllowCreateDirectory;
+                    fileRights.AllowDelete = permission.AllowDelete;
+                    fileRights.AllowRename = permission.AllowRename;
+                    fileRights.AllowMove = permission.AllowMove;
+                    */
+                    FileIOPermissionAccess access;
+
+                    access = accManager.GetFileIOPermission(dirPath);
+
+                    fileRights = new FileAccessRights();
+                    fileRights.AllowRead = (access & FileIOPermissionAccess.Read) == FileIOPermissionAccess.Read;
+                    fileRights.AllowWrite = (access & FileIOPermissionAccess.Write) == FileIOPermissionAccess.Write;
+                    fileRights.AllowCopyFiles = (access & FileIOPermissionAccess.CopyFiles) == FileIOPermissionAccess.CopyFiles;
+                    fileRights.AllowListDirectory = (access & FileIOPermissionAccess.ListDirectory) == FileIOPermissionAccess.ListDirectory;
+                    fileRights.AllowCreateDirectories = (access & FileIOPermissionAccess.CreateDirectories) == FileIOPermissionAccess.CreateDirectories;
+                    fileRights.AllowDelete = (access & FileIOPermissionAccess.Delete) == FileIOPermissionAccess.Delete;
+                    fileRights.AllowRename = (access & FileIOPermissionAccess.Rename) == FileIOPermissionAccess.Rename;
+                    fileRights.AllowMove = (access & FileIOPermissionAccess.Move) == FileIOPermissionAccess.Move;
+
+                    // 액세스 권한을 캐시한다.
+                    cache[dirPath] = fileRights;
+                } // if (fileRights == null)
+
+                if (procInfo == null)
+                {
+#if INTEROP_SWORK   // ============================================================================
+                    fileRights.AllowDelete = true;
+                    fileRights.AllowRename = true;
+                    if (m_tracing.Enabled)
+                    {
+                        Trace.WriteLine("[EFAM.Trace] GetPermissions() # return permissions. PID " + processId + "; " + dirPath + "; " + fileRights);
+                    }
+
+                    return fileRights;
+#else   // INTEROP_SWORK ==========================================================================
+                    return (new FileAccessRights());
+#endif  // INTEROP_SWORK ==========================================================================
+                }
+            } // try
+            catch (Exception exc)
+            {
+                // WebException - HTTP 상태 오류가 발생한 경우
+                // SoapException - SOAP를 통해 XML Web services 메서드를 호출했지만 예외가 발생한 경우
+                //                 서버 컴퓨터에 요청이 도달했지만 성공적으로 처리되지 않은 경우
+
+                string message = String.Format(
+                    "FacFilterAdapter.GetPermissions() - {0}, {1}\n{2}", procInfo, path, exc);
+
+                if (m_logger.IsErrorEnabled) m_logger.Error(message);
+                if (m_tracing.Enabled) Trace.WriteLine("[EFAM.Error] " + message);
+
+                return (new FileAccessRights());
+            } // catch
+
+            //
+            // 프로세스에서 생성한 파일이면 삭제 권한을 허용한다.
+            //
+            if (procInfo.Kind != ProcessKind.SystemProcess
+                && procInfo.Kind != ProcessKind.WindowsExplorer)
+            {
+                if (!isDir && procInfo.CreatedFiles.Contains(path.ToLower()))
+                {
+                    fileRights.AllowDelete = true;
+                    fileRights.AllowRename = true;
+                }
+            } // if (!SystemProcess && !WindowsExplorer)
+
+            //
+            // 사용자 지정 프로세스를 수행한다.
+            //
+            if (m_behavior != null)
+            {
+                m_behavior.OnGetPermissions(fileRights, procInfo, path, isDir);
+            }
+
+            //
+            // 고정 폴더인 경우 삭제/이름 바꾸기/이동 권한을 거부한다.
+            if (isDir && accManager.IsFixedDirectory(dirPath))
+            {
+                fileRights.AllowDelete = false;
+                fileRights.AllowRename = false;
+                fileRights.AllowMove = false;
+            } // if (isDir && accManager.IsFixedDirectory(dirPath))
+            //else
+            //{
+            //    if (fileRights.AllowDelete || fileRights.AllowMove)
+            //    {
+            //        string parentDir = null;
+
+            //        foreach (string fixedDir in accManager.FixedDirectories)
+            //        {
+            //            parentDir = fixedDir + Path.DirectorySeparatorChar;
+
+            //            if (dirPath.StartsWith(parentDir, StringComparison.OrdinalIgnoreCase))
+            //            {
+            //                fileRights.AllowDelete = false;
+            //                fileRights.AllowMove = false;
+            //                break;
+            //            }
+            //        } // foreach ( string )
+            //    } // if ( AllowDelete || AllowMove)
+            //} // else
+            
+            if (m_tracing.Enabled)
+            {
+                Trace.WriteLine("[EFAM.Trace] GetPermissions() # return permissions. " + procInfo.FileName + "; " + dirPath + "; " + fileRights);
+            }
+
+            return fileRights;
+        }
+
+        /// <summary>
+        /// 지정한 프로세스의 종류를 가져온다.
+        /// </summary>
+        /// <param name="processId">프로세스에 할당된 프로세스 ID</param>
+        /// <returns>프로세스의 종류를 나타내는 <see cref="ProcessKind"/> 값 중 하나</returns>
+        public ProcessKind GetProcessKind(int processId)
+        {
+            ProcessInfo procInfo = m_infoManager.Get(processId);
+
+            return ((procInfo != null) ? procInfo.Kind : ProcessKind.NormalProcess);
+        }
+
+        /// <summary>
+        /// 새 프로세스가 생성된 후 호출된다.
+        /// </summary>
+        /// <param name="e">이벤트 데이터가 포함된 <see cref="ProcessCreatedEventArgs"/> 개체</param>
+        public void OnProcessCreated(ProcessCreatedEventArgs e)
+        {
+            ProcessInfo procInfo = null;
+
+            try
+            {
+                procInfo = m_infoManager.Create(e.ProcessId);
+                e.Kind = procInfo.Kind;
+            }
+            catch { }
+        }
+
+        /// <summary>
+        /// <see cref="WorkersExited"/> 이벤트를 발생시킨다.
+        /// </summary>
+        public void OnWorkersExited()
+        {
+            m_infoManager.Clear();
+
+            if (WorkersExited != null) WorkersExited(this, EventArgs.Empty);
+        }
+
+        /// <summary>
+        /// <see cref="WorkersStarted"/> 이벤트를 발생시킨다.
+        /// </summary>
+        public void OnWorkersStarted()
+        {
+            // 추적 메시지를 쓴다.
+            if (m_tracing.Enabled) Trace.WriteLine("[EFAM] All processes running on the local computer...");
+
+            foreach (Process process in Process.GetProcesses())
+            {
+                try 
+                {
+                    m_infoManager.Create(process.Id);
+                }
+                catch { }
+                finally { process.Close(); }
+            } // foreach ( Process )
+
+            if (WorkersStarted != null) WorkersStarted(this, EventArgs.Empty);
+        }
+
+        /// <summary>
+        /// 파일 또는 디렉토리에 대해 수행된 작업의 로그를 기록한다.
+        /// </summary>
+        /// <param name="processId">작업을 수행한 프로세스에 할당된 프로세스 ID</param>
+        /// <param name="path">파일 또는 디렉토리의 경로</param>
+        /// <param name="newPath">파일 또는 디렉토리의 새 경로</param>
+        /// <param name="action">
+        /// 파일 또는 디렉토리에 대해 수행된 작업을 지정하는 <see cref="FileAction"/> 값 중 하나
+        /// </param>
+        /// <remarks>
+        /// action 매개 변수가 다음의 값 중 하나일 경우 newPath 매개 변수는 다음과 같은 의미를 갖는다.<br/>
+        /// FileDeleted - 휴지통 디렉토리로 백업된 파일의 경로.<br/>
+        /// FileRenamed - 새 파일 이름.<br/>
+        /// FileMoved - 파일의 새 위치에 대한 경로.<br/>
+        /// FileCopied - 관리하는 네트워크 공유가 아닌 위치(로컬 디스크, 네트워크 공유 등)로 복사된 파일의 새 경로.<br/>
+        /// DirectoryRenamed - 새 디렉토리 이름.<br/>
+        /// DirectoryMoved - 디렉토리의 새 위치에 대한 경로.
+        /// </remarks>
+        /// 
+        /// <exception cref="ArgumentNullException">path 또는 newPath가 null인 경우</exception>
+        /// <exception cref="ArgumentException">path가 길이가 0인 문자열이거나 공백만 포함한 경우</exception>
+        public void WriteLog(int processId, string path, string newPath, FileAction action)
+        {
+            if (path == null) throw new ArgumentNullException("path");
+            if (path.Trim().Length == 0)
+            {
+                throw new ArgumentException(Resource.Argument_WhiteSpaceString, "path");
+            }
+            if (newPath == null) throw new ArgumentNullException("newPath");
+            //
+            // TODO: 인증된 사용자가 아닐 경우 처리할 코드를 추가
+            //
+
+            ProcessInfo procInfo = m_infoManager.Get(processId);
+
+            //
+            switch (action)
+            {
+                case FileAction.DirectoryRenamed:
+                    string newDirPath = Path.Combine(NtPath.GetDirectoryName(path), newPath);
+
+                    if (AccessManager.GetManager().Rename(path, newDirPath))
+                    {
+                        PermissionCache.GetPermissionCache().Clear();
+                    }
+                    AccessManager.GetManager().OnDirectoryMoved(newDirPath, path);
+                    break;
+
+                case FileAction.DirectoryDeleted:
+                    if (AccessManager.GetManager().DeleteRules(path))
+                    {
+                        PermissionCache.GetPermissionCache().Clear();
+                    }
+                    break;
+
+                case FileAction.DirectoryMoved:
+                    AccessManager.GetManager().OnDirectoryMoved(newPath, path);
+                    break;
+
+#if INTEROP_SWORK   // ============================================================================
+                case FileAction.FileCopied:
+                    /*
+                    if (newPath != null && newPath.Length > 2
+                        && (newPath[0] == '\\' && newPath[1] == '\\'))
+                    {
+                        string remotePathRoot = null;
+                        bool destIsSecureDrive = false;
+
+                        try
+                        {
+                            remotePathRoot = NtPath.GetPathRoot(newPath);
+                        }
+                        catch { }
+
+                        try
+                        {
+                            if (String.IsNullOrEmpty(remotePathRoot))
+                            {
+                                destIsSecureDrive = true;
+                            }
+                            else
+                            {
+                                NetworkConnection.GetNetworkConnections(remotePathRoot);
+                            }
+                        } // try
+                        catch (InvalidOperationException exc)
+                        {
+                            // ERROR_BAD_NET_NAME
+                            if (((Win32Exception)exc.InnerException).NativeErrorCode == 67)
+                            {
+                                destIsSecureDrive = true;
+                            }
+                        } // catch ( InvalidOperationException )
+                        catch { }
+
+                        if (destIsSecureDrive)
+                        {
+                            newPath = "S:" + newPath.Substring(1);
+                        }
+                    } // if (...)
+                     */
+                    break;
+#endif  // INTEROP_SWORK ==========================================================================
+            } // switch (action)
+
+            if (procInfo != null)
+            {
+                //
+                // 프로세스 정보의 파일 컬렉션에 프로세스에서 생성한 파일의 경로를 추가하거나 
+                // 삭제한 파일의 경로를 제거한다.
+                //
+                if (procInfo.Kind != ProcessKind.SystemProcess
+                    && procInfo.Kind != ProcessKind.WindowsExplorer)
+                {
+                    ProcessInfo.CreatedFileCollection fileColl = procInfo.CreatedFiles;
+
+                    switch (action)
+                    {
+                        case FileAction.FileCreated:
+                            fileColl.Add(path.ToLower());
+                            break;
+
+                        case FileAction.FileDeleted:
+                            fileColl.Remove(path.ToLower());
+                            break;
+
+                        case FileAction.FileRenamed:
+                            int index = fileColl.IndexOf(path.ToLower());
+
+                            if (index != -1)
+                            {
+                                string dirPath = NtPath.GetDirectoryName(path.ToLower());
+
+                                fileColl.Add(Path.Combine(dirPath, newPath.ToLower()));
+                                fileColl.RemoveAt(index);
+                            }
+                            break;
+                    } // switch (action)
+                } // if (!SystemProcess && !WindowsExplorer)
+
+                //
+                // 사용자 지정 프로세스를 수행한다.
+                //
+                if (m_behavior != null)
+                {
+                    bool cancel = false;
+
+                    cancel = !m_behavior.OnWriteLog(procInfo, path, newPath, action);
+                    if (cancel) return;
+                }
+            } // if (procInfo != null)
+
+            try
+            {
+                // 웹 서비스 메소드를 호출하여 로그를 저장한다.
+                m_webService.WriteLog(m_credential.UserId, path, newPath, GetActionString(action),
+                                      m_ipAddr);
+            }
+            catch (Exception exc)
+            {
+                // WebException - HTTP 상태 오류가 발생한 경우
+                // SoapException - SOAP를 통해 XML Web services 메서드를 호출했지만 예외가 발생한 경우
+                //                 서버 컴퓨터에 요청이 도달했지만 성공적으로 처리되지 않은 경우
+
+                string message = null;
+
+                switch (action)
+                {
+                    case FileAction.FileDeleted:
+                    case FileAction.FileRenamed:
+                    case FileAction.FileMoved:
+                    case FileAction.FileCopied:
+                    case FileAction.DirectoryRenamed:
+                    case FileAction.DirectoryMoved:
+                        message = String.Format("FacFilterAdapter.WriteLog() - {0}, {1}: {2} => {3}\n{4}",
+                                                procInfo, action, path, newPath, exc);
+                        break;
+
+                    default:
+                        message = String.Format("FacFilterAdapter.WriteLog() - {0}, {1}: {2}\n{3}",
+                                                procInfo, action, path, exc);
+                        break;
+                } // switch (action)
+
+                if (m_logger.IsErrorEnabled) m_logger.Error(message);
+                if (m_tracing.Enabled) Trace.WriteLine("[EFAM.Error] " + message);
+            } // catch
+        }
+
+        #endregion
+    }
+}

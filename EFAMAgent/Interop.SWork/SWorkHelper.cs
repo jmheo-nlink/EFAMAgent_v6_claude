@@ -1,0 +1,348 @@
+﻿#region 변경 이력
+/*
+ * Author : Link mskoo (2013. 2. 12)
+ * 
+ * ====================================================================================================================
+ * Date         Name            Description of Change
+ * --------------------------------------------------------------------------------------------------------------------
+ * 2013-02-12   mskoo           최초 작성.
+ * 
+ * 2013-04-01   mskoo           64비트 운영체제에서 64비트용 S-Work SDK 모듈을 사용하도록 수정.
+ * 
+ * 2013-05-14   mskoo           도메인 이름 주소를 IP 주소로 변환하여 API를 호출하도록 수정.
+ *                              - SetSecureDrives(IEnumerable<SharedDrive>)
+ *                              - DeleteSecureDriveInfos(IEnumerable<SharedDrive>)
+ *                              - DnsNameToIPAddress(string remoteName)
+ *                              
+ * 2013-12-04   mskoo           S-Work SDK 모듈을 찾을 수 없는 경우 예외를 처리하는 코드를 추가.
+ *                              - IsInstalled
+ *                              - IsLoggedIn
+ *                              - GetLoggedInUserId()
+ *                              
+ * 2019-02-23   DJJUNG          로그인 된 S-Work 사용자의 ID를 가져오지 못하는 에러 수정
+ *                              - GetLoggedInUserId()
+ *                              - SetSecureDriveInfos(IEnumerable<SharedDrive>)
+ *                              
+ * 2019-09-25   DJJUNG          로그인 된 S-Work 사용자의 ID를 가져오지 못하는 에러 수정
+ *                              - 전처리기 지시문 추가
+ * ====================================================================================================================
+ */
+#endregion
+
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Text;
+// log4net 라이브러리
+using log4net;
+// 소프트캠프 S-Work 라이브러리
+using WFASCGetFileTypeHelper;
+// .NET 라이브러리
+using Link.Core.Net;
+
+namespace Link.EFAM.Agent.Interop.SWork
+{
+    using Link.EFAM.Core;
+    using IPAddress = System.Net.IPAddress;
+
+    internal static class SWorkHelper
+    {
+        private static BooleanSwitch m_tracing = new BooleanSwitch("traceSwitch", "SWorkHelper");
+        private static ILog m_logger = LogManager.GetLogger(typeof(SWorkHelper));
+        private static bool m_dllNotFound = false;
+
+        private static string global_UserId = "";
+
+        #region 정적 속성
+
+        /// <summary>
+        /// S-Work이 설치되어 있는지 여부를 나타내는 값을 가져온다.
+        /// </summary>
+        /// <value>S-Work이 설치되어 있으면 <b>true</b>, 그렇지 않으면 <b>false</b></value>
+        public static bool IsInstalled
+        {
+            get
+            {
+                if (!m_dllNotFound)
+                {
+                    try
+                    {
+                        return NativeMethods.IsSWorkInstall();
+                    }
+                    catch (Exception exc)
+                    {
+                        m_dllNotFound = true;
+
+                        m_logger.Error("[EFAM.Error] SWorkHelper.IsInstalled\n" + exc);
+                        if (m_tracing.Enabled) Trace.WriteLine("[EFAM.Error] SWorkHelper.IsInstalled\n" + exc);
+                    }
+                } // if (!m_dllNotFound)
+
+                return false;
+            } // get
+        }
+
+        /// <summary>
+        /// S-Work 사용자가 인증되었는지 여부를 나타내는 값을 가져온다.
+        /// </summary>
+        /// <value>S-Work 사용자가 인증되었으면 <b>true</b>, 그렇지 않으면 <b>false</b></value>
+        public static bool IsLoggedIn
+        {
+            get
+            {
+                int status = NativeMethods.SWORK_STATUS_NULL;
+
+                if (!m_dllNotFound)
+                {
+                    try
+                    {
+                        status = NativeMethods.GetStatusFromSW();
+                    }
+                    catch (Exception exc)
+                    {
+                        m_dllNotFound = true;
+
+                        m_logger.Error("[EFAM.Error] SWorkHelper.IsLoggedIn\n" + exc);
+                        if (m_tracing.Enabled) Trace.WriteLine("[EFAM.Error] SWorkHelper.IsLoggedIn\n" + exc);
+                    }
+                } // if (!m_dllNotFound)
+
+                switch (status)
+                {
+                    case NativeMethods.SWORK_STATUS_NULL:
+                    case NativeMethods.SWORK_STATUS_LOGOUT:
+                    case NativeMethods.SWORK_STATUS_LOGOUT_CHECK:
+                    case NativeMethods.SWORK_STATUS_LOGOUT_RESTORE:
+                    case NativeMethods.SWORK_STATUS_FAIL:
+                        return false;
+                } // switch (status)
+
+                return true;
+            } // get
+        }
+
+        #endregion
+
+        #region 정적 메소드
+
+#if INTEROP_SWORK // S-Work 일 때
+        /// <summary>
+        /// 로그인 된 S-Work 사용자의 ID를 가져온다.
+        /// </summary>
+        /// <returns>로그인 된 S-Work 사용자의 ID</returns>
+        public static string GetLoggedInUserId()
+        {
+            string userId = "";
+
+            try
+            {
+                ISCGetGrade grade = (ISCGetGrade)new SCGetGrade();
+                userId = grade.GetUserID();
+                global_UserId = userId;
+            }
+            catch (Exception exc)
+            {
+                m_logger.Error("[EFAM.Error] SWorkHelper.GetLoggedInUserId()\n" + exc);
+                if (m_tracing.Enabled) Trace.WriteLine("[EFAM.Error] SWorkHelper.GetLoggedInUserId()\n" + exc);
+            }
+
+            return userId;
+        }
+
+        /// <summary>
+        /// 보안 드라이브로 지정된 공유 드라이브들을 S-Work 보안 드라이브로 설정한다.
+        /// </summary>
+        /// <param name="drives">공유 드라이브의 컬렉션</param>
+        /// <returns>보안 드라이브들이 성공적으로 설정되었으면 <b>true</b>, 그렇지 않으면 <b>false</b></returns>
+        /// 
+        /// <exception cref="ArgumentNullException"><paramref name="drives"/>가 <b>null</b>인 경우</exception>
+        public static bool SetSecureDriveInfos(IEnumerable<SharedDrive> drives)
+        {
+            if (drives == null) throw new ArgumentNullException("drives");
+
+            StringBuilder remotePath = null;
+            StringBuilder driveName = null;
+            StringBuilder userId = new StringBuilder(global_UserId);
+            StringBuilder policy = new StringBuilder("rw");
+            int errorCode = NativeMethods.NO_ERROR;
+
+            foreach (SharedDrive drive in drives)
+            {
+                if (m_tracing.Enabled) Trace.WriteLine("[EFAM.Debug] SetSecureDrives() # is_secure: " + drive.IsSecure + ", drive: " + drive);
+
+                if (!drive.IsSecure) continue;
+                if (!drive.Usable || drive.DriveName.Length == 0) continue;
+
+                remotePath = new StringBuilder(drive.ShareName);
+                driveName = new StringBuilder(drive.DriveName);
+
+                if (m_tracing.Enabled) Trace.WriteLine("[EFAM.Debug] SetSecureDrives() # SWORK_SHARE_DATA_ADD - drive: " + drive + ", ipBase: " + remotePath.ToString());
+                errorCode = NativeMethods.QuerySecureNetworkInfo(NativeMethods.SWORK_SHARE_DATA_ADD,
+                                remotePath, driveName, policy, userId, null, null, 0);
+                if (errorCode != NativeMethods.NO_ERROR)
+                {
+                    string format = "SWorkHelper.SetSecureDrives() SWORK_SHARE_DATA_ADD - error {0}, drive: {1}";
+
+                    m_logger.ErrorFormat(format, errorCode, drive);
+                    if (m_tracing.Enabled) Trace.WriteLine("[EFAM.Debug] SetSecureDrives() # SWORK_SHARE_DATA_ADD - error " + errorCode + ", drive: " + drive + ", ipBase: " + remotePath.ToString());
+                    return false;
+                }
+            } // foreach ( SharedDrive )
+
+            return true;
+        }
+#else // S-Work 아닐 때 (조선사업부)
+        /// <summary>
+        /// 로그인 된 S-Work 사용자의 ID를 가져온다.
+        /// </summary>
+        /// <returns>로그인 된 S-Work 사용자의 ID</returns>
+        public static string GetLoggedInUserId()
+        {
+            string userId = "";
+
+            try
+            {
+                ISCGetGrade grade = (ISCGetGrade)new SCGetGrade();
+                userId = grade.GetUserID();
+            }
+            catch (Exception exc)
+            {
+                m_logger.Error("[EFAM.Error] SWorkHelper.GetLoggedInUserId()\n" + exc);
+                if (m_tracing.Enabled) Trace.WriteLine("[EFAM.Error] SWorkHelper.GetLoggedInUserId()\n" + exc);
+            }
+
+            return userId;
+        }
+
+        /// <summary>
+        /// 보안 드라이브로 지정된 공유 드라이브들을 S-Work 보안 드라이브로 설정한다.
+        /// </summary>
+        /// <param name="drives">공유 드라이브의 컬렉션</param>
+        /// <returns>보안 드라이브들이 성공적으로 설정되었으면 <b>true</b>, 그렇지 않으면 <b>false</b></returns>
+        /// 
+        /// <exception cref="ArgumentNullException"><paramref name="drives"/>가 <b>null</b>인 경우</exception>
+        public static bool SetSecureDriveInfos(IEnumerable<SharedDrive> drives)
+        {
+            if (drives == null) throw new ArgumentNullException("drives");
+
+            StringBuilder remotePath = null;
+            StringBuilder driveName = null;
+            StringBuilder userId = new StringBuilder(GetLoggedInUserId());
+            StringBuilder policy = new StringBuilder("rw");
+            int errorCode = NativeMethods.NO_ERROR;
+
+            foreach (SharedDrive drive in drives)
+            {
+                if (m_tracing.Enabled) Trace.WriteLine("[EFAM.Debug] SetSecureDrives() # is_secure: " + drive.IsSecure + ", drive: " + drive);
+
+                if (!drive.IsSecure) continue;
+                if (!drive.Usable || drive.DriveName.Length == 0) continue;
+
+                remotePath = new StringBuilder(drive.ShareName);
+                driveName = new StringBuilder(drive.DriveName);
+
+                if (m_tracing.Enabled) Trace.WriteLine("[EFAM.Debug] SetSecureDrives() # SWORK_SHARE_DATA_ADD - drive: " + drive + ", ipBase: " + remotePath.ToString());
+                errorCode = NativeMethods.QuerySecureNetworkInfo(NativeMethods.SWORK_SHARE_DATA_ADD,
+                                remotePath, driveName, policy, userId, null, null, 0);
+                if (errorCode != NativeMethods.NO_ERROR)
+                {
+                    string format = "SWorkHelper.SetSecureDrives() SWORK_SHARE_DATA_ADD - error {0}, drive: {1}";
+
+                    m_logger.ErrorFormat(format, errorCode, drive);
+                    if (m_tracing.Enabled) Trace.WriteLine("[EFAM.Debug] SetSecureDrives() # SWORK_SHARE_DATA_ADD - error " + errorCode + ", drive: " + drive + ", ipBase: " + remotePath.ToString());
+                    return false;
+                }
+            } // foreach ( SharedDrive )
+
+            return true;
+        }
+#endif // INTEROP_SWORK
+
+        /// <summary>
+        /// 지정한 공유 드라이브들에 대한 S-Work 보안 드라이브 정보를 삭제한다.
+        /// </summary>
+        /// <param name="drives">공유 드라이브의 컬렉션</param>
+        public static void DeleteSecureDriveInfos(IEnumerable<SharedDrive> drives)
+        {
+            Debug.Assert(drives != null, "drives cannot be null.");
+
+            StringBuilder remotePath = new StringBuilder(260);
+            StringBuilder driveName = new StringBuilder(260);
+            StringBuilder userId = new StringBuilder(260);
+            StringBuilder policy = new StringBuilder(260);
+            StringBuilder serverIP = new StringBuilder(64);
+            StringBuilder serverName = new StringBuilder(260);
+            int dataCount = 0;
+
+            dataCount = NativeMethods.QuerySecureNetworkInfo(NativeMethods.SWORK_SHARE_DATA_GET_COUNT,
+                            null, null, null, null, null, null, 0);
+            if (m_tracing.Enabled) Trace.WriteLine("[EFAM.Debug] DeleteSecureDriveInfos() # SWORK_SHARE_DATA_GET_COUNT - Count: " + dataCount);
+
+            for (int lastIndex = dataCount - 1; lastIndex >= 0; lastIndex--)
+            {
+                remotePath.Length = 0;
+
+                NativeMethods.QuerySecureNetworkInfo(NativeMethods.SWORK_SHARE_DATA_GET_LIST,
+                    remotePath, driveName, policy, userId, serverIP, serverName, lastIndex);
+                if (m_tracing.Enabled) Trace.WriteLine("[EFAM.Debug] DeleteSecureDriveInfos() # SWORK_SHARE_DATA_GET_LIST - Index: " + lastIndex + " , RemotePath: " + remotePath.ToString());
+
+                foreach (SharedDrive drive in drives)
+                {
+                    if (drive.DriveName.Length == 0) continue;
+
+                    if (String.Equals(drive.ShareName, remotePath.ToString(), StringComparison.OrdinalIgnoreCase))
+                    {
+                        NativeMethods.QuerySecureNetworkInfo(NativeMethods.SWORK_SHARE_DATA_DELETE,
+                            null, null, null, null, null, null, lastIndex);
+                        if (m_tracing.Enabled) Trace.WriteLine("[EFAM.Debug] DeleteSecureDriveInfos() # SWORK_SHARE_DATA_DELETE - RemotePath: " + remotePath.ToString());
+
+                        drive.VolumeLabel = drive.VolumeLabel;
+                        break;
+                    }
+                } // foreach ( SharedDrive )
+            } // for (...)
+        }
+
+        private static string DnsNameToIPAddress(string remoteName)
+        {
+            IPAddress address = null;
+            string[] texts = null;
+            //char[] separators = { '\\' };
+            //string shareName = null;
+            string ipString = null;
+            string shareString = null;
+            int foundIndex = -1;
+
+            // 네트워크 공유의 UNC 이름에서 IP 주소를 가져온다.
+            texts = remoteName.Split(new char[] { '\\' }, StringSplitOptions.RemoveEmptyEntries);
+            ipString = (texts.Length != 0) ? texts[0] : "";
+
+            if (ipString.Length != 0 && !IPAddress.TryParse(ipString, out address))
+            {
+                // 네트워크 공유의 UNC 이름에서 공유 이름을 가져온다.
+                foundIndex = remoteName.StartsWith("\\")
+                           ? remoteName.IndexOf('\\', 2) : remoteName.IndexOf('\\');
+                shareString = (foundIndex != -1) ? remoteName.Substring(foundIndex) : "";
+
+                try
+                {
+                    foreach (string ipAddr in DnsHelper.Lookup(ipString))
+                    {
+                        if (IPAddress.TryParse(ipAddr, out address))
+                        {
+                            //return ("\\\\" + ipAddr + shareString);
+                            remoteName = ("\\\\" + ipAddr + shareString);
+                            break;
+                        }
+                    } // foreach ( string )
+                } // try
+                catch { }
+            } // if (ipString.Length != 0 && !IPAddress.TryParse(ipString, out address))
+            //if (m_traceSwitch.Enabled) Trace.WriteLine("[EFAM.Debug] DnsNameToIPAddress() # ip_address: " + remoteName);
+
+            return remoteName;
+        }
+
+        #endregion
+    }
+}

@@ -1,0 +1,1278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userpwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ip" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginResult" type="tns:EFAMLoginStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EFAMLoginStatus">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IsLoggedIn" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsManager" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="AllowSaveAs" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="UseRecycleBin" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ErrorMsg" type="tns:LoginError" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="LoginError">
+        <s:restriction base="s:string">
+          <s:enumeration value="NoError" />
+          <s:enumeration value="UserNotFound" />
+          <s:enumeration value="InactiveUser" />
+          <s:enumeration value="InvalidPassword" />
+          <s:enumeration value="LDAPNotFound" />
+          <s:enumeration value="RestrictedIPAddress" />
+          <s:enumeration value="DomainNameMismatch" />
+          <s:enumeration value="ExpiredPassword" />
+          <s:enumeration value="ADAcountExpired" />
+          <s:enumeration value="RestrictedMACAddress" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="LoginAsDomainComputer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="domainName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userpwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ip" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginAsDomainComputerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginAsDomainComputerResult" type="tns:EFAMLoginStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPermissions">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="drivePath" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPermissionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPermissionsResult" type="tns:FilePermission" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="FilePermission">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="AllowCopy" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="AllowCreateDirectory" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="AllowDelete" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="AllowRead" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="AllowRename" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="AllowWrite" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="AllowList" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="AllowMove" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPermissionListByUserID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPermissionListByUserIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPermissionListByUserIDResult" type="tns:ArrayOfEFAMPermission" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEFAMPermission">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EFAMPermission" nillable="true" type="tns:EFAMPermission" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EFAMPermission">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SelectLine" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Seq" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GroupName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DriveIdx" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DrivePath" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanRead" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanWrite" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanDelete" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanRename" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanCopy" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanCreateFolder" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanHide" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CancelHide" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanList" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanMove" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanNotInherit" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanNotPropagate" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="SelectAll" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetFileLogList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="groupName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="destFileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="action" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFileLogListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFileLogListResult" type="tns:ArrayOfFileLog" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfFileLog">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FileLog" nillable="true" type="tns:FileLog" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FileLog">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Seq" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GroupName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Src" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dest" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Action" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Date" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServerIP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientIP" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="WriteLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="src" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dest" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="action" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ip" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WriteLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="WriteLogResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDomainName">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDomainNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDomainNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePwd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newPwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePwdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChangePwdResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetShareDriveList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetShareDriveListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetShareDriveListResult" type="tns:ArrayOfShareDrive" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfShareDrive">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ShareDrive" nillable="true" type="tns:ShareDrive" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ShareDrive">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Seq" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShareDriveName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShareDrivePath" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserPwd" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalSpace" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserSpace" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="FreeSpace" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="UseRate" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetUserDriveListByUserID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserDriveListByUserIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserDriveListByUserIDResult" type="tns:ArrayOfUserDrive" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfUserDrive">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="UserDrive" nillable="true" type="tns:UserDrive" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UserDrive">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SelectLine" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Seq" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ManagedFolderName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ManagedFolderPath" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShareDrivePath" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LoginUserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LoginUserPwd" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Connect" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetUserDriveListByUserID_Swork">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserDriveListByUserID_SworkResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserDriveListByUserID_SworkResult" type="tns:ArrayOfUserSecurityDrive" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfUserSecurityDrive">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="UserSecurityDrive" nillable="true" type="tns:UserSecurityDrive" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UserSecurityDrive">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SelectLine" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Seq" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ManagedFolderName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ManagedFolderPath" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShareDrivePath" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LoginUserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LoginUserPwd" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Connect" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsSecure" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConnectDriveName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetUserDriveListByUserID_Swork_Letter">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserDriveListByUserID_Swork_LetterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserDriveListByUserID_Swork_LetterResult" type="tns:ArrayOfUserSecurityDrive" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFolderSetValueList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetFolderSetValueListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFolderSetValueListResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetFolderSetValueListbyUserID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFolderSetValueListbyUserIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFolderSetValueListbyUserIDResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFolderExtProc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="folderPath" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFolderExtProcResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFolderExtProcResult" type="tns:ArrayOfExtProc" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfExtProc">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ExtProc" nillable="true" type="tns:ExtProc" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ExtProc">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SelectLine" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Seq" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FolderPath" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ext" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AllowProc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DenyProc" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="EncryptString">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EncryptStringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptStringResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DecryptString">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DecryptStringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DecryptStringResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginTest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userpwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ip" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginTestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginTestResult" type="tns:EFAMLoginStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getUserProfile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getUserProfileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getUserProfileResult" type="tns:UserProfile" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UserProfile">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="AllowSaveAs" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="UseRecycleBin" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="OpenLogOption" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ModifyLogOption" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreateLogOption" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="DeleteLogOption" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="MoveLogOption" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="RenameLogOption" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="LoginLogOption" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="LogoutLogOption" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getServerProfile">
+        <s:complexType />
+      </s:element>
+      <s:element name="getServerProfileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getServerProfileResult" type="tns:ServerProfile" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ServerProfile">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="RefreshPerMinutes" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ipMacTest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ip" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ipMacTestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ipMacTestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeletePrivateRecyBinFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeletePrivateRecyBinFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeletePrivateRecyBinFileResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRestrictAuthority">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetRestrictAuthorityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetRestrictAuthorityResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetManagerList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="path" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetManagerListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetManagerListResult" type="tns:ArrayOfUserInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfUserInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="UserInfo" nillable="true" type="tns:UserInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UserInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="JobTitle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Department" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetHiddenManageFolderList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetHiddenManageFolderListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHiddenManageFolderListResult" type="tns:ArrayOfManagedFolder" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfManagedFolder">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ManagedFolder" nillable="true" type="tns:ManagedFolder" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ManagedFolder">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Seq" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ManagedFolderName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ManagedFolderPath" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShareDrivePath" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IsPrivate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Enabled" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginAsDomainComputerSoapIn">
+    <wsdl:part name="parameters" element="tns:LoginAsDomainComputer" />
+  </wsdl:message>
+  <wsdl:message name="LoginAsDomainComputerSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginAsDomainComputerResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPermissionsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPermissions" />
+  </wsdl:message>
+  <wsdl:message name="GetPermissionsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPermissionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPermissionListByUserIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPermissionListByUserID" />
+  </wsdl:message>
+  <wsdl:message name="GetPermissionListByUserIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPermissionListByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFileLogListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFileLogList" />
+  </wsdl:message>
+  <wsdl:message name="GetFileLogListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFileLogListResponse" />
+  </wsdl:message>
+  <wsdl:message name="WriteLogSoapIn">
+    <wsdl:part name="parameters" element="tns:WriteLog" />
+  </wsdl:message>
+  <wsdl:message name="WriteLogSoapOut">
+    <wsdl:part name="parameters" element="tns:WriteLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDomainNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDomainName" />
+  </wsdl:message>
+  <wsdl:message name="GetDomainNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDomainNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangePwdSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangePwd" />
+  </wsdl:message>
+  <wsdl:message name="ChangePwdSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangePwdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetShareDriveListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetShareDriveList" />
+  </wsdl:message>
+  <wsdl:message name="GetShareDriveListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetShareDriveListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserDriveListByUserIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserDriveListByUserID" />
+  </wsdl:message>
+  <wsdl:message name="GetUserDriveListByUserIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserDriveListByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserDriveListByUserID_SworkSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserDriveListByUserID_Swork" />
+  </wsdl:message>
+  <wsdl:message name="GetUserDriveListByUserID_SworkSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserDriveListByUserID_SworkResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserDriveListByUserID_Swork_LetterSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserDriveListByUserID_Swork_Letter" />
+  </wsdl:message>
+  <wsdl:message name="GetUserDriveListByUserID_Swork_LetterSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserDriveListByUserID_Swork_LetterResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFolderSetValueListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFolderSetValueList" />
+  </wsdl:message>
+  <wsdl:message name="GetFolderSetValueListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFolderSetValueListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFolderSetValueListbyUserIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFolderSetValueListbyUserID" />
+  </wsdl:message>
+  <wsdl:message name="GetFolderSetValueListbyUserIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFolderSetValueListbyUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFolderExtProcSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFolderExtProc" />
+  </wsdl:message>
+  <wsdl:message name="GetFolderExtProcSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFolderExtProcResponse" />
+  </wsdl:message>
+  <wsdl:message name="EncryptStringSoapIn">
+    <wsdl:part name="parameters" element="tns:EncryptString" />
+  </wsdl:message>
+  <wsdl:message name="EncryptStringSoapOut">
+    <wsdl:part name="parameters" element="tns:EncryptStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="DecryptStringSoapIn">
+    <wsdl:part name="parameters" element="tns:DecryptString" />
+  </wsdl:message>
+  <wsdl:message name="DecryptStringSoapOut">
+    <wsdl:part name="parameters" element="tns:DecryptStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginTestSoapIn">
+    <wsdl:part name="parameters" element="tns:LoginTest" />
+  </wsdl:message>
+  <wsdl:message name="LoginTestSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="getUserProfileSoapIn">
+    <wsdl:part name="parameters" element="tns:getUserProfile" />
+  </wsdl:message>
+  <wsdl:message name="getUserProfileSoapOut">
+    <wsdl:part name="parameters" element="tns:getUserProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="getServerProfileSoapIn">
+    <wsdl:part name="parameters" element="tns:getServerProfile" />
+  </wsdl:message>
+  <wsdl:message name="getServerProfileSoapOut">
+    <wsdl:part name="parameters" element="tns:getServerProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ipMacTestSoapIn">
+    <wsdl:part name="parameters" element="tns:ipMacTest" />
+  </wsdl:message>
+  <wsdl:message name="ipMacTestSoapOut">
+    <wsdl:part name="parameters" element="tns:ipMacTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeletePrivateRecyBinFileSoapIn">
+    <wsdl:part name="parameters" element="tns:DeletePrivateRecyBinFile" />
+  </wsdl:message>
+  <wsdl:message name="DeletePrivateRecyBinFileSoapOut">
+    <wsdl:part name="parameters" element="tns:DeletePrivateRecyBinFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRestrictAuthoritySoapIn">
+    <wsdl:part name="parameters" element="tns:GetRestrictAuthority" />
+  </wsdl:message>
+  <wsdl:message name="GetRestrictAuthoritySoapOut">
+    <wsdl:part name="parameters" element="tns:GetRestrictAuthorityResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetManagerList" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetManagerListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHiddenManageFolderListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHiddenManageFolderList" />
+  </wsdl:message>
+  <wsdl:message name="GetHiddenManageFolderListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHiddenManageFolderListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="EFAMAgentWebServiceSoap">
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginSoapIn" />
+      <wsdl:output message="tns:LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginAsDomainComputer">
+      <wsdl:input message="tns:LoginAsDomainComputerSoapIn" />
+      <wsdl:output message="tns:LoginAsDomainComputerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPermissions">
+      <wsdl:input message="tns:GetPermissionsSoapIn" />
+      <wsdl:output message="tns:GetPermissionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPermissionListByUserID">
+      <wsdl:input message="tns:GetPermissionListByUserIDSoapIn" />
+      <wsdl:output message="tns:GetPermissionListByUserIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFileLogList">
+      <wsdl:input message="tns:GetFileLogListSoapIn" />
+      <wsdl:output message="tns:GetFileLogListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WriteLog">
+      <wsdl:input message="tns:WriteLogSoapIn" />
+      <wsdl:output message="tns:WriteLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDomainName">
+      <wsdl:input message="tns:GetDomainNameSoapIn" />
+      <wsdl:output message="tns:GetDomainNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePwd">
+      <wsdl:input message="tns:ChangePwdSoapIn" />
+      <wsdl:output message="tns:ChangePwdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShareDriveList">
+      <wsdl:input message="tns:GetShareDriveListSoapIn" />
+      <wsdl:output message="tns:GetShareDriveListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDriveListByUserID">
+      <wsdl:input message="tns:GetUserDriveListByUserIDSoapIn" />
+      <wsdl:output message="tns:GetUserDriveListByUserIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDriveListByUserID_Swork">
+      <wsdl:input message="tns:GetUserDriveListByUserID_SworkSoapIn" />
+      <wsdl:output message="tns:GetUserDriveListByUserID_SworkSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDriveListByUserID_Swork_Letter">
+      <wsdl:input message="tns:GetUserDriveListByUserID_Swork_LetterSoapIn" />
+      <wsdl:output message="tns:GetUserDriveListByUserID_Swork_LetterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderSetValueList">
+      <wsdl:input message="tns:GetFolderSetValueListSoapIn" />
+      <wsdl:output message="tns:GetFolderSetValueListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderSetValueListbyUserID">
+      <wsdl:input message="tns:GetFolderSetValueListbyUserIDSoapIn" />
+      <wsdl:output message="tns:GetFolderSetValueListbyUserIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderExtProc">
+      <wsdl:input message="tns:GetFolderExtProcSoapIn" />
+      <wsdl:output message="tns:GetFolderExtProcSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EncryptString">
+      <wsdl:input message="tns:EncryptStringSoapIn" />
+      <wsdl:output message="tns:EncryptStringSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DecryptString">
+      <wsdl:input message="tns:DecryptStringSoapIn" />
+      <wsdl:output message="tns:DecryptStringSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginTest">
+      <wsdl:input message="tns:LoginTestSoapIn" />
+      <wsdl:output message="tns:LoginTestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserProfile">
+      <wsdl:input message="tns:getUserProfileSoapIn" />
+      <wsdl:output message="tns:getUserProfileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getServerProfile">
+      <wsdl:input message="tns:getServerProfileSoapIn" />
+      <wsdl:output message="tns:getServerProfileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ipMacTest">
+      <wsdl:input message="tns:ipMacTestSoapIn" />
+      <wsdl:output message="tns:ipMacTestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePrivateRecyBinFile">
+      <wsdl:input message="tns:DeletePrivateRecyBinFileSoapIn" />
+      <wsdl:output message="tns:DeletePrivateRecyBinFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRestrictAuthority">
+      <wsdl:input message="tns:GetRestrictAuthoritySoapIn" />
+      <wsdl:output message="tns:GetRestrictAuthoritySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerList">
+      <wsdl:input message="tns:GetManagerListSoapIn" />
+      <wsdl:output message="tns:GetManagerListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHiddenManageFolderList">
+      <wsdl:input message="tns:GetHiddenManageFolderListSoapIn" />
+      <wsdl:output message="tns:GetHiddenManageFolderListSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EFAMAgentWebServiceSoap" type="tns:EFAMAgentWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginAsDomainComputer">
+      <soap:operation soapAction="http://tempuri.org/LoginAsDomainComputer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPermissions">
+      <soap:operation soapAction="http://tempuri.org/GetPermissions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPermissionListByUserID">
+      <soap:operation soapAction="http://tempuri.org/GetPermissionListByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileLogList">
+      <soap:operation soapAction="http://tempuri.org/GetFileLogList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WriteLog">
+      <soap:operation soapAction="http://tempuri.org/WriteLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDomainName">
+      <soap:operation soapAction="http://tempuri.org/GetDomainName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePwd">
+      <soap:operation soapAction="http://tempuri.org/ChangePwd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShareDriveList">
+      <soap:operation soapAction="http://tempuri.org/GetShareDriveList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDriveListByUserID">
+      <soap:operation soapAction="http://tempuri.org/GetUserDriveListByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDriveListByUserID_Swork">
+      <soap:operation soapAction="http://tempuri.org/GetUserDriveListByUserID_Swork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDriveListByUserID_Swork_Letter">
+      <soap:operation soapAction="http://tempuri.org/GetUserDriveListByUserID_Swork_Letter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderSetValueList">
+      <soap:operation soapAction="http://tempuri.org/GetFolderSetValueList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderSetValueListbyUserID">
+      <soap:operation soapAction="http://tempuri.org/GetFolderSetValueListbyUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderExtProc">
+      <soap:operation soapAction="http://tempuri.org/GetFolderExtProc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncryptString">
+      <soap:operation soapAction="http://tempuri.org/EncryptString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DecryptString">
+      <soap:operation soapAction="http://tempuri.org/DecryptString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginTest">
+      <soap:operation soapAction="http://tempuri.org/LoginTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserProfile">
+      <soap:operation soapAction="http://tempuri.org/getUserProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getServerProfile">
+      <soap:operation soapAction="http://tempuri.org/getServerProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ipMacTest">
+      <soap:operation soapAction="http://tempuri.org/ipMacTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePrivateRecyBinFile">
+      <soap:operation soapAction="http://tempuri.org/DeletePrivateRecyBinFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRestrictAuthority">
+      <soap:operation soapAction="http://tempuri.org/GetRestrictAuthority" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerList">
+      <soap:operation soapAction="http://tempuri.org/GetManagerList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHiddenManageFolderList">
+      <soap:operation soapAction="http://tempuri.org/GetHiddenManageFolderList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="EFAMAgentWebServiceSoap12" type="tns:EFAMAgentWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://tempuri.org/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginAsDomainComputer">
+      <soap12:operation soapAction="http://tempuri.org/LoginAsDomainComputer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPermissions">
+      <soap12:operation soapAction="http://tempuri.org/GetPermissions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPermissionListByUserID">
+      <soap12:operation soapAction="http://tempuri.org/GetPermissionListByUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileLogList">
+      <soap12:operation soapAction="http://tempuri.org/GetFileLogList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WriteLog">
+      <soap12:operation soapAction="http://tempuri.org/WriteLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDomainName">
+      <soap12:operation soapAction="http://tempuri.org/GetDomainName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePwd">
+      <soap12:operation soapAction="http://tempuri.org/ChangePwd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShareDriveList">
+      <soap12:operation soapAction="http://tempuri.org/GetShareDriveList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDriveListByUserID">
+      <soap12:operation soapAction="http://tempuri.org/GetUserDriveListByUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDriveListByUserID_Swork">
+      <soap12:operation soapAction="http://tempuri.org/GetUserDriveListByUserID_Swork" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDriveListByUserID_Swork_Letter">
+      <soap12:operation soapAction="http://tempuri.org/GetUserDriveListByUserID_Swork_Letter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderSetValueList">
+      <soap12:operation soapAction="http://tempuri.org/GetFolderSetValueList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderSetValueListbyUserID">
+      <soap12:operation soapAction="http://tempuri.org/GetFolderSetValueListbyUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderExtProc">
+      <soap12:operation soapAction="http://tempuri.org/GetFolderExtProc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncryptString">
+      <soap12:operation soapAction="http://tempuri.org/EncryptString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DecryptString">
+      <soap12:operation soapAction="http://tempuri.org/DecryptString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginTest">
+      <soap12:operation soapAction="http://tempuri.org/LoginTest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserProfile">
+      <soap12:operation soapAction="http://tempuri.org/getUserProfile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getServerProfile">
+      <soap12:operation soapAction="http://tempuri.org/getServerProfile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ipMacTest">
+      <soap12:operation soapAction="http://tempuri.org/ipMacTest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePrivateRecyBinFile">
+      <soap12:operation soapAction="http://tempuri.org/DeletePrivateRecyBinFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRestrictAuthority">
+      <soap12:operation soapAction="http://tempuri.org/GetRestrictAuthority" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManagerList">
+      <soap12:operation soapAction="http://tempuri.org/GetManagerList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHiddenManageFolderList">
+      <soap12:operation soapAction="http://tempuri.org/GetHiddenManageFolderList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EFAMAgentWebService">
+    <wsdl:port name="EFAMAgentWebServiceSoap" binding="tns:EFAMAgentWebServiceSoap">
+      <soap:address location="http://124.137.245.171/EFAMServerAD/EFAMAgentWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="EFAMAgentWebServiceSoap12" binding="tns:EFAMAgentWebServiceSoap12">
+      <soap12:address location="http://124.137.245.171/EFAMServerAD/EFAMAgentWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

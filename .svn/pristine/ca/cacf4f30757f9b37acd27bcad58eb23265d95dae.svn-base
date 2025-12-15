@@ -1,0 +1,10 @@
+﻿using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+[assembly: AssemblyCompany("Link")]
+[assembly: AssemblyProduct("Enterprise File Access Manager")]
+[assembly: AssemblyCopyright("Copyright (c) 2011-2013 Link Inc.")]
+[assembly: AssemblyTrademark("")]
+
+[assembly: AssemblyInformationalVersionAttribute("5.1")]

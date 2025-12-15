@@ -1,0 +1,6 @@
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent_msiexe\EFAMAgent_msi\bin\x86\Debug\EFAMAgent_msi_v4.msi
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent_msiexe\EFAMAgent_msi\bin\x86\Debug\EFAMAgent_msi_v4.wixpdb
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent_msiexe\EFAMAgent_msi\obj\x86\Debug\EFAMAgent_msi_v4.wixproj.CoreCompileInputs.cache
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent_msiexe\EFAMAgent_msi\obj\x86\Debug\EFAMAgent_msi_v4.msi
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent_msiexe\EFAMAgent_msi\obj\x86\Debug\EFAMAgent_msi_v4.wixpdb
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent_msiexe\EFAMAgent_msi\obj\x86\Debug\EFAMAgent_msi_v4.wixproj.BindTracking-neutral.txt

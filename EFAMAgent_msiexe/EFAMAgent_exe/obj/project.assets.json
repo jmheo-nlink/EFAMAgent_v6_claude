@@ -1,0 +1,182 @@
+{
+  "version": 3,
+  "targets": {
+    "native,Version=v0.0": {
+      "WixToolset.Bal.wixext/4.0.6": {
+        "type": "package",
+        "build": {
+          "build/WixToolset.Bal.wixext.targets": {}
+        }
+      },
+      "WixToolset.Util.wixext/4.0.6": {
+        "type": "package",
+        "build": {
+          "build/WixToolset.Util.wixext.targets": {}
+        }
+      }
+    },
+    "native,Version=v0.0/win": {
+      "WixToolset.Bal.wixext/4.0.6": {
+        "type": "package",
+        "build": {
+          "build/WixToolset.Bal.wixext.targets": {}
+        }
+      },
+      "WixToolset.Util.wixext/4.0.6": {
+        "type": "package",
+        "build": {
+          "build/WixToolset.Util.wixext.targets": {}
+        }
+      }
+    },
+    "native,Version=v0.0/win-arm64": {
+      "WixToolset.Bal.wixext/4.0.6": {
+        "type": "package",
+        "build": {
+          "build/WixToolset.Bal.wixext.targets": {}
+        }
+      },
+      "WixToolset.Util.wixext/4.0.6": {
+        "type": "package",
+        "build": {
+          "build/WixToolset.Util.wixext.targets": {}
+        }
+      }
+    },
+    "native,Version=v0.0/win-x64": {
+      "WixToolset.Bal.wixext/4.0.6": {
+        "type": "package",
+        "build": {
+          "build/WixToolset.Bal.wixext.targets": {}
+        }
+      },
+      "WixToolset.Util.wixext/4.0.6": {
+        "type": "package",
+        "build": {
+          "build/WixToolset.Util.wixext.targets": {}
+        }
+      }
+    },
+    "native,Version=v0.0/win-x86": {
+      "WixToolset.Bal.wixext/4.0.6": {
+        "type": "package",
+        "build": {
+          "build/WixToolset.Bal.wixext.targets": {}
+        }
+      },
+      "WixToolset.Util.wixext/4.0.6": {
+        "type": "package",
+        "build": {
+          "build/WixToolset.Util.wixext.targets": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WixToolset.Bal.wixext/4.0.6": {
+      "sha512": "rX+qsfgsW8BYz4cgLye/5dS4rR0XM3X0gtC6q6keOhENO36ivRrFcIr8sqgVkR9M8p1ff2hqZjfJEasIU4fT3w==",
+      "type": "package",
+      "path": "wixtoolset.bal.wixext/4.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/WixToolset.Bal.wixext.targets",
+        "wix.png",
+        "wixext4/WixToolset.Bal.wixext.dll",
+        "wixtoolset.bal.wixext.4.0.6.nupkg.sha512",
+        "wixtoolset.bal.wixext.nuspec"
+      ]
+    },
+    "WixToolset.Util.wixext/4.0.6": {
+      "sha512": "U4Oln/PikOY580YIsEIuSwhL+ei4Ni0zBKkiybUHf3RlR45NJ6gVykf56dVZg9dYzJZ+7ePETcNY+OjX4R9yIw==",
+      "type": "package",
+      "path": "wixtoolset.util.wixext/4.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/WixToolset.Util.wixext.targets",
+        "wix.png",
+        "wixext4/WixToolset.Util.wixext.dll",
+        "wixtoolset.util.wixext.4.0.6.nupkg.sha512",
+        "wixtoolset.util.wixext.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "native,Version=v0.0": [
+      "WixToolset.Bal.wixext >= 4.0.*",
+      "WixToolset.Util.wixext >= 4.0.*"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\HEO\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\HEO\\Link\\EFAM\\[240912]EFAM\\03_EFAMv6_Agent_Source\\[240315]EFAMAgent_v6)_HDElectric\\EFAMAgent_msiexe\\EFAMAgent_exe\\EFAMAgent_exe_v4.wixproj",
+      "projectName": "EFAMAgent_exe_v4",
+      "projectPath": "C:\\Users\\HEO\\Link\\EFAM\\[240912]EFAM\\03_EFAMv6_Agent_Source\\[240315]EFAMAgent_v6)_HDElectric\\EFAMAgent_msiexe\\EFAMAgent_exe\\EFAMAgent_exe_v4.wixproj",
+      "packagesPath": "C:\\Users\\HEO\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\HEO\\Link\\EFAM\\[240912]EFAM\\03_EFAMv6_Agent_Source\\[240315]EFAMAgent_v6)_HDElectric\\EFAMAgent_msiexe\\EFAMAgent_exe\\obj\\",
+      "projectStyle": "PackageReference",
+      "UsingMicrosoftNETSdk": false,
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\HEO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "native"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "native": {
+          "targetAlias": "native",
+          "projectReferences": {}
+        }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "native": {
+        "targetAlias": "native",
+        "dependencies": {
+          "WixToolset.Bal.wixext": {
+            "target": "Package",
+            "version": "[4.0.*, )"
+          },
+          "WixToolset.Util.wixext": {
+            "target": "Package",
+            "version": "[4.0.*, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-arm64": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}

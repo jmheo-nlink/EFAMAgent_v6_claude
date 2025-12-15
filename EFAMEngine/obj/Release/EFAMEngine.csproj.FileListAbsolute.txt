@@ -1,0 +1,258 @@
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMEngine\bin\Release\EFAMNgin.xml
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMEngine\bin\Release\EFAMNgin.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMEngine\bin\Release\EFAMNgin.XmlSerializers.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMEngine\bin\Release\EFAMNgin.pdb
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMEngine\bin\Release\en-US\EFAMNgin.resources.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMEngine\bin\Release\zh-Hans\EFAMNgin.resources.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMEngine\bin\Release\zh-Hant\EFAMNgin.resources.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMEngine\bin\Release\EFAMCore.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMEngine\bin\Release\LKCorLib.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMEngine\bin\Release\log4net.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMEngine\bin\Release\EFAMCore.pdb
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMEngine\bin\Release\EFAMCore.xml
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMEngine\bin\Release\LKCorLib.xml
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMEngine\bin\Release\log4net.xml
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMEngine\bin\Release\en-US\EFAMCore.resources.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMEngine\bin\Release\zh-Hans\EFAMCore.resources.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMEngine\bin\Release\zh-Hant\EFAMCore.resources.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.resources
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.en-US.resources
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.zh-Hans.resources
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.zh-Hant.resources
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMEngine\obj\Release\EFAMEngine.csproj.GenerateResource.Cache
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMEngine\obj\Release\en-US\EFAMNgin.resources.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMEngine\obj\Release\zh-Hans\EFAMNgin.resources.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMEngine\obj\Release\zh-Hant\EFAMNgin.resources.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMEngine\obj\Release\EFAMNgin.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMEngine\obj\Release\EFAMNgin.pdb
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMEngine\obj\Release\EFAMNgin.XmlSerializers.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMEngine\obj\Release\EFAMEngine.csprojResolveAssemblyReference.cache
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMEngine\obj\Release\EFAMEngine.csprojResolveAssemblyReference.cache
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.resources
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.en-US.resources
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.zh-Hans.resources
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.zh-Hant.resources
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMEngine\obj\Release\EFAMEngine.csproj.GenerateResource.Cache
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMEngine\obj\Release\EFAMNgin.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMEngine\obj\Release\EFAMNgin.pdb
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMEngine\obj\Release\EFAMNgin.XmlSerializers.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMEngine\bin\Release\EFAMNgin.xml
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMEngine\bin\Release\EFAMNgin.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMEngine\bin\Release\EFAMNgin.XmlSerializers.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMEngine\bin\Release\EFAMNgin.pdb
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMEngine\bin\Release\en-US\EFAMNgin.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMEngine\bin\Release\zh-Hans\EFAMNgin.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMEngine\bin\Release\zh-Hant\EFAMNgin.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMEngine\bin\Release\EFAMCore.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMEngine\bin\Release\LKCorLib.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMEngine\bin\Release\log4net.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMEngine\bin\Release\EFAMCore.pdb
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMEngine\bin\Release\EFAMCore.xml
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMEngine\bin\Release\LKCorLib.xml
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMEngine\bin\Release\log4net.xml
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMEngine\bin\Release\en-US\EFAMCore.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMEngine\bin\Release\zh-Hans\EFAMCore.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMEngine\bin\Release\zh-Hant\EFAMCore.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMEngine\obj\Release\en-US\EFAMNgin.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMEngine\obj\Release\zh-Hans\EFAMNgin.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMEngine\obj\Release\zh-Hant\EFAMNgin.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMEngine\bin\Release\EFAMNgin.xml
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMEngine\bin\Release\EFAMNgin.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMEngine\bin\Release\EFAMNgin.XmlSerializers.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMEngine\bin\Release\EFAMNgin.pdb
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMEngine\bin\Release\en-US\EFAMNgin.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMEngine\bin\Release\zh-Hans\EFAMNgin.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMEngine\bin\Release\zh-Hant\EFAMNgin.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMEngine\bin\Release\EFAMCore.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMEngine\bin\Release\LKCorLib.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMEngine\bin\Release\log4net.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMEngine\bin\Release\EFAMCore.pdb
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMEngine\bin\Release\EFAMCore.xml
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMEngine\bin\Release\LKCorLib.xml
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMEngine\bin\Release\log4net.xml
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMEngine\bin\Release\en-US\EFAMCore.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMEngine\bin\Release\zh-Hans\EFAMCore.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMEngine\bin\Release\zh-Hant\EFAMCore.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMEngine\obj\Release\EFAMEngine.csprojResolveAssemblyReference.cache
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.resources
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.en-US.resources
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.zh-Hans.resources
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.zh-Hant.resources
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMEngine\obj\Release\EFAMEngine.csproj.GenerateResource.Cache
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMEngine\obj\Release\en-US\EFAMNgin.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMEngine\obj\Release\zh-Hans\EFAMNgin.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMEngine\obj\Release\zh-Hant\EFAMNgin.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMEngine\obj\Release\EFAMNgin.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMEngine\obj\Release\EFAMNgin.pdb
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMEngine\obj\Release\EFAMNgin.XmlSerializers.dll
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMEngine\bin\Release\EFAMNgin.xml
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMEngine\bin\Release\EFAMNgin.dll
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMEngine\bin\Release\EFAMNgin.XmlSerializers.dll
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMEngine\bin\Release\EFAMNgin.pdb
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMEngine\bin\Release\en-US\EFAMNgin.resources.dll
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMEngine\bin\Release\zh-Hans\EFAMNgin.resources.dll
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMEngine\bin\Release\zh-Hant\EFAMNgin.resources.dll
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMEngine\bin\Release\EFAMCore.dll
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMEngine\bin\Release\LKCorLib.dll
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMEngine\bin\Release\log4net.dll
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMEngine\bin\Release\EFAMCore.pdb
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMEngine\bin\Release\EFAMCore.xml
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMEngine\bin\Release\LKCorLib.xml
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMEngine\bin\Release\log4net.xml
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMEngine\bin\Release\en-US\EFAMCore.resources.dll
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMEngine\bin\Release\zh-Hans\EFAMCore.resources.dll
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMEngine\bin\Release\zh-Hant\EFAMCore.resources.dll
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMEngine\obj\Release\EFAMEngine.csprojResolveAssemblyReference.cache
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.resources
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.en-US.resources
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.zh-Hans.resources
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.zh-Hant.resources
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMEngine\obj\Release\EFAMEngine.csproj.GenerateResource.Cache
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMEngine\obj\Release\en-US\EFAMNgin.resources.dll
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMEngine\obj\Release\zh-Hans\EFAMNgin.resources.dll
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMEngine\obj\Release\zh-Hant\EFAMNgin.resources.dll
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMEngine\obj\Release\EFAMNgin.dll
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMEngine\obj\Release\EFAMNgin.pdb
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMEngine\obj\Release\EFAMNgin.XmlSerializers.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMEngine\bin\Release\EFAMNgin.xml
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMEngine\bin\Release\EFAMNgin.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMEngine\bin\Release\EFAMNgin.XmlSerializers.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMEngine\bin\Release\EFAMNgin.pdb
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMEngine\bin\Release\en-US\EFAMNgin.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMEngine\bin\Release\zh-Hans\EFAMNgin.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMEngine\bin\Release\zh-Hant\EFAMNgin.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMEngine\bin\Release\EFAMCore.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMEngine\bin\Release\LKCorLib.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMEngine\bin\Release\log4net.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMEngine\bin\Release\EFAMCore.pdb
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMEngine\bin\Release\EFAMCore.xml
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMEngine\bin\Release\LKCorLib.xml
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMEngine\bin\Release\log4net.xml
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMEngine\bin\Release\en-US\EFAMCore.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMEngine\bin\Release\zh-Hans\EFAMCore.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMEngine\bin\Release\zh-Hant\EFAMCore.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMEngine\obj\Release\EFAMEngine.csprojResolveAssemblyReference.cache
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.resources
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.en-US.resources
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.zh-Hans.resources
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.zh-Hant.resources
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMEngine\obj\Release\EFAMEngine.csproj.GenerateResource.Cache
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMEngine\obj\Release\en-US\EFAMNgin.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMEngine\obj\Release\zh-Hans\EFAMNgin.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMEngine\obj\Release\zh-Hant\EFAMNgin.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMEngine\obj\Release\EFAMNgin.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMEngine\obj\Release\EFAMNgin.pdb
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMEngine\obj\Release\EFAMNgin.XmlSerializers.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMEngine\bin\Release\EFAMNgin.xml
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMEngine\bin\Release\EFAMNgin.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMEngine\bin\Release\EFAMNgin.XmlSerializers.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMEngine\bin\Release\EFAMNgin.pdb
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMEngine\bin\Release\en-US\EFAMNgin.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMEngine\bin\Release\zh-Hans\EFAMNgin.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMEngine\bin\Release\zh-Hant\EFAMNgin.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMEngine\bin\Release\EFAMCore.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMEngine\bin\Release\LKCorLib.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMEngine\bin\Release\log4net.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMEngine\bin\Release\EFAMCore.pdb
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMEngine\bin\Release\EFAMCore.xml
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMEngine\bin\Release\LKCorLib.xml
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMEngine\bin\Release\log4net.xml
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMEngine\bin\Release\en-US\EFAMCore.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMEngine\bin\Release\zh-Hans\EFAMCore.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMEngine\bin\Release\zh-Hant\EFAMCore.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMEngine\obj\Release\EFAMEngine.csprojResolveAssemblyReference.cache
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.resources
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.en-US.resources
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.zh-Hans.resources
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.zh-Hant.resources
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMEngine\obj\Release\EFAMEngine.csproj.GenerateResource.Cache
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMEngine\obj\Release\en-US\EFAMNgin.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMEngine\obj\Release\zh-Hans\EFAMNgin.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMEngine\obj\Release\zh-Hant\EFAMNgin.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMEngine\obj\Release\EFAMNgin.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMEngine\obj\Release\EFAMNgin.pdb
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMEngine\obj\Release\EFAMNgin.XmlSerializers.dll
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMEngine\bin\Release\EFAMNgin.xml
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMEngine\bin\Release\EFAMNgin.dll
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMEngine\bin\Release\EFAMNgin.XmlSerializers.dll
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMEngine\bin\Release\EFAMNgin.pdb
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMEngine\bin\Release\en-US\EFAMNgin.resources.dll
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMEngine\bin\Release\zh-Hans\EFAMNgin.resources.dll
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMEngine\bin\Release\zh-Hant\EFAMNgin.resources.dll
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMEngine\bin\Release\EFAMCore.dll
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMEngine\bin\Release\LKCorLib.dll
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMEngine\bin\Release\log4net.dll
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMEngine\bin\Release\EFAMCore.pdb
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMEngine\bin\Release\EFAMCore.xml
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMEngine\bin\Release\LKCorLib.xml
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMEngine\bin\Release\log4net.xml
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMEngine\bin\Release\en-US\EFAMCore.resources.dll
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMEngine\bin\Release\zh-Hans\EFAMCore.resources.dll
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMEngine\bin\Release\zh-Hant\EFAMCore.resources.dll
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.resources
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.en-US.resources
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.zh-Hans.resources
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.zh-Hant.resources
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMEngine\obj\Release\EFAMEngine.csproj.GenerateResource.Cache
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMEngine\obj\Release\en-US\EFAMNgin.resources.dll
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMEngine\obj\Release\zh-Hans\EFAMNgin.resources.dll
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMEngine\obj\Release\zh-Hant\EFAMNgin.resources.dll
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMEngine\obj\Release\EFAMNgin.dll
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMEngine\obj\Release\EFAMNgin.pdb
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMEngine\obj\Release\EFAMNgin.XmlSerializers.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMEngine\bin\Release\EFAMNgin.xml
+D:\Development\Workspace\EFAMAgent_v6\EFAMEngine\bin\Release\EFAMNgin.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMEngine\bin\Release\EFAMNgin.XmlSerializers.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMEngine\bin\Release\EFAMNgin.pdb
+D:\Development\Workspace\EFAMAgent_v6\EFAMEngine\bin\Release\en-US\EFAMNgin.resources.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMEngine\bin\Release\zh-Hans\EFAMNgin.resources.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMEngine\bin\Release\zh-Hant\EFAMNgin.resources.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMEngine\bin\Release\EFAMCore.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMEngine\bin\Release\LKCorLib.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMEngine\bin\Release\log4net.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMEngine\bin\Release\EFAMCore.pdb
+D:\Development\Workspace\EFAMAgent_v6\EFAMEngine\bin\Release\EFAMCore.xml
+D:\Development\Workspace\EFAMAgent_v6\EFAMEngine\bin\Release\LKCorLib.xml
+D:\Development\Workspace\EFAMAgent_v6\EFAMEngine\bin\Release\log4net.xml
+D:\Development\Workspace\EFAMAgent_v6\EFAMEngine\bin\Release\en-US\EFAMCore.resources.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMEngine\bin\Release\zh-Hans\EFAMCore.resources.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMEngine\bin\Release\zh-Hant\EFAMCore.resources.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.resources
+D:\Development\Workspace\EFAMAgent_v6\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.en-US.resources
+D:\Development\Workspace\EFAMAgent_v6\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.zh-Hans.resources
+D:\Development\Workspace\EFAMAgent_v6\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.zh-Hant.resources
+D:\Development\Workspace\EFAMAgent_v6\EFAMEngine\obj\Release\EFAMEngine.csproj.GenerateResource.Cache
+D:\Development\Workspace\EFAMAgent_v6\EFAMEngine\obj\Release\en-US\EFAMNgin.resources.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMEngine\obj\Release\zh-Hans\EFAMNgin.resources.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMEngine\obj\Release\zh-Hant\EFAMNgin.resources.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMEngine\obj\Release\EFAMNgin.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMEngine\obj\Release\EFAMNgin.pdb
+D:\Development\Workspace\EFAMAgent_v6\EFAMEngine\obj\Release\EFAMNgin.XmlSerializers.dll
+D:\Development\Source\EFAMAgent_v6\EFAMEngine\bin\Release\EFAMNgin.xml
+D:\Development\Source\EFAMAgent_v6\EFAMEngine\bin\Release\EFAMNgin.dll
+D:\Development\Source\EFAMAgent_v6\EFAMEngine\bin\Release\EFAMNgin.XmlSerializers.dll
+D:\Development\Source\EFAMAgent_v6\EFAMEngine\bin\Release\EFAMNgin.pdb
+D:\Development\Source\EFAMAgent_v6\EFAMEngine\bin\Release\en-US\EFAMNgin.resources.dll
+D:\Development\Source\EFAMAgent_v6\EFAMEngine\bin\Release\zh-Hans\EFAMNgin.resources.dll
+D:\Development\Source\EFAMAgent_v6\EFAMEngine\bin\Release\zh-Hant\EFAMNgin.resources.dll
+D:\Development\Source\EFAMAgent_v6\EFAMEngine\bin\Release\EFAMCore.dll
+D:\Development\Source\EFAMAgent_v6\EFAMEngine\bin\Release\LKCorLib.dll
+D:\Development\Source\EFAMAgent_v6\EFAMEngine\bin\Release\log4net.dll
+D:\Development\Source\EFAMAgent_v6\EFAMEngine\bin\Release\EFAMCore.pdb
+D:\Development\Source\EFAMAgent_v6\EFAMEngine\bin\Release\EFAMCore.xml
+D:\Development\Source\EFAMAgent_v6\EFAMEngine\bin\Release\LKCorLib.xml
+D:\Development\Source\EFAMAgent_v6\EFAMEngine\bin\Release\log4net.xml
+D:\Development\Source\EFAMAgent_v6\EFAMEngine\bin\Release\en-US\EFAMCore.resources.dll
+D:\Development\Source\EFAMAgent_v6\EFAMEngine\bin\Release\zh-Hans\EFAMCore.resources.dll
+D:\Development\Source\EFAMAgent_v6\EFAMEngine\bin\Release\zh-Hant\EFAMCore.resources.dll
+D:\Development\Source\EFAMAgent_v6\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.resources
+D:\Development\Source\EFAMAgent_v6\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.en-US.resources
+D:\Development\Source\EFAMAgent_v6\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.zh-Hans.resources
+D:\Development\Source\EFAMAgent_v6\EFAMEngine\obj\Release\Link.EFAM.Engine.Properties.Resources.zh-Hant.resources
+D:\Development\Source\EFAMAgent_v6\EFAMEngine\obj\Release\EFAMEngine.csproj.GenerateResource.Cache
+D:\Development\Source\EFAMAgent_v6\EFAMEngine\obj\Release\en-US\EFAMNgin.resources.dll
+D:\Development\Source\EFAMAgent_v6\EFAMEngine\obj\Release\zh-Hans\EFAMNgin.resources.dll
+D:\Development\Source\EFAMAgent_v6\EFAMEngine\obj\Release\zh-Hant\EFAMNgin.resources.dll
+D:\Development\Source\EFAMAgent_v6\EFAMEngine\obj\Release\EFAMNgin.dll
+D:\Development\Source\EFAMAgent_v6\EFAMEngine\obj\Release\EFAMNgin.pdb
+D:\Development\Source\EFAMAgent_v6\EFAMEngine\obj\Release\EFAMNgin.XmlSerializers.dll

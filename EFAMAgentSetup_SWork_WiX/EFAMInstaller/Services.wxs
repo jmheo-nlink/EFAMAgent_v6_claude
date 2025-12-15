@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+    <!-- Windows 서비스 설치/제거 설정 조각입니다. -->
+    <ComponentGroup Id="ServicesGroup">
+    </ComponentGroup>
+  </Fragment>
+</Wix>

@@ -1,0 +1,1465 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EFAMCore</name>
+    </assembly>
+    <members>
+        <member name="T:Link.EFAM.AppResources.AppResource">
+            <summary>
+            지역화된 리소스를 검색하기 위한 리소스 클래스이다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.AppResources.AppResource.#ctor">
+            <summary>
+            <see cref="T:Link.EFAM.AppResources.AppResource"/> 클래스의 새 인스턴스를 초기화한다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.AppResources.AppResource.GetString(System.String,System.Object[])">
+            <summary>
+            지역화된 리소스 문자열 또는 오류 메시지를 검색하고 서식을 지정한다.
+            </summary>
+            <param name="key">검색할 문자열 또는 오류 메시지의 식별자</param>
+            <param name="values">문자열 또는 오류 메시지의 자리 표시자를 대체할 매개 변수의 배열</param>
+            <returns>서식 지정된 리소스 문자열 또는 오류 메시지</returns>
+        </member>
+        <member name="M:Link.EFAM.AppResources.AppResource.GetString(System.String)">
+            <summary>
+            지역화된 리소스 문자열 또는 오류 메시지를 검색한다.
+            </summary>
+            <param name="key">검색할 문자열 또는 오류 메시지의 식별자</param>
+            <returns>리소스 문자열 또는 오류 메시지</returns>
+        </member>
+        <member name="M:Link.EFAM.AppResources.AppResource.GetResourceString(System.String)">
+            <summary>
+            지역화된 문자열 리소스를 가져온다.
+            </summary>
+            <param name="name">가져올 리소스 이름</param>
+            <returns>지역화된 문자열 리소스</returns>
+        </member>
+        <member name="P:Link.EFAM.AppResources.AppResource.Resource">
+            <summary>
+            캐시된 <see cref="T:Link.EFAM.AppResources.AppResource"/> 인스턴스를 반환한다.
+            </summary>
+            <value>캐시된 <see cref="T:Link.EFAM.AppResources.AppResource"/> 개체</value>
+        </member>
+        <member name="T:Link.EFAM.Common.Constants">
+            <summary>
+            상수 값들을 제공한다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.Constants.FacFilterName">
+            <summary>
+            액세스 제어 미니필터 드라이버의 이름
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.Constants.CryptoPassword">
+            <summary>
+            비밀 키를 파생시키는데 사용할 암호
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.Constants.CryptoKeySalt">
+            <summary>
+            비밀 키를 파생시키는데 사용할 키 솔트
+            </summary>
+        </member>
+        <member name="T:Link.EFAM.Common.FileAccessRights">
+            <summary>
+            파일이나 디렉토리에 적용할 수 있는 액세스 권한을 나타낸다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Common.FileAccessRights.#ctor">
+            <summary>
+            <see cref="T:Link.EFAM.Common.FileAccessRights"/> 클래스의 새 인스턴스를 초기화한다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Common.FileAccessRights.Clone">
+            <summary>
+            현재 인스턴스의 복사본인 새 <see cref="T:Link.EFAM.Common.FileAccessRights"/> 개체를 만든다.
+            </summary>
+            <returns>현재 인스턴스의 복사본인 새 <see cref="T:Link.EFAM.Common.FileAccessRights"/> 개체</returns>
+        </member>
+        <member name="M:Link.EFAM.Common.FileAccessRights.ToString">
+            <summary>
+            허용된 액세스 권한을 나타내는 문자열을 반환한다.
+            </summary>
+            <returns>허용된 액세스 권한을 나타내는 문자열</returns>
+        </member>
+        <member name="P:Link.EFAM.Common.FileAccessRights.AllowRead">
+            <summary>
+            파일을 열 수 있는지 여부를 나타내는 값을 가져오거나 설정한다.
+            </summary>
+            <value>파일을 열 수 있으면 true, 그렇지 않으면 false. 기본값은 false</value>
+        </member>
+        <member name="P:Link.EFAM.Common.FileAccessRights.AllowWrite">
+            <summary>
+            파일을 생성하고 파일에 데이터를 추가하고 제거할 수 있는지 여부를 나타내는 값을 가져오거나 설정한다.
+            </summary>
+            <value>
+            파일을 생성하고 파일에 데이터를 추가하고 제거할 수 있으면 true, 그렇지 않으면 false. 기본값은 false
+            </value>
+        </member>
+        <member name="P:Link.EFAM.Common.FileAccessRights.AllowCopyFiles">
+            <summary>
+            파일을 관리하는 네트워크 공유가 아닌 위치(로컬 디스크, 네트워크 공유 등)로
+            복사할 수 있는지 여부를 나타내는 값을 가져오거나 설정한다.
+            </summary>
+            <value>파일을 복사할 수 있으면 true, 그렇지 않으면 false. 기본값은 false</value>
+        </member>
+        <member name="P:Link.EFAM.Common.FileAccessRights.AllowListDirectory">
+            <summary>
+            디렉토리의 내용을 읽을 수 있는지 여부를 나타내는 값을 가져오거나 설정한다.
+            </summary>
+            <value>디렉토리의 내용을 읽을 수 있으면 true, 그렇지 않으면 false. 기본값은 false</value>
+        </member>
+        <member name="P:Link.EFAM.Common.FileAccessRights.AllowCreateDirectories">
+            <summary>
+            디렉토리를 생성할 수 있는지 여부를 나타내는 값을 가져오거나 설정한다.
+            </summary>
+            <value>디렉토리를 생성할 수 있으면 true, 그렇지 않으면 false. 기본값은 false</value>
+        </member>
+        <member name="P:Link.EFAM.Common.FileAccessRights.AllowDelete">
+            <summary>
+            파일이나 디렉토리를 삭제할 수 있는지 여부를 나타내는 값을 가져오거나 설정한다.
+            </summary>
+            <value>파일이나 디렉토리를 삭제할 수 있으면 true, 그렇지 않으면 false. 기본값은 false</value>
+        </member>
+        <member name="P:Link.EFAM.Common.FileAccessRights.AllowRename">
+            <summary>
+            파일이나 디렉토리의 이름을 바꿀 수 있는지 여부를 나타내는 값을 가져오거나 설정한다.
+            </summary>
+            <value>파일이나 디렉토리의 이름을 바꿀 수 있으면 true, 그렇지 않으면 false. 기본값은 false</value>
+        </member>
+        <member name="P:Link.EFAM.Common.FileAccessRights.AllowMove">
+            <summary>
+            파일이나 디렉토리를 새 위치로 이동할 수 있는지 여부를 나타내는 값을 가져오거나 설정한다.
+            </summary>
+            <value>파일이나 디렉토리를 새 위치로 이동할 수 있으면 true, 그렇지 않으면 false. 기본값은 falase</value>
+        </member>
+        <member name="T:Link.EFAM.Common.FileAccessRule">
+            <summary>
+            파일이나 디렉토리에 대한 액세스 규칙(허용되거나 거부된 액세스 권한의 조합)을 나타낸다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Common.FileAccessRule.#ctor(System.String)">
+            <summary>
+            <see cref="T:Link.EFAM.Common.FileAccessRule"/> 클래스의 새 인스턴스를 초기화하여 
+            규칙을 적용할 파일이나 디렉토리의 경로를 지정한다.
+            </summary>
+            <param name="path">규칙을 적용할 파일이나 디렉토리의 경로</param>
+            
+            <exception cref="T:System.ArgumentNullException">path가 null인 경우</exception>
+        </member>
+        <member name="M:Link.EFAM.Common.FileAccessRule.#ctor(System.String,Link.EFAM.Common.FileAccessRights)">
+            <summary>
+            <see cref="T:Link.EFAM.Common.FileAccessRule"/> 클래스의 새 인스턴스를 초기화하여 
+            규칙을 적용할 파일이나 디렉토리의 경로, 허용하거나 거부할 액세스 권한을 지정한다.
+            </summary>
+            <param name="path">규칙을 적용할 파일이나 디렉토리의 경로</param>
+            <param name="fileRights">허용하거나 거부할 액세스 권한을 나타내는 <see cref="T:Link.EFAM.Common.FileAccessRights"/> 개체</param>
+            
+            <exception cref="T:System.ArgumentNullException">path가 null인 경우</exception>
+        </member>
+        <member name="M:Link.EFAM.Common.FileAccessRule.ToString">
+            <summary>
+            현재 인스턴스를 나타내는 문자열을 반환한다.
+            </summary>
+            <returns>현재 인스턴스를 나타내는 문자열</returns>
+            <remarks>
+            <see cref="P:Link.EFAM.Common.FileAccessRule.Path"/> 및 <see cref="P:Link.EFAM.Common.FileAccessRule.AccessRights"/> 속성 문자열의 조합이다.
+            </remarks>
+        </member>
+        <member name="P:Link.EFAM.Common.FileAccessRule.Path">
+            <summary>
+            규칙을 적용할 파일이나 디렉토리의 경로를 가져온다.
+            </summary>
+            <value>규칙을 적용할 파일이나 디렉토리의 경로</value>
+        </member>
+        <member name="P:Link.EFAM.Common.FileAccessRule.AccessRights">
+            <summary>
+            액세스 규칙에 의해 허용되거나 거부된 액세스 권한을 가져오거나 설정한다.
+            </summary>
+            <value>액세스 규칙에 의해 허용되거나 거부된 액세스 권한을 나타내는 <see cref="T:Link.EFAM.Common.FileAccessRights"/> 개체</value>
+        </member>
+        <member name="T:Link.EFAM.Common.FileAction">
+            <summary>
+            파일 또는 디렉토리에 대해 수행된 작업을 지정한다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.FileAction.FileOpened">
+            <summary>
+            파일이 열렸다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.FileAction.FileModified">
+            <summary>
+            파일이 수정되었다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.FileAction.FileCreated">
+            <summary>
+            파일이 생성되었다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.FileAction.FileDeleted">
+            <summary>
+            파일이 삭제되었다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.FileAction.FileMoved">
+            <summary>
+            파일이 새 위치로 이동되었다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.FileAction.FileRenamed">
+            <summary>
+            파일의 이름이 바뀌었다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.FileAction.FileCopied">
+            <summary>
+            파일이 복사되었다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.FileAction.DirectoryCreated">
+            <summary>
+            디렉토리가 생성되었다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.FileAction.DirectoryDeleted">
+            <summary>
+            디렉토리가 삭제되었다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.FileAction.DirectoryMoved">
+            <summary>
+            디렉토리가 새 위치로 이동되었다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.FileAction.DirectoryRenamed">
+            <summary>
+            디렉토리의 이름이 바뀌었다.
+            </summary>
+        </member>
+        <member name="T:Link.EFAM.Common.ProcessKind">
+            <summary>
+            프로세스의 종류를 지정한다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.ProcessKind.NormalProcess">
+            <summary>
+            일반적인 프로세스를 나타낸다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.ProcessKind.SystemProcess">
+            <summary>
+            시스템 프로세스를 나타낸다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.ProcessKind.WindowsExplorer">
+            <summary>
+            "Windows 탐색기" 프로세스를 나타낸다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.ProcessKind.WindowsCommand">
+            <summary>
+            "Windows 명령 처리기" 프로세스를 나타낸다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.ProcessKind.MsOffice">
+            <summary>
+            "Microsoft Office" 응용 프로그램의 프로세스를 나타낸다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.ProcessKind.AntiVirus">
+            <summary>
+            백신 응용 프로그램의 프로세스를 나타낸다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.ProcessKind.MaxProcessKind">
+            <summary>
+            이 열거형의 마지막 열거자 값을 나타낸다.
+            </summary>
+        </member>
+        <member name="T:Link.EFAM.Core.IFacFilterAdapter">
+            <summary>
+            액세스 제어(remote File Access Control) 미니필터 드라이버에서 요청하는 작업을 처리하는 어댑터를 정의한다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Core.IFacFilterAdapter.OnWorkersStarted">
+            <summary>
+            작업 스레드들이 시작된 후 호출된다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Core.IFacFilterAdapter.OnWorkersExited">
+            <summary>
+            작업 스레드들이 종료된 후 호출된다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Core.IFacFilterAdapter.OnProcessCreated(Link.EFAM.Core.ProcessCreatedEventArgs)">
+            <summary>
+            새 프로세스가 생성된 후 호출된다.
+            </summary>
+            <param name="e">이벤트 데이터가 포함된 <see cref="T:Link.EFAM.Core.ProcessCreatedEventArgs"/> 개체</param>
+        </member>
+        <member name="M:Link.EFAM.Core.IFacFilterAdapter.GetPermissions(System.Int32,System.String,System.Boolean)">
+            <summary>
+            지정한 경로에 대해 허용되거나 거부된 액세스 권한을 가져온다.
+            </summary>
+            <param name="processId">액세스 권한을 요청한 프로세스에 할당된 프로세스 ID</param>
+            <param name="path">액세스 권한을 가져올 경로</param>
+            <param name="isDir">디렉토리의 경로이면 true, 파일의 경로이면 false</param>
+            <returns>허용되거나 거부된 액세스 권한을 나타내는 <see cref="T:Link.EFAM.Common.FileAccessRights"/> 개체</returns>
+        </member>
+        <member name="M:Link.EFAM.Core.IFacFilterAdapter.GetProcessKind(System.Int32)">
+            <summary>
+            지정한 프로세스의 종류를 가져온다.
+            </summary>
+            <param name="processId">프로세스에 할당된 프로세스 ID</param>
+            <returns>프로세스의 종류를 나타내는 <see cref="T:Link.EFAM.Common.ProcessKind"/> 값 중 하나</returns>
+        </member>
+        <member name="M:Link.EFAM.Core.IFacFilterAdapter.WriteLog(System.Int32,System.String,System.String,Link.EFAM.Common.FileAction)">
+            <summary>
+            파일 또는 디렉토리에 대해 수행된 작업의 로그를 기록한다.
+            </summary>
+            <param name="processId">작업을 수행한 프로세스에 할당된 프로세스 ID</param>
+            <param name="path">파일 또는 디렉토리의 경로</param>
+            <param name="newPath">파일 또는 디렉토리의 새 경로</param>
+            <param name="action">
+            파일 또는 디렉토리에 대해 수행된 작업을 지정하는 <see cref="T:Link.EFAM.Common.FileAction"/> 값 중 하나
+            </param>
+            <remarks>
+            action 매개 변수가 다음의 값 중 하나일 경우 newPath 매개 변수는 다음과 같은 의미를 갖는다.<br/>
+            FileDeleted - 휴지통 디렉토리로 백업된 파일의 경로.<br/>
+            FileRenamed - 새 파일 이름.<br/>
+            FileMoved - 파일의 새 위치에 대한 경로.<br/>
+            FileCopied - 관리하는 네트워크 공유가 아닌 위치(로컬 디스크, 네트워크 공유 등)로 복사된 파일의 새 경로.<br/>
+            DirectoryRenamed - 새 디렉토리 이름.<br/>
+            DirectoryMoved - 디렉토리의 새 위치에 대한 경로.
+            </remarks>
+        </member>
+        <member name="M:Link.EFAM.Core.IFacFilterOperator.ConnectFilter">
+            <summary>
+            액세스 제어 미니필터 드라이버에 연결한다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Core.IFacFilterOperator.DisconnectFilter">
+            <summary>
+            액세스 제어 미니필터 드라이버와 연결을 해제한다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Core.IFacFilterOperator.ActivateFilter">
+            <summary>
+            원격 파일 및 디렉토리에 대한 액세스 제어를 활성화한다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Core.IFacFilterOperator.DeactivateFilter">
+            <summary>
+            원격 파일 및 디렉토리에 대한 액세스 제어를 비활성화한다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Core.IFacFilterOperator.SetRemotePaths(System.String[])">
+            <summary>
+            원격 파일 및 디렉토리에 대한 액세스를 제어할 원격 경로들을 설정한다.
+            </summary>
+            <param name="paths">액세스를 제어할 원격 경로들의 배열</param>
+        </member>
+        <member name="M:Link.EFAM.Core.IFacFilterOperator.SetCacheDirectoryOfMsOffice">
+            <summary>
+            "Microsoft Office" 응용 프로그램의 캐시 디렉토리의 경로를 설정한다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Core.IFacFilterOperator.SetTemporaryPaths(System.String[])">
+            <summary>
+            응용 프로그램들의 임시 파일이 생성되는 경로들을 설정한다.
+            </summary>
+            <param name="paths">임시 파일이 생성되는 경로들의 배열</param>
+        </member>
+        <member name="P:Link.EFAM.Core.IFacFilterOperator.ThreadCount">
+            <summary>
+            생성할 작업 스레드의 개수를 가져오거나 설정한다.
+            </summary>
+            <value>생성할 작업 스레드의 개수</value>
+        </member>
+        <member name="P:Link.EFAM.Core.IFacFilterOperator.RequestCount">
+            <summary>
+            각 작업 스레드에서 처리할 요청의 개수를 가져오거나 설정한다.
+            </summary>
+            <value>각 작업 스레드에서 처리할 요청의 개수</value>
+        </member>
+        <member name="P:Link.EFAM.Core.IFacFilterOperator.AllowSaveAs">
+            <summary>
+            파일을 로컬 디스크에 저장할 수 있는지 여부를 나타내는 값을 가져오거나 설정한다.
+            </summary>
+            <value>파일을 로컬 디스크에 저장할 수 있으면 <b>true</b>, 그렇지 않으면 <b>false</b></value>
+        </member>
+        <member name="P:Link.EFAM.Core.IFacFilterOperator.UseRecycleBin">
+            <summary>
+            휴지통 기능을 사용할지 여부를 나타내는 값을 가져오거나 설정한다.
+            </summary>
+            <value>휴지통 기능을 사용하려면 <b>true</b>, 그렇지 않으면 <b>false</b></value>
+        </member>
+        <member name="P:Link.EFAM.Core.IFacFilterOperator.RecycleBinDirectoryName">
+            <summary>
+            휴지통 디렉토리의 이름을 가져온다.
+            </summary>
+            <value>휴지통 디렉토리의 이름</value>
+        </member>
+        <member name="P:Link.EFAM.Core.IFacFilterOperator.Adapter">
+            <summary>
+            미니필터 드라이버에서 요청하는 작업을 처리하는 어댑터를 가져오거나 설정한다.
+            </summary>
+            <value>미니필터 드라이버에서 요청하는 작업을 처리하는 <see cref="T:Link.EFAM.Core.IFacFilterAdapter"/></value>
+        </member>
+        <member name="T:Link.EFAM.Core.ProcessCreatedEventArgs">
+            <summary>
+            ProcessCreated 이벤트에 대한 데이터를 제공한다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Core.ProcessCreatedEventArgs.#ctor(System.Int32)">
+            <summary>
+            생성된 프로세스에 할당된 프로세스 ID(식별자)를 사용하여 
+            <see cref="T:Link.EFAM.Core.ProcessCreatedEventArgs"/> 클래스의 새 인스턴스를 초기화한다.
+            </summary>
+            <param name="processId">프로세스에 할당된 프로세스 ID</param>
+        </member>
+        <member name="P:Link.EFAM.Core.ProcessCreatedEventArgs.ProcessId">
+            <summary>
+            생성된 프로세스에 할당된 프로세스 ID(식별자)를 가져온다.
+            </summary>
+            <value>생성된 프로세스에 할당된 프로세스 ID</value>
+        </member>
+        <member name="P:Link.EFAM.Core.ProcessCreatedEventArgs.Kind">
+            <summary>
+            프로세스의 종류를 가져오거나 설정한다.
+            </summary>
+            <value>프로세스의 종류를 나타내는 <see cref="T:Link.EFAM.Common.ProcessKind"/> 값 중 하나.</value>
+        </member>
+        <member name="T:Link.EFAM.NativeMethods">
+            <summary>
+            Win32 API의 함수를 호출하기 위한 플랫폼 호출 메소드를 포함하고 있다.
+            </summary>
+        </member>
+        <member name="T:Link.EFAM.Core.SharedDrive">
+            <summary>
+            공유 드라이브를 나타낸다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Core.SharedDrive.#ctor(System.String)">
+            <summary>
+            <see cref="T:Link.EFAM.Core.SharedDrive"/> 클래스의 새 인스턴스를 초기화하고,
+            공유 드라이브로 연결할 네트워크 공유의 UNC 이름을 지정한다.
+            </summary>
+            <param name="shareName">공유 드라이브로 연결할 네트워크 공유의 UNC 이름</param>
+            
+            <exception cref="T:System.ArgumentNullException"><paramref name="shareName"/>이 <b>null</b>인 경우</exception>
+            <exception cref="T:System.ArgumentException">
+            <paramref name="shareName"/>이 길이가 0인 문자열이거나, 공백만 포함하는 경우
+            </exception>
+        </member>
+        <member name="M:Link.EFAM.Core.SharedDrive.Connect">
+            <summary>
+            공유 드라이브를 연결한다.
+            </summary>
+            <returns>
+            공유 드라이브가 연결된 경우 <b>true</b>, 이미 공유 드라이브가 연결되어 있는 경우 <b>false</b>
+            </returns>
+            <remarks>
+            <see cref="P:Link.EFAM.Core.SharedDrive.UserName"/> 속성이 <b>null</b>이면 
+            기본 사용자 이름(프로세스에 대한 사용자 컨텍스트에서 제공)을 사용한다.<br/>
+            <see cref="P:Link.EFAM.Core.SharedDrive.Password"/> 속성이 <b>null</b>이면 
+            <see cref="P:Link.EFAM.Core.SharedDrive.UserName"/> 속성에 지정한 사용자와 관련된 현재 기본 비밀번호를 사용한다.<br/>
+            <br/>
+            <see cref="P:Link.EFAM.Core.SharedDrive.DriveName"/> 속성이 빈 문자열("")인 경우 드라이브 이름이 할당되지 않은 공유 드라이브를 연결한다.<br/>
+            <br/>
+            시스템이 자동으로 드라이브 문자를 할당할 때 드라이브 문자는 Z:부터 C:까지 역순으로 할당된다.<br/>
+            </remarks>
+            
+            <exception cref="T:System.InvalidOperationException">
+            <see cref="P:Link.EFAM.Core.SharedDrive.ShareName"/> 속성에 지정된 네트워크 공유를 찾을 수 없는 경우<br/>
+            - 또는 -<br/>
+            <see cref="P:Link.EFAM.Core.SharedDrive.DriveName"/> 속성에 지정한 드라이브 이름이 유효하지 않은 경우<br/>
+            - 또는 -<br/>
+            <see cref="P:Link.EFAM.Core.SharedDrive.DriveName"/> 속성에 지정한 드라이브 이름이 이미 사용 중이거나 
+            다른 네트워크 공유에 대한 연결에 저장된 경우<br/>
+            - 또는 -<br/>
+            알 수 없는 사용자이거나 틀린 비밀번호이기 때문에 로그인에 실패한 경우<br/>
+            - 또는 -<br/>
+            잘못된 네트워크 경로이거나 네트워크 공급자를 사용할 수 없는 경우<br/>
+            - 또는 -<br/>
+            네트워크를 사용할 수 없는 경우
+            </exception>
+            <exception cref="T:System.UnauthorizedAccessException">네트워크 공유에 대한 액세스 권한이 없는 경우</exception>
+            <exception cref="T:System.ComponentModel.Win32Exception">시스템 API에 액세스하는 동안 오류가 발생한 경우</exception>
+        </member>
+        <member name="M:Link.EFAM.Core.SharedDrive.Connect(System.String,System.String)">
+            <summary>
+            지정한 사용자 이름과 비밀번호를 사용하여 공유 드라이브를 연결한다.
+            </summary>
+            <param name="userName">공유 드라이브를 연결하는데 사용할 사용자 이름</param>
+            <param name="password">공유 드라이브를 연결하는데 사용할 비밀번호</param>
+            <returns>
+            공유 드라이브가 연결된 경우 <b>true</b>, 이미 공유 드라이브가 연결되어 있는 경우 <b>false</b>
+            </returns>
+            <remarks>
+            <paramref name="userName"/>이 <b>null</b>이면 
+            기본 사용자 이름(프로세스에 대한 사용자 컨텍스트에서 제공)을 사용한다.<br/>
+            <paramref name="password"/>가 <b>null</b>이면 
+            <paramref name="userName"/>에 지정한 사용자와 관련된 현재 기본 비밀번호를 사용한다.<br/>
+            <br/>
+            <see cref="P:Link.EFAM.Core.SharedDrive.DriveName"/> 속성이 빈 문자열("")인 경우 드라이브 이름이 할당되지 않은 공유 드라이브를 연결한다.<br/>
+            <br/>
+            시스템이 자동으로 드라이브 문자를 할당할 때 드라이브 문자는 Z:부터 C:까지 역순으로 할당된다.<br/>
+            </remarks>
+            
+            <exception cref="T:System.InvalidOperationException">
+            <see cref="P:Link.EFAM.Core.SharedDrive.ShareName"/> 속성에 지정된 네트워크 공유를 찾을 수 없는 경우<br/>
+            - 또는 -<br/>
+            <see cref="P:Link.EFAM.Core.SharedDrive.DriveName"/> 속성에 지정한 드라이브 이름이 유효하지 않은 경우<br/>
+            - 또는 -<br/>
+            <see cref="P:Link.EFAM.Core.SharedDrive.DriveName"/> 속성에 지정한 드라이브 이름이 이미 사용 중이거나 
+            다른 네트워크 공유에 대한 연결에 저장된 경우<br/>
+            - 또는 -<br/>
+            알 수 없는 사용자이거나 틀린 비밀번호이기 때문에 로그인에 실패한 경우<br/>
+            - 또는 -<br/>
+            잘못된 네트워크 경로이거나 네트워크 공급자를 사용할 수 없는 경우<br/>
+            - 또는 -<br/>
+            네트워크를 사용할 수 없는 경우
+            </exception>
+            <exception cref="T:System.UnauthorizedAccessException">네트워크 공유에 대한 액세스 권한이 없는 경우</exception>
+            <exception cref="T:System.ComponentModel.Win32Exception">시스템 API에 액세스하는 동안 오류가 발생한 경우</exception>
+        </member>
+        <member name="M:Link.EFAM.Core.SharedDrive.ToString">
+            <summary>
+            현재 <see cref="T:Link.EFAM.Core.SharedDrive"/>의 문자열 표현을 반환한다.
+            </summary>
+            <returns>현재 <see cref="T:Link.EFAM.Core.SharedDrive"/>의 문자열 표현</returns>
+        </member>
+        <member name="P:Link.EFAM.Core.SharedDrive.ShareName">
+            <summary>
+            공유 드라이브로 연결한 네트워크 공유의 UNC 이름을 가져온다.
+            </summary>
+            <value>공유 드라이브로 연결한 네트워크 공유의 UNC 이름</value>
+        </member>
+        <member name="P:Link.EFAM.Core.SharedDrive.DriveName">
+            <summary>
+            공유 드라이브에 사용할 드라이브 이름을 가져오거나 설정한다.
+            </summary>
+            <value>공유 드라이브에 사용할 드라이브 이름. 기본값은 빈 문자열("")</value>
+            <remarks>
+            이 속성은 C: 또는 E:와 같이 공유 드라이브에 할당할 이름이다.
+            별표(*)를 사용하여 다음 사용 가능한 드라이브 이름을 지정할 수 있다.<br/>
+            <br/>
+            공유 드라이브를 연결한 후에 <see cref="P:Link.EFAM.Core.SharedDrive.DriveName"/> 값을 변경하면 변경 내용이 적용되지 않는다.
+            </remarks>
+        </member>
+        <member name="P:Link.EFAM.Core.SharedDrive.VolumeLabel">
+            <summary>
+            공유 드라이브의 볼륨 레이블을 가져오거나 설정한다.
+            </summary>
+            <value>공유 드라이브의 볼륨 레이블. 기본값은 빈 문자열("")</value>
+            
+            <exception cref="T:System.Security.SecurityException">
+            사용자에게 레지스트리 키를 만들거나 수정하는 데 필요한 권한이 없는 경우
+            </exception>
+            <exception cref="T:System.UnauthorizedAccessException"><see cref="T:Microsoft.Win32.RegistryKey"/>에 쓸 수 없는 경우</exception>
+        </member>
+        <member name="P:Link.EFAM.Core.SharedDrive.UserName">
+            <summary>
+            공유 드라이브를 연결하는데 사용할 사용자 이름을 가져오거나 설정한다.
+            </summary>
+            <value>공유 드라이브를 연결하는데 사용할 사용자 이름</value>
+            <remarks>
+            공유 드라이브를 연결한 후에 <see cref="P:Link.EFAM.Core.SharedDrive.UserName"/> 값을 변경하면 변경 내용이 적용되지 않는다.
+            </remarks>
+        </member>
+        <member name="P:Link.EFAM.Core.SharedDrive.Password">
+            <summary>
+            공유 드라이브를 연결하는데 사용할 사용자 비밀번호를 가져오거나 설정한다.
+            </summary>
+            <value>드라이브를 연결하는데 사용할 비밀번호</value>
+            <remarks>
+            공유 드라이브를 연결한 후에 <see cref="P:Link.EFAM.Core.SharedDrive.Password"/> 값을 변경하면 변경 내용이 적용되지 않는다.
+            </remarks>
+        </member>
+        <member name="P:Link.EFAM.Core.SharedDrive.IsSecure">
+            <summary>
+            공유 드라이브가 보안 드라이브인지 여부를 나타내는 값을 가져오거나 설정한다.
+            </summary>
+            <value>공유 드라이브가 보안 드라이브이면 <b>true</b>, 그렇지 않으면 <b>false</b></value>
+        </member>
+        <member name="P:Link.EFAM.Core.SharedDrive.Usable">
+            <summary>
+            공유 드라이브를 사용할 수 있는지 여부를 나타내는 값을 가져오거나 설정한다.
+            </summary>
+            <value>공유 드라이브를 사용할 수 있으면 <b>true</b>, 그렇지 않으면 <b>false</b></value>
+        </member>
+        <member name="P:Link.EFAM.Core.SharedDrive.IsFixedDriveName">
+            <summary>
+            공유 드라이브에 사용할 드라이브 이름이 고정되어 있는지 여부를 나타내는 값을 가져오거나 설정한다.
+            </summary>
+            <value>
+            공유 드라이브에 사용할 드라이브 이름이 고정되어 있으면 <b>true</b>, 그렇지 않으면 <b>false</b>
+            </value>
+        </member>
+        <member name="T:Link.EFAM.Core.SharedDriveHelper">
+            <summary>
+            공유 드라이브들을 연결하거나 연결을 끊는 메소드를 제공한다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Core.SharedDriveHelper.CancelExistingNetworkConnections(System.Collections.Generic.IEnumerable{Link.EFAM.Core.SharedDrive})">
+            <summary>
+            지정한 공유 드라이브들과 관련된 네트워크 공유에 대한 연결들을 끊는다.
+            </summary>
+            <param name="drives">공유 드라이브의 컬렉션</param>
+            
+            <exception cref="T:System.ArgumentNullException"><paramref name="drives"/>가 <b>null</b>인 경우</exception>
+        </member>
+        <member name="M:Link.EFAM.Core.SharedDriveHelper.ConnectSharedDrives(System.Collections.Generic.IEnumerable{Link.EFAM.Core.SharedDrive})">
+            <summary>
+            지정한 공유 드라이브들을 연결한다.
+            </summary>
+            <param name="drives">연결할 공유 드라이브의 컬렉션</param>
+            <returns>공유 드라이브들을 성공적으로 연결한 경우 <b>true</b>, 그렇지 않으면 <b>false</b></returns>
+            
+            <exception cref="T:System.ArgumentNullException"><paramref name="drives"/>가 <b>null</b>인 경우</exception>
+        </member>
+        <member name="M:Link.EFAM.Core.SharedDriveHelper.DisconnectSharedDrives(System.Collections.Generic.IEnumerable{Link.EFAM.Core.SharedDrive})">
+            <summary>
+            지정한 공유 드라이브들의 연결을 끊는다.
+            </summary>
+            <param name="drives">연결을 끊을 공유 드라이브의 컬렉션</param>
+            <returns>공유 드라이브들의 연결을 성공적으로 끊은 경우 <b>true</b>, 그렇지 않으면 <b>false</b></returns>
+            
+            <exception cref="T:System.ArgumentNullException"><paramref name="drives"/>가 <b>null</b>인 경우</exception>
+        </member>
+        <member name="M:Link.EFAM.Core.SharedDriveHelper.IsExceeded(System.Collections.Generic.IEnumerable{Link.EFAM.Core.SharedDrive})">
+            <summary>
+            연결할 수 있는 공유 드라이브의 개수가 초과되었는지 여부를 확인한다.
+            </summary>
+            <param name="drives">공유 드라이브의 컬렉션</param>
+            <returns>
+            연결할 수 있는 공유 드라이브의 개수가 초과되었으면 <b>true</b>, 그렇지 않으면 <b>false</b>
+            </returns>
+            
+            <exception cref="T:System.ArgumentNullException"><paramref name="drives"/>가 <b>null</b>인 경우</exception>
+        </member>
+        <member name="T:Link.EFAM.Properties.Resources">
+            <summary>
+              지역화된 문자열 등을 찾기 위한 강력한 형식의 리소스 클래스입니다.
+            </summary>
+        </member>
+        <member name="P:Link.EFAM.Properties.Resources.ResourceManager">
+            <summary>
+              이 클래스에서 사용하는 캐시된 ResourceManager 인스턴스를 반환합니다.
+            </summary>
+        </member>
+        <member name="P:Link.EFAM.Properties.Resources.Culture">
+            <summary>
+              이 강력한 형식의 리소스 클래스를 사용하여 모든 리소스 조회에 대한 현재 스레드의 CurrentUICulture
+              속성을 재정의합니다.
+            </summary>
+        </member>
+        <member name="P:Link.EFAM.Properties.Resources.Argument_EmptyString">
+            <summary>
+              값은 빈 문자열(&quot;&quot;)일 수 없습니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:Link.EFAM.Properties.Resources.Argument_InvalidEnumValue">
+            <summary>
+              값 &apos;{0}&apos;은(는) {1} 형식에 사용할 수 없습니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:Link.EFAM.Properties.Resources.Argument_NamePatternEmpty">
+            <summary>
+              이름 패턴은 빈 문자열(&quot;&quot;)이거나 모두 공백일 수 없습니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:Link.EFAM.Properties.Resources.Argument_NullOrEmptyString">
+            <summary>
+              값은 null이거나 빈 문자열(&quot;&quot;)일 수 없습니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:Link.EFAM.Properties.Resources.Argument_UNCPathEmpty">
+            <summary>
+              빈 UNC 경로 이름은 사용할 수 없습니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:Link.EFAM.Properties.Resources.Argument_UNCPathIllegal">
+            <summary>
+              UNC 경로의 형식이 잘못되었습니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:Link.EFAM.Properties.Resources.ArgumentOutOfRange_Enum">
+            <summary>
+              Enum 값이 올바른 범위를 벗어났습니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:Link.EFAM.Properties.Resources.UnknownError_Number">
+            <summary>
+              알 수 없는 오류입니다. 오류 번호: 0x{0:X8}과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="T:Link.EFAM.Security.AccessControlPolicy">
+            <summary>
+            <see cref="T:Link.EFAM.Security.AccessManager"/>와 연결된 액세스 제어 정책을 나타낸다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Security.AccessControlPolicy.#ctor">
+            <summary>
+            <see cref="T:Link.EFAM.Security.AccessControlPolicy"/> 클래스의 새 인스턴스를 초기화한다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Security.AccessControlPolicy.SetAccessControl(System.String,Link.EFAM.Security.AccessControl.DirectorySecurity)">
+            <summary>
+            ACL(액세스 제어 목록) 항목을 지정한 디렉토리에 적용한다.
+            </summary>
+            <param name="path">ACL(액세스 제어 목록) 항목을 추가하거나 제거할 디렉토리의 경로</param>
+            <param name="security">
+            디렉토리에 적용할 ACL(액세스 제어 목록) 항목을 설명하는 <see cref="T:Link.EFAM.Security.AccessControl.DirectorySecurity"/> 개체
+            </param>
+            <remarks>
+            <paramref name="security"/>가 <b>null</b>이면 디렉토리에 적용된 ACL(액세스 제어 목록) 항목을 제거한다.
+            </remarks>
+            
+            <exception cref="T:System.ArgumentNullException"><paramref name="path"/>가 <b>null</b>인 경우</exception>
+            <exception cref="T:System.ArgumentException">
+            <paramref name="path"/>가 빈 문자열("")인 경우<br/>
+            - 또는 -<br/>
+            <paramref name="path"/>에 공백만 포함된 경우<br/>
+            - 또는 -<br/>
+            <paramref name="path"/>에 하나 이상의 잘못된 문자가 포함된 경우
+            </exception>
+        </member>
+        <member name="M:Link.EFAM.Security.AccessControlPolicy.GetAccessControl(System.String)">
+            <summary>
+            지정한 디렉토리의 ACL(액세스 제어 목록) 항목을 가져온다.
+            </summary>
+            <param name="path">ACL(액세스 제어 목록) 항목을 가져올 디렉토리의 경로</param>
+            <returns>
+            디렉토리의 액세스 제어 규칙을 캡슐화하는 <see cref="T:Link.EFAM.Security.AccessControl.DirectorySecurity"/> 개체.<br/>
+            디렉토리에 적용된 ACL(액세스 제어 목록) 항목이 없으면 <b>null</b>이 반환된다.
+            </returns>
+            
+            <exception cref="T:System.ArgumentNullException"><paramref name="path"/>가 <b>null</b>인 경우</exception>
+            <exception cref="T:System.ArgumentException">
+            <paramref name="path"/>가 빈 문자열("")인 경우<br/>
+            - 또는 -<br/>
+            <paramref name="path"/>에 공백만 포함된 경우<br/>
+            - 또는 -<br/>
+            <paramref name="path"/>에 하나 이상의 잘못된 문자가 포함된 경우
+            </exception>
+        </member>
+        <member name="P:Link.EFAM.Security.AccessControlPolicy.Directories">
+            <summary>
+            ACL(액세스 제어 목록) 항목이 적용된 디렉토리들을 가져온다.
+            </summary>
+            <value>ACL(액세스 제어 목록) 항목이 적용된 디렉토리의 경로 배열</value>
+        </member>
+        <member name="T:Link.EFAM.Security.AccessControl.AuthorizationRuleAction">
+            <summary>
+            파일이나 디렉토리에 액세스할 때 적용할 권한 부여 형식을 지정한다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Security.AccessControl.AuthorizationRuleAction.Allow">
+            <summary>
+            파일이나 디렉토리에 대한 액세스를 허용한다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Security.AccessControl.AuthorizationRuleAction.Deny">
+            <summary>
+            파일이나 디렉토리에 대한 액세스를 거부한다.
+            </summary>
+        </member>
+        <member name="T:Link.EFAM.Security.AccessControl.AuthorizationRule">
+            <summary>
+            파일이나 디렉토리에 대한 권한 부여 규칙을 나타낸다.<br/>
+            응용 프로그램에 대해 허용 또는 거부된 액세스를 나타낸다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Security.AccessControl.AuthorizationRule.#ctor(Link.EFAM.Security.Principal.ApplicationIdentifier,Link.EFAM.Security.AccessControl.AuthorizationRuleAction)">
+            <summary>
+            지정한 값을 사용하여 <see cref="T:Link.EFAM.Security.AccessControl.AuthorizationRule"/> 클래스의 새 인스턴스를 초기화한다.
+            </summary>
+            <param name="identity">규칙을 적용할 응용 프로그램</param>
+            <param name="action">액세스의 허용 여부를 지정하는 <see cref="T:Link.EFAM.Security.AccessControl.AuthorizationRuleAction"/> 값 중 하나</param>
+            
+            <exception cref="T:System.ArgumentNullException"><paramref name="identity"/>가 <b>null</b>인 경우</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="action"/>이 잘못된 값을 지정하는 경우</exception>
+        </member>
+        <member name="P:Link.EFAM.Security.AccessControl.AuthorizationRule.Identity">
+            <summary>
+            이 규칙을 적용할 <see cref="T:Link.EFAM.Security.Principal.ApplicationIdentifier"/>를 가져온다.
+            </summary>
+            <value>이 규칙을 적용할 <see cref="T:Link.EFAM.Security.Principal.ApplicationIdentifier"/></value>
+        </member>
+        <member name="P:Link.EFAM.Security.AccessControl.AuthorizationRule.Action">
+            <summary>
+            이 규칙과 관련된 권한 부여 형식을 가져온다.
+            </summary>
+            <value>이 규칙과 관련된 <see cref="T:Link.EFAM.Security.AccessControl.AuthorizationRuleAction"/> 값</value>
+        </member>
+        <member name="T:Link.EFAM.Security.AccessControl.DirectorySecurity">
+            <summary>
+            디렉토리에 대한 액세스 제어 및 파일 명명을 나타낸다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Security.AccessControl.DirectorySecurity.#ctor">
+            <summary>
+            <see cref="T:Link.EFAM.Security.AccessControl.DirectorySecurity"/> 클래스의 새 인스턴스를 초기화한다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Security.AccessControl.DirectorySecurity.GetAccessRules">
+            <summary>
+            액세스 규칙 컬렉션을 가져온다.
+            </summary>
+            <returns>액세스 규칙 컬렉션</returns>
+        </member>
+        <member name="M:Link.EFAM.Security.AccessControl.DirectorySecurity.SetAccessRule(Link.EFAM.Security.AccessControl.FileSystemAccessRule)">
+            <summary>
+            지정한 ACL(액세스 제어 목록) 권한을 현재 디렉토리에 설정한다.
+            </summary>
+            <param name="rule">
+            디렉토리에 설정할 ACL(액세스 제어 목록) 권한을 나타내는 <see cref="T:Link.EFAM.Security.AccessControl.FileSystemAccessRule"/> 개체
+            </param>
+            <remarks>
+            <see cref="M:Link.EFAM.Security.AccessControl.DirectorySecurity.SetAccessRule(Link.EFAM.Security.AccessControl.FileSystemAccessRule)"/> 메소드는 지정한 ACL 규칙을 추가하거나, 
+            <paramref name="rule"/>의 <see cref="P:Link.EFAM.Security.AccessControl.FileSystemAccessRule.Identity"/>와 일치하는 ACL 규칙을 덮어쓴다.
+            </remarks>
+            
+            <exception cref="T:System.ArgumentNullException"><paramref name="rule"/>이 <b>null</b>인 경우</exception>
+        </member>
+        <member name="M:Link.EFAM.Security.AccessControl.DirectorySecurity.RemoveAccessRule(Link.EFAM.Security.AccessControl.FileSystemAccessRule)">
+            <summary>
+            현재 디렉토리에서 일치하는 ACL(액세스 제어 목록) 권한을 제거한다.
+            </summary>
+            <param name="rule">
+            디렉토리에서 제거할 ACL(액세스 제어 목록) 권한을 나타내는 <see cref="T:Link.EFAM.Security.AccessControl.FileSystemAccessRule"/> 개체
+            </param>
+            <remarks>
+            <see cref="M:Link.EFAM.Security.AccessControl.DirectorySecurity.RemoveAccessRule(Link.EFAM.Security.AccessControl.FileSystemAccessRule)"/> 메소드는 현재 <see cref="T:Link.EFAM.Security.AccessControl.DirectorySecurity"/> 개체에서 
+            <see cref="P:Link.EFAM.Security.AccessControl.FileSystemAccessRule.Identity"/>가 일치하는 ACL 규칙을 제거한다.
+            </remarks>
+            
+            <exception cref="T:System.ArgumentNullException"><paramref name="rule"/>이 <b>null</b>인 경우</exception>
+        </member>
+        <member name="M:Link.EFAM.Security.AccessControl.DirectorySecurity.RemoveAccessRuleAll">
+            <summary>
+            현재 디렉토리에서 모든 ACL(액세스 제어 목록) 권한을 제거한다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Security.AccessControl.DirectorySecurity.SetNamingRule(Link.EFAM.Security.AccessControl.NamingRule)">
+            <summary>
+            지정한 파일 명명 규칙을 현재 디렉토리에 설정한다.
+            </summary>
+            <param name="rule">디렉토리에 설정할 파일 명명 규칙을 나타내는 <see cref="T:Link.EFAM.Security.AccessControl.NamingRule"/> 개체</param>
+            <remarks>
+            <see cref="M:Link.EFAM.Security.AccessControl.DirectorySecurity.SetNamingRule(Link.EFAM.Security.AccessControl.NamingRule)"/> 메소드는 지정한 파일 명명 규칙을 추가하거나, 
+            <paramref name="rule"/>의 <see cref="P:Link.EFAM.Security.AccessControl.NamingRule.Pattern"/>과 일치하는 파일 명명 규칙을 덮어쓴다.
+            </remarks>
+            
+            <exception cref="T:System.ArgumentNullException"><paramref name="rule"/>이 <b>null</b>인 경우</exception>
+        </member>
+        <member name="M:Link.EFAM.Security.AccessControl.DirectorySecurity.GetNamingRules">
+            <summary>
+            파일 명명 규칙 컬렉션을 가져온다.
+            </summary>
+            <returns>파일 명명 규칙 컬렉션</returns>
+        </member>
+        <member name="M:Link.EFAM.Security.AccessControl.DirectorySecurity.RemoveNamingRule(Link.EFAM.Security.AccessControl.NamingRule)">
+            <summary>
+            현재 디렉토리에서 일치하는 파일 명명 규칙을 제거한다.
+            </summary>
+            <param name="rule">디렉토리에서 제거할 파일 명명 규칙을 나타내는 <see cref="T:Link.EFAM.Security.AccessControl.NamingRule"/> 개체</param>
+            <remarks>
+            <see cref="M:Link.EFAM.Security.AccessControl.DirectorySecurity.RemoveNamingRule(Link.EFAM.Security.AccessControl.NamingRule)"/> 메소드는 현재 <see cref="T:Link.EFAM.Security.AccessControl.DirectorySecurity"/> 개체에서 
+            <see cref="P:Link.EFAM.Security.AccessControl.NamingRule.Pattern"/>이 일치하는 파일 명명 규칙을 제거한다.
+            </remarks>
+            
+            <exception cref="T:System.ArgumentNullException"><paramref name="rule"/>이 <b>null</b>인 경우</exception>
+        </member>
+        <member name="M:Link.EFAM.Security.AccessControl.DirectorySecurity.RemoveNamingRuleAll">
+            <summary>
+            현재 디렉토리에서 모든 파일 명명 규칙을 제거한다.
+            </summary>
+        </member>
+        <member name="T:Link.EFAM.Security.AccessControl.FileSystemRights">
+            <summary>
+            파일이나 디렉토리에 적용할 수 있는 액세스 권한을 지정한다.<br/>
+            이 열거형에는 멤버 값을 비트로 조합할 수 있는 <see cref="T:System.FlagsAttribute"/> 특성이 있다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Security.AccessControl.FileSystemRights.Read">
+            <summary>
+            파일을 읽기 전용으로 열 수 있는 권한이다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Security.AccessControl.FileSystemRights.Write">
+            <summary>
+            파일을 만들고, 파일에서 데이터를 추가하고 제거할 수 있는 권한이다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Security.AccessControl.FileSystemRights.CopyFiles">
+            <summary>
+            파일을 복사할 수 있는 권한이다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Security.AccessControl.FileSystemRights.ListDirectory">
+            <summary>
+            디렉토리의 내용을 읽을 수 있는 권한이다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Security.AccessControl.FileSystemRights.CreateDirectories">
+            <summary>
+            디렉토리를 만들 수 있는 권한이다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Security.AccessControl.FileSystemRights.Delete">
+            <summary>
+            파일이나 디렉토리를 삭제할 수 있는 권한이다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Security.AccessControl.FileSystemRights.Rename">
+            <summary>
+            파일이나 디렉토리의 이름을 바꿀 수 있는 권한이다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Security.AccessControl.FileSystemRights.Move">
+            <summary>
+            파일이나 디렉토리를 새 위치로 이동할 수 있는 권한이다.<br/>
+            이동하는 새 위치가 같은 네트워크 공유(또는 볼륨)인 경우에만 지정할 수 있다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Security.AccessControl.FileSystemRights.FullControl">
+            <summary>
+            파일이나 디렉토리에 대해 모든 작업을 할 수 있는 권한이다.<br/>
+            이 값은 이 열거형의 모든 권한을 조합한 것이다.
+            </summary>
+        </member>
+        <member name="T:Link.EFAM.Security.AccessControl.FileSystemAccessRule">
+            <summary>
+            파일이나 디렉토리에 대한 액세스 규칙을 나타낸다.<br/>
+            사용자 또는 그룹에 대해 허용된 액세스 권한 집합을 나타낸다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Security.AccessControl.FileSystemAccessRule.#ctor(Link.EFAM.Security.Principal.Account,Link.EFAM.Security.AccessControl.FileSystemRights)">
+            <summary>
+            지정한 값을 사용하여 <see cref="T:Link.EFAM.Security.AccessControl.FileSystemAccessRule"/> 클래스의 새 인스턴스를 초기화한다.
+            </summary>
+            <param name="identity">규칙을 적용할 사용자나 그룹</param>
+            <param name="rights">허용 권한을 지정하는 <see cref="T:Link.EFAM.Security.AccessControl.FileSystemRights"/> 값의 비트 조합</param>
+            
+            <exception cref="T:System.ArgumentNullException"><paramref name="identity"/>가 <b>null</b>인 경우</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="rights"/>가 잘못된 값을 지정하는 경우</exception>
+        </member>
+        <member name="M:Link.EFAM.Security.AccessControl.FileSystemAccessRule.#ctor(Link.EFAM.Security.Principal.Account,Link.EFAM.Security.AccessControl.FileSystemRights,System.Boolean,System.Boolean)">
+            <summary>
+            지정한 값을 사용하여 <see cref="T:Link.EFAM.Security.AccessControl.FileSystemAccessRule"/> 클래스의 새 인스턴스를 초기화한다.
+            </summary>
+            <param name="identity">규칙을 적용할 사용자나 그룹</param>
+            <param name="rights">허용 권한을 지정하는 <see cref="T:Link.EFAM.Security.AccessControl.FileSystemRights"/> 값의 비트 조합</param>
+            <param name="noInherit">액세스 규칙을 부모 컨테이너 개체에서 상속하지 않으면 <b>true</b></param>
+            <param name="noPropagate">액세스 규칙이 자식 컨테이너 개체로 전파되지 않으면 <b>true</b></param>
+            
+            <exception cref="T:System.ArgumentNullException"><paramref name="identity"/>가 <b>null</b>인 경우</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="rights"/>가 잘못된 값을 지정하는 경우</exception>
+        </member>
+        <member name="P:Link.EFAM.Security.AccessControl.FileSystemAccessRule.Identity">
+            <summary>
+            이 규칙을 적용할 <see cref="T:Link.EFAM.Security.Principal.Account"/>를 가져온다.
+            </summary>
+            <value>이 규칙을 적용할 <see cref="T:Link.EFAM.Security.Principal.Account"/></value>
+        </member>
+        <member name="P:Link.EFAM.Security.AccessControl.FileSystemAccessRule.AccessMask">
+            <summary>
+            이 규칙의 액세스 마스크를 가져온다.
+            </summary>
+            <value>이 규칙의 액세스 마스크</value>
+        </member>
+        <member name="P:Link.EFAM.Security.AccessControl.FileSystemAccessRule.Rights">
+            <summary>
+            이 규칙에 의해 허용된 액세스 권한을 가져온다.
+            </summary>
+            <value>이 규칙에 의해 허용된 액세스 권한을 나타내는 <see cref="T:Link.EFAM.Security.AccessControl.FileSystemRights"/> 값의 비트 조합</value>
+        </member>
+        <member name="P:Link.EFAM.Security.AccessControl.FileSystemAccessRule.NoInherit">
+            <summary>
+            액세스 규칙을 부모 컨테이너 개체에서 상속할 것인지 여부를 나타내는 값을 가져온다.
+            </summary>
+            <value>액세스 규칙을 부모 컨테이너 개체에서 상속하지 않으면 <b>true</b></value>
+        </member>
+        <member name="P:Link.EFAM.Security.AccessControl.FileSystemAccessRule.NoPropagate">
+            <summary>
+            액세스 규칙이 자식 컨테이너 개체로 전파되는지 여부를 나타내는 값을 가져온다.
+            </summary>
+            <value>액세스 규칙이 자식 컨테이너 개체로 전파되지 않으면 <b>true</b></value>
+        </member>
+        <member name="T:Link.EFAM.Security.AccessControl.NamingRule">
+            <summary>
+            파일이나 디렉토리에 대한 명명 규칙을 나타낸다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Security.AccessControl.NamingRule.#ctor(System.String)">
+            <summary>
+            지정한 이름 패턴을 사용하여 <see cref="T:Link.EFAM.Security.AccessControl.NamingRule"/> 클래스의 새 인스턴스를 초기화한다.
+            </summary>
+            <param name="pattern">이름 패턴을 나타내는 정규식 표현</param>
+            
+            <exception cref="T:System.ArgumentNullException"><paramref name="pattern"/>이 <b>null</b>인 경우</exception>
+            <paramref name="pattern"/>이 빈 문자열("")이거나 모두 공백 문자로 이루어진 경우<br/>
+            - 또는 -<br/>
+            정규식 구문 분석 오류가 발생한 경우
+        </member>
+        <member name="M:Link.EFAM.Security.AccessControl.NamingRule.IsMatch(System.String)">
+            <summary>
+            지정한 이름이 이름 패턴과 일치하는지 여부를 확인한다.
+            </summary>
+            <param name="name">일치하는지 확인할 파일 이름이나 디렉토리 이름</param>
+            <returns>지정한 이름이 이름 패턴과 일치하면 <b>true</b>, 그렇지 않으면 <b>false</b></returns>
+            
+            <exception cref="T:System.ArgumentNullException"><paramref name="name"/>이 <b>null</b>인 경우</exception>
+        </member>
+        <member name="P:Link.EFAM.Security.AccessControl.NamingRule.Pattern">
+            <summary>
+            이 규칙의 이름 패턴을 가져온다.
+            </summary>
+            <value>이 규칙의 이름 패턴을 나타내는 정규식 표현</value>
+        </member>
+        <member name="T:Link.EFAM.Security.AccessControl.RuleCollection">
+            <summary>
+            <see cref="T:Link.EFAM.Security.AccessControl.FileSystemAccessRule"/> 개체의 컬렉션을 나타낸다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Security.AccessControl.RuleCollection.#ctor">
+            <summary>
+            <see cref="T:Link.EFAM.Security.AccessControl.RuleCollection"/> 클래스의 새 인스턴스를 초기화한다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Security.AccessControl.RuleCollection.#ctor(System.Collections.IEnumerable)">
+            <summary>
+            <see cref="T:Link.EFAM.Security.AccessControl.RuleCollection"/> 클래스의 새 인스턴스를 지정한 컬렉션의 래퍼로 초기화한다.
+            </summary>
+            <param name="collection">새 컬렉션이 래핑하는 컬렉션</param>
+        </member>
+        <member name="M:Link.EFAM.Security.AccessControl.RuleCollection.AddRule(Link.EFAM.Security.AccessControl.FileSystemAccessRule)">
+            <summary>
+            <see cref="T:Link.EFAM.Security.AccessControl.FileSystemAccessRule"/> 개체를 컬렉션의 끝 부분에 추가한다.
+            </summary>
+            <param name="rule">컬렉션의 끝에 추가할 <see cref="T:Link.EFAM.Security.AccessControl.FileSystemAccessRule"/> 개체</param>
+        </member>
+        <member name="M:Link.EFAM.Security.AccessControl.RuleCollection.CopyTo(Link.EFAM.Security.AccessControl.FileSystemAccessRule[],System.Int32)">
+            <summary>
+            컬렉션의 내용을 배열에 복사한다.
+            </summary>
+            <param name="rules">컬렉션의 내용을 복사할 배열</param>
+            <param name="index"><paramref name="rules"/>에서 복사가 시작되는 인덱스(0부터 시작)</param>
+            
+            <exception cref="T:System.ArgumentNullException"><paramref name="rules"/>가 <b>null</b>인 경우</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="index"/>가 0보다 작은 경우</exception>
+            <exception cref="T:System.ArgumentException">
+            <paramref name="index"/>가 <paramref name="rules"/>의 길이보다 크거나 같은 경우<br/>
+            - 또는 -<br/>
+            컬렉션의 요소 수가 <paramref name="index"/>에서 <paramref name="rules"/> 끝까지 사용 가능한 공간보다 큰 경우 
+            </exception>
+        </member>
+        <member name="P:Link.EFAM.Security.AccessControl.RuleCollection.Item(System.Int32)">
+            <summary>
+            컬렉션의 지정한 인덱스에서 <see cref="T:Link.EFAM.Security.AccessControl.FileSystemAccessRule"/> 개체를 가져온다.
+            </summary>
+            <param name="index">가져올 <see cref="T:Link.EFAM.Security.AccessControl.FileSystemAccessRule"/> 개체의 인덱스(0부터 시작)</param>
+            <returns>지정한 인덱스에 있는 <see cref="T:Link.EFAM.Security.AccessControl.FileSystemAccessRule"/> 개체</returns>
+        </member>
+        <member name="M:Link.EFAM.Security.AccessManager.#ctor">
+            <summary>
+            <see cref="T:Link.EFAM.Security.AccessManager"/> 클래스의 새 인스턴스를 초기화한다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Security.AccessManager.GetManager">
+            <summary>
+            캐시된 <see cref="T:Link.EFAM.Security.AccessManager"/> 인스턴스를 반환한다.
+            </summary>
+            <returns>캐시된 <see cref="T:Link.EFAM.Security.AccessManager"/> 개체</returns>
+        </member>
+        <member name="M:Link.EFAM.Security.AccessManager.IsFixedDirectory(System.String)">
+            <summary>
+            지정한 디렉토리가 고정 디렉토리인지 여부를 확인한다.
+            </summary>
+            <param name="path">확인할 디렉토리의 경로</param>
+            <returns>지정한 디렉토리가 고정 디렉토리이면 <b>true</b>, 그렇지 않으면 <b>false</b></returns>
+        </member>
+        <member name="M:Link.EFAM.Security.AccessManager.ApplyPolicy(Link.EFAM.Security.AccessControlPolicy,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            
+            </summary>
+            <param name="policy"></param>
+            <param name="hostNames"></param>
+        </member>
+        <member name="P:Link.EFAM.Security.AccessManager.Policy">
+            <summary>
+            액세스 제어 정책을 가져온다.
+            </summary>
+            <value><see cref="T:Link.EFAM.Security.AccessControlPolicy"/> 개체</value>
+        </member>
+        <member name="P:Link.EFAM.Security.AccessManager.FixedDirectories">
+            <summary>
+            고정 디렉토리 목록을 가져오거나 설정한다.
+            </summary>
+            <value>고정 디렉토리 목록</value>
+        </member>
+        <member name="M:Link.EFAM.Security.AccessManager.PathHelper.AppendTerminalBackslash(System.String)">
+            <summary>
+            지정한 경로에 백슬래시('\') 문자를 추가한다.
+            </summary>
+            <param name="path">백슬래시 문자를 추가할 경로</param>
+            <returns>백슬래시 문자가 추가된 경로</returns>
+        </member>
+        <member name="T:Link.EFAM.Security.AccessManager.AccountCollection">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Security.AccessManager.AccountCollection.#ctor">
+            <summary>
+            <see cref="T:Link.EFAM.Security.AccessManager.AccountCollection"/> 클래스의 새 인스턴스를 초기화한다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Security.AccessManager.AccountCollection.GetKeyForItem(Link.EFAM.Security.Principal.Account)">
+            <summary>
+            지정한 요소에서 키를 추출한다.
+            </summary>
+            <param name="identity">키를 추출할 요소</param>
+            <returns>지정된 요소의 키</returns>
+        </member>
+        <member name="T:Link.EFAM.Security.AccessManager.AccessRuleCollection">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Security.AccessManager.AccessRuleCollection.#ctor">
+            <summary>
+            <see cref="T:Link.EFAM.Security.AccessManager.AccessRuleCollection"/> 클래스의 새 인스턴스를 초기화한다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Security.AccessManager.AccessRuleCollection.GetKeyForItem(Link.EFAM.Security.AccessControl.FileSystemAccessRule)">
+            <summary>
+            지정한 요소에서 키를 추출한다.
+            </summary>
+            <param name="rule">키를 추출할 요소</param>
+            <returns>지정된 요소의 키</returns>
+        </member>
+        <member name="T:Link.EFAM.Security.FileIOPermissionAccess">
+            <summary>
+            파일이나 폴더에 대한 사용 권한을 지정한다.<br/>
+            이 열거형에는 멤버 값을 비트로 조합할 수 있는 <see cref="T:System.FlagsAttribute"/> 특성이 있다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Security.FileIOPermissionAccess.NoAccess">
+            <summary>
+            파일이나 폴더에 대한 권한이 없다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Security.FileIOPermissionAccess.Read">
+            <summary>
+            파일에 대한 데이터 읽기 권한이다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Security.FileIOPermissionAccess.Write">
+            <summary>
+            파일에 대한 만들기/데이터 쓰기 권한이다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Security.FileIOPermissionAccess.CopyFiles">
+            <summary>
+            파일에 대한 복사 권한이다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Security.FileIOPermissionAccess.ListDirectory">
+            <summary>
+            폴더에 대한 내용 보기 권한이다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Security.FileIOPermissionAccess.CreateDirectories">
+            <summary>
+            폴더에 대한 만들기 권한이다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Security.FileIOPermissionAccess.Delete">
+            <summary>
+            파일이나 폴더에 대한 삭제 권한이다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Security.FileIOPermissionAccess.Rename">
+            <summary>
+            파일이나 폴더에 대한 이름 바꾸기 권한이다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Security.FileIOPermissionAccess.Move">
+            <summary>
+            파일이나 폴더에 대한 이동 권한이다.<br/>
+            이동하는 새 위치가 같은 네트워크 공유(또는 볼륨)인 경우에만 지정할 수 있다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Security.FileIOPermissionAccess.AllAccess">
+            <summary>
+            파일이나 폴더에 대한 모든 권한이 있다.
+            </summary>
+        </member>
+        <member name="T:Link.EFAM.Security.Principal.Account">
+            <summary>
+            사용자 또는 그룹 계정을 나타낸다.
+            </summary>
+        </member>
+        <member name="T:Link.EFAM.Security.Principal.IdentityReference">
+            <summary>
+            ID를 나타내며 <see cref="T:Link.EFAM.Security.Principal.Account"/> 및 <see cref="T:Link.EFAM.Security.Principal.ApplicationIdentifier"/> 클래스의 기본 클래스이다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Security.Principal.IdentityReference.op_Equality(Link.EFAM.Security.Principal.IdentityReference,Link.EFAM.Security.Principal.IdentityReference)">
+            <summary>
+            두 <see cref="T:Link.EFAM.Security.Principal.IdentityReference"/> 개체가 동일한지 비교한다.<br/>
+            두 개체가 <see cref="P:Link.EFAM.Security.Principal.IdentityReference.Value"/> 속성에 의해 반환된 것과 동일한 정식 이름 표현을 가지거나 
+            둘 다 <b>null</b>인 경우 같은 것으로 간주된다.
+            </summary>
+            <param name="left">
+            같은지 비교할 때 사용할 왼쪽 <see cref="T:Link.EFAM.Security.Principal.IdentityReference"/> 피연산자.<br/>
+            이 매개 변수는 <b>null</b>일 수 있다.
+            </param>
+            <param name="right">
+            같은지 비교할 때 사용할 오른쪽 <see cref="T:Link.EFAM.Security.Principal.IdentityReference"/> 피연산자.<br/>
+            이 매개 변수는 <b>null</b>일 수 있다.
+            </param>
+            <returns>
+            <paramref name="left"/>와 <paramref name="right"/>가 같으면 <b>true</b>, 그렇지 않으면 <b>false</b>
+            </returns>
+        </member>
+        <member name="M:Link.EFAM.Security.Principal.IdentityReference.op_Inequality(Link.EFAM.Security.Principal.IdentityReference,Link.EFAM.Security.Principal.IdentityReference)">
+            <summary>
+            두 <see cref="T:Link.EFAM.Security.Principal.IdentityReference"/> 개체가 동일하지 않은지 비교한다.<br/>
+            두 개체가 <see cref="P:Link.EFAM.Security.Principal.IdentityReference.Value"/> 속성에 의해 반환된 것과 다른 정식 이름 표현을 가지거나 
+            개체 중 하나는 <b>null</b>이고 나머지는 그렇지 않을 경우 다른 것으로 간주된다.
+            </summary>
+            <param name="left">
+            다른지 비교할 때 사용할 왼쪽 <see cref="T:Link.EFAM.Security.Principal.IdentityReference"/> 피연산자.<br/>
+            이 매개 변수는 <b>null</b>일 수 있다.
+            </param>
+            <param name="right">
+            다른지 비교할 때 사용할 오른쪽 <see cref="T:Link.EFAM.Security.Principal.IdentityReference"/> 피연산자.<br/>
+            이 매개 변수는 <b>null</b>일 수 있다.
+            </param>
+            <returns>
+            <paramref name="left"/>와 <paramref name="right"/>가 같지 않으면 <b>true</b>, 같으면 <b>false</b>
+            </returns>
+        </member>
+        <member name="M:Link.EFAM.Security.Principal.IdentityReference.#ctor">
+            <summary>
+            <see cref="T:Link.EFAM.Security.Principal.IdentityReference"/> 클래스의 새 인스턴스를 초기화한다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Security.Principal.IdentityReference.Equals(System.Object)">
+            <summary>
+            지정한 개체가 이 <see cref="T:Link.EFAM.Security.Principal.IdentityReference"/> 개체와 같은지 여부를 확인한다.
+            </summary>
+            <param name="obj">이 <see cref="T:Link.EFAM.Security.Principal.IdentityReference"/> 개체와 비교할 개체</param>
+            <returns>
+            <paramref name="obj"/>가 이 <see cref="T:Link.EFAM.Security.Principal.IdentityReference"/> 개체와 
+            같은 값을 가지는 개체이면 <b>true</b>, 그렇지 않으면 <b>false</b>
+            </returns>
+        </member>
+        <member name="M:Link.EFAM.Security.Principal.IdentityReference.GetHashCode">
+            <summary>
+            이 <see cref="T:Link.EFAM.Security.Principal.IdentityReference"/> 개체의 해시 코드를 가져온다.
+            </summary>
+            <returns>이 <see cref="T:Link.EFAM.Security.Principal.IdentityReference"/> 개체의 해시 코드</returns>
+        </member>
+        <member name="M:Link.EFAM.Security.Principal.IdentityReference.ToString">
+            <summary>
+            <see cref="T:Link.EFAM.Security.Principal.IdentityReference"/> 개체로 표시한 ID의 문자열 표현을 반환한다.
+            </summary>
+            <returns>문자열 형식의 ID</returns>
+        </member>
+        <member name="P:Link.EFAM.Security.Principal.IdentityReference.Value">
+            <summary>
+            <see cref="T:Link.EFAM.Security.Principal.IdentityReference"/> 개체로 표시한 ID의 문자열 값을 가져온다.
+            </summary>
+            <value><see cref="T:Link.EFAM.Security.Principal.IdentityReference"/> 개체로 표시한 ID의 문자열 값</value>
+        </member>
+        <member name="M:Link.EFAM.Security.Principal.Account.op_Equality(Link.EFAM.Security.Principal.Account,Link.EFAM.Security.Principal.Account)">
+            <summary>
+            두 <see cref="T:Link.EFAM.Security.Principal.Account"/> 개체가 동일한지 비교한다.<br/>
+            두 개체가 <see cref="P:Link.EFAM.Security.Principal.Account.Value"/> 속성에 의해 반환된 것과 동일한 정식 이름 표현을 가지거나 
+            둘 다 <b>null</b>인 경우 같은 것으로 간주된다.
+            </summary>
+            <param name="left">
+            같은지 비교할 때 사용할 왼쪽 피연산자.<br/>
+            이 매개 변수는 <b>null</b>일 수 있다.
+            </param>
+            <param name="right">
+            같은지 비교할 때 사용할 오른쪽 피연산자.<br/>
+            이 매개 변수는 <b>null</b>일 수 있다.
+            </param>
+            <returns>
+            <paramref name="left"/>와 <paramref name="right"/>가 같으면 <b>true</b>, 그렇지 않으면 <b>false</b>
+            </returns>
+        </member>
+        <member name="M:Link.EFAM.Security.Principal.Account.op_Inequality(Link.EFAM.Security.Principal.Account,Link.EFAM.Security.Principal.Account)">
+            <summary>
+            두 <see cref="T:Link.EFAM.Security.Principal.Account"/> 개체가 동일하지 않은지 비교한다.<br/>
+            두 개체가 <see cref="P:Link.EFAM.Security.Principal.Account.Value"/> 속성에 의해 반환된 것과 다른 정식 이름 표현을 가지거나 
+            개체 중 하나는 <b>null</b>이고 나머지는 그렇지 않을 경우 다른 것으로 간주된다.
+            </summary>
+            <param name="left">
+            다른지 비교할 때 사용할 왼쪽 피연산자.<br/>
+            이 매개 변수는 <b>null</b>일 수 있다.
+            </param>
+            <param name="right">
+            다른지 비교할 때 사용할 오른쪽 피연산자.<br/>
+            이 매개 변수는 <b>null</b>일 수 있다.
+            </param>
+            <returns>
+            <paramref name="left"/>와 <paramref name="right"/>가 같지 않으면 <b>true</b>, 같으면 <b>false</b>
+            </returns>
+        </member>
+        <member name="M:Link.EFAM.Security.Principal.Account.#ctor(System.String)">
+            <summary>
+            지정한 이름을 사용하여 <see cref="T:Link.EFAM.Security.Principal.Account"/> 클래스의 새 인스턴스를 초기화한다.
+            </summary>
+            <param name="name">사용자 또는 그룹 이름</param>
+            
+            <exception cref="T:System.ArgumentException"><paramref name="name"/>이 <b>null</b>이거나 빈 문자열("")인 경우</exception>
+        </member>
+        <member name="M:Link.EFAM.Security.Principal.Account.Equals(System.Object)">
+            <summary>
+            지정한 개체가 이 <see cref="T:Link.EFAM.Security.Principal.Account"/> 개체와 같은지 여부를 확인한다.
+            </summary>
+            <param name="obj">이 <see cref="T:Link.EFAM.Security.Principal.Account"/> 개체와 비교할 개체</param>
+            <returns>
+            <paramref name="obj"/>가 이 <see cref="T:Link.EFAM.Security.Principal.Account"/> 개체와 
+            같은 값을 가지는 개체이면 <b>true</b>, 그렇지 않으면 <b>false</b>
+            </returns>
+        </member>
+        <member name="M:Link.EFAM.Security.Principal.Account.GetHashCode">
+            <summary>
+            이 <see cref="T:Link.EFAM.Security.Principal.Account"/> 개체의 해시 코드를 가져온다.
+            </summary>
+            <returns>이 <see cref="T:Link.EFAM.Security.Principal.Account"/> 개체의 해시 코드</returns>
+        </member>
+        <member name="M:Link.EFAM.Security.Principal.Account.ToString">
+            <summary>
+            이 <see cref="T:Link.EFAM.Security.Principal.Account"/> 개체가 나타내는 계정의 이름을 반환한다.
+            </summary>
+            <returns>이 <see cref="T:Link.EFAM.Security.Principal.Account"/> 개체가 나타내는 계정의 이름</returns>
+        </member>
+        <member name="P:Link.EFAM.Security.Principal.Account.Value">
+            <summary>
+            이 <see cref="T:Link.EFAM.Security.Principal.Account"/> 개체에 대한 대문자 문자열 표시를 가져온다.
+            </summary>
+            <value>이 <see cref="T:Link.EFAM.Security.Principal.Account"/> 개체에 대한 대문자 문자열 표시</value>
+        </member>
+        <member name="T:Link.EFAM.Security.Principal.ApplicationIdentifier">
+            <summary>
+            응용 프로그램 ID를 나타낸다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Security.Principal.ApplicationIdentifier.op_Equality(Link.EFAM.Security.Principal.ApplicationIdentifier,Link.EFAM.Security.Principal.ApplicationIdentifier)">
+            <summary>
+            두 <see cref="T:Link.EFAM.Security.Principal.ApplicationIdentifier"/> 개체가 동일한지 비교한다.<br/>
+            두 개체가 <see cref="P:Link.EFAM.Security.Principal.ApplicationIdentifier.Value"/> 속성에 의해 반환된 것과 동일한 ID 표현을 가지거나 
+            둘 다 <b>null</b>인 경우 같은 것으로 간주된다.
+            </summary>
+            <param name="left">
+            같은지 비교할 때 사용할 왼쪽 피연산자.<br/>
+            이 매개 변수는 <b>null</b>일 수 있다.
+            </param>
+            <param name="right">
+            같은지 비교할 때 사용할 오른쪽 피연산자.<br/>
+            이 매개 변수는 <b>null</b>일 수 있다.
+            </param>
+            <returns>
+            <paramref name="left"/>와 <paramref name="right"/>가 같으면 <b>true</b>, 그렇지 않으면 <b>false</b>
+            </returns>
+        </member>
+        <member name="M:Link.EFAM.Security.Principal.ApplicationIdentifier.op_Inequality(Link.EFAM.Security.Principal.ApplicationIdentifier,Link.EFAM.Security.Principal.ApplicationIdentifier)">
+            <summary>
+            두 <see cref="T:Link.EFAM.Security.Principal.ApplicationIdentifier"/> 개체가 동일하지 않은지 비교한다.<br/>
+            두 개체가 <see cref="P:Link.EFAM.Security.Principal.ApplicationIdentifier.Value"/> 속성에 의해 반환된 것과 다른 ID 표현을 가지거나 
+            개체 중 하나는 <b>null</b>이고 나머지는 그렇지 않을 경우 다른 것으로 간주된다.
+            </summary>
+            <param name="left">
+            다른지 비교할 때 사용할 왼쪽 피연산자.<br/>
+            이 매개 변수는 <b>null</b>일 수 있다.
+            </param>
+            <param name="right">
+            다른지 비교할 때 사용할 오른쪽 피연산자.<br/>
+            이 매개 변수는 <b>null</b>일 수 있다.
+            </param>
+            <returns>
+            <paramref name="left"/>와 <paramref name="right"/>가 같지 않으면 <b>true</b>, 같으면 <b>false</b>
+            </returns>
+        </member>
+        <member name="M:Link.EFAM.Security.Principal.ApplicationIdentifier.#ctor">
+            <summary>
+            <see cref="T:Link.EFAM.Security.Principal.ApplicationIdentifier"/> 클래스의 새 인스턴스를 초기화한다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Security.Principal.ApplicationIdentifier.#ctor(System.String)">
+            <summary>
+            지정한 실행 파일 이름을 사용하여 <see cref="T:Link.EFAM.Security.Principal.ApplicationIdentifier"/> 클래스의 새 인스턴스를 초기화한다.
+            </summary>
+            <param name="fileName">실행 파일 이름</param>
+            
+            <exception cref="T:System.ArgumentException">
+            <paramref name="fileName"/>이 <b>null</b>이거나 빈 문자열("")인 경우
+            </exception>
+        </member>
+        <member name="M:Link.EFAM.Security.Principal.ApplicationIdentifier.Equals(System.Object)">
+            <summary>
+            지정한 개체가 이 <see cref="T:Link.EFAM.Security.Principal.ApplicationIdentifier"/> 개체와 같은지 여부를 확인한다.
+            </summary>
+            <param name="obj">이 <see cref="T:Link.EFAM.Security.Principal.ApplicationIdentifier"/> 개체와 비교할 개체</param>
+            <returns>
+            <paramref name="obj"/>가 이 <see cref="T:Link.EFAM.Security.Principal.ApplicationIdentifier"/> 개체와 
+            같은 값을 가지는 개체이면 <b>true</b>, 그렇지 않으면 <b>false</b>
+            </returns>
+        </member>
+        <member name="M:Link.EFAM.Security.Principal.ApplicationIdentifier.GetHashCode">
+            <summary>
+            이 <see cref="T:Link.EFAM.Security.Principal.ApplicationIdentifier"/> 개체의 해시 코드를 가져온다.
+            </summary>
+            <returns>이 <see cref="T:Link.EFAM.Security.Principal.ApplicationIdentifier"/> 개체의 해시 코드</returns>
+        </member>
+        <member name="M:Link.EFAM.Security.Principal.ApplicationIdentifier.ToString">
+            <summary>
+            이 <see cref="T:Link.EFAM.Security.Principal.ApplicationIdentifier"/> 개체로 표시된 ID에 대한 문자열 표현을 반환한다.
+            </summary>
+            <returns>이 <see cref="T:Link.EFAM.Security.Principal.ApplicationIdentifier"/> 개체로 표시된 ID에 대한 문자열 표현</returns>
+        </member>
+        <member name="M:Link.EFAM.Security.Principal.ApplicationIdentifier.Equals(Link.EFAM.Security.Principal.ApplicationIdentifier)">
+            <summary>
+            지정한 <see cref="T:Link.EFAM.Security.Principal.ApplicationIdentifier"/> 개체가 
+            현재 <see cref="T:Link.EFAM.Security.Principal.ApplicationIdentifier"/> 개체와 같은지 여부를 나타낸다.
+            </summary>
+            <param name="other">현재 개체와 비교할 개체</param>
+            <returns>
+            <paramref name="other"/>의 값이 현재 <see cref="T:Link.EFAM.Security.Principal.ApplicationIdentifier"/> 개체의 값과 
+            같으면 <b>true</b>, 그렇지 않으면 <b>false</b>
+            </returns>
+        </member>
+        <member name="P:Link.EFAM.Security.Principal.ApplicationIdentifier.All">
+            <summary>
+            모든 응용 프로그램을 나타내는 <see cref="T:Link.EFAM.Security.Principal.ApplicationIdentifier"/> 인스턴스를 가져온다.
+            </summary>
+            <value>모든 응용 프로그램을 나타내는 <see cref="T:Link.EFAM.Security.Principal.ApplicationIdentifier"/> 개체</value>
+        </member>
+        <member name="P:Link.EFAM.Security.Principal.ApplicationIdentifier.IsAll">
+            <summary>
+            모든 응용 프로그램을 나타내는 ID로 식별되는지 여부를 나타내는 값을 가져온다.
+            </summary>
+            <value>모든 응용 프로그램을 나타내는 ID이면 <b>true</b>, 그렇지 않으면 <b>false</b></value>
+        </member>
+        <member name="P:Link.EFAM.Security.Principal.ApplicationIdentifier.Value">
+            <summary>
+            이 <see cref="T:Link.EFAM.Security.Principal.ApplicationIdentifier"/> 개체로 표시된 ID에 대한 대문자 문자열을 가져온다.
+            </summary>
+            <value>이 <see cref="T:Link.EFAM.Security.Principal.ApplicationIdentifier"/> 개체로 표시된 ID에 대한 대문자 문자열</value>
+        </member>
+    </members>
+</doc>

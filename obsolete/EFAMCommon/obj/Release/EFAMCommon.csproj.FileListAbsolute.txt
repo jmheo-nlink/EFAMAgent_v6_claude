@@ -1,0 +1,16 @@
+D:\MyWorks\EFAM\EFAMEngine\EFAMCommon\bin\Release\EFAMCommon.dll
+D:\MyWorks\EFAM\EFAMEngine\EFAMCommon\bin\Release\EFAMCommon.pdb
+D:\MyWorks\EFAM\EFAMEngine\EFAMCommon\obj\Release\ResolveAssemblyReference.cache
+D:\MyWorks\EFAM\EFAMEngine\EFAMCommon\obj\Release\EFAMCommon.dll
+D:\MyWorks\EFAM\EFAMEngine\EFAMCommon\obj\Release\EFAMCommon.pdb
+D:\MyWorks\EFAM\EFAMEngine\EFAMCommon\bin\Release\EFAMCommon.xml
+D:\MyWorks\EFAM\EFAMEngine_v5.1\EFAMCommon\bin\Release\EFAMCommon.dll
+D:\MyWorks\EFAM\EFAMEngine_v5.1\EFAMCommon\bin\Release\EFAMCommon.pdb
+D:\MyWorks\EFAM\EFAMEngine_v5.1\EFAMCommon\obj\Release\ResolveAssemblyReference.cache
+D:\MyWorks\EFAM\EFAMEngine_v5.1\EFAMCommon\obj\Release\EFAMCommon.dll
+D:\MyWorks\EFAM\EFAMEngine_v5.1\EFAMCommon\obj\Release\EFAMCommon.pdb
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMCommon\bin\Release\EFAMCommon.xml
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMCommon\bin\Release\EFAMCommon.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMCommon\bin\Release\EFAMCommon.pdb
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMCommon\obj\Release\EFAMCommon.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMCommon\obj\Release\EFAMCommon.pdb

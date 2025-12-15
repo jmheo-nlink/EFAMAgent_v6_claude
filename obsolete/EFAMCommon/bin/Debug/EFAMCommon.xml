@@ -1,0 +1,246 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EFAMCommon</name>
+    </assembly>
+    <members>
+        <member name="T:Link.EFAM.Common.Constants">
+            <summary>
+            상수 값들을 제공한다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.Constants.FacFilterName">
+            <summary>
+            액세스 제어 미니필터 드라이버의 이름
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.Constants.CryptoPassword">
+            <summary>
+            비밀 키를 파생시키는데 사용할 암호
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.Constants.CryptoKeySalt">
+            <summary>
+            비밀 키를 파생시키는데 사용할 키 솔트
+            </summary>
+        </member>
+        <member name="T:Link.EFAM.Common.FileAccessRights">
+            <summary>
+            파일이나 디렉토리에 적용할 수 있는 액세스 권한을 나타낸다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Common.FileAccessRights.#ctor">
+            <summary>
+            <see cref="T:Link.EFAM.Common.FileAccessRights"/> 클래스의 새 인스턴스를 초기화한다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Common.FileAccessRights.Clone">
+            <summary>
+            현재 인스턴스의 복사본인 새 <see cref="T:Link.EFAM.Common.FileAccessRights"/> 개체를 만든다.
+            </summary>
+            <returns>현재 인스턴스의 복사본인 새 <see cref="T:Link.EFAM.Common.FileAccessRights"/> 개체</returns>
+        </member>
+        <member name="M:Link.EFAM.Common.FileAccessRights.ToString">
+            <summary>
+            허용된 액세스 권한을 나타내는 문자열을 반환한다.
+            </summary>
+            <returns>허용된 액세스 권한을 나타내는 문자열</returns>
+        </member>
+        <member name="P:Link.EFAM.Common.FileAccessRights.AllowRead">
+            <summary>
+            파일을 열 수 있는지 여부를 나타내는 값을 가져오거나 설정한다.
+            </summary>
+            <value>파일을 열 수 있으면 true, 그렇지 않으면 false. 기본값은 false</value>
+        </member>
+        <member name="P:Link.EFAM.Common.FileAccessRights.AllowWrite">
+            <summary>
+            파일을 생성하고 파일에 데이터를 추가하고 제거할 수 있는지 여부를 나타내는 값을 가져오거나 설정한다.
+            </summary>
+            <value>
+            파일을 생성하고 파일에 데이터를 추가하고 제거할 수 있으면 true, 그렇지 않으면 false. 기본값은 false
+            </value>
+        </member>
+        <member name="P:Link.EFAM.Common.FileAccessRights.AllowCopyFiles">
+            <summary>
+            파일을 관리하는 네트워크 공유가 아닌 위치(로컬 디스크, 네트워크 공유 등)로
+            복사할 수 있는지 여부를 나타내는 값을 가져오거나 설정한다.
+            </summary>
+            <value>파일을 복사할 수 있으면 true, 그렇지 않으면 false. 기본값은 false</value>
+        </member>
+        <member name="P:Link.EFAM.Common.FileAccessRights.AllowListDirectory">
+            <summary>
+            디렉토리의 내용을 읽을 수 있는지 여부를 나타내는 값을 가져오거나 설정한다.
+            </summary>
+            <value>디렉토리의 내용을 읽을 수 있으면 true, 그렇지 않으면 false. 기본값은 false</value>
+        </member>
+        <member name="P:Link.EFAM.Common.FileAccessRights.AllowCreateDirectories">
+            <summary>
+            디렉토리를 생성할 수 있는지 여부를 나타내는 값을 가져오거나 설정한다.
+            </summary>
+            <value>디렉토리를 생성할 수 있으면 true, 그렇지 않으면 false. 기본값은 false</value>
+        </member>
+        <member name="P:Link.EFAM.Common.FileAccessRights.AllowDelete">
+            <summary>
+            파일이나 디렉토리를 삭제할 수 있는지 여부를 나타내는 값을 가져오거나 설정한다.
+            </summary>
+            <value>파일이나 디렉토리를 삭제할 수 있으면 true, 그렇지 않으면 false. 기본값은 false</value>
+        </member>
+        <member name="P:Link.EFAM.Common.FileAccessRights.AllowRename">
+            <summary>
+            파일이나 디렉토리의 이름을 바꿀 수 있는지 여부를 나타내는 값을 가져오거나 설정한다.
+            </summary>
+            <value>파일이나 디렉토리의 이름을 바꿀 수 있으면 true, 그렇지 않으면 false. 기본값은 false</value>
+        </member>
+        <member name="P:Link.EFAM.Common.FileAccessRights.AllowMove">
+            <summary>
+            파일이나 디렉토리를 새 위치로 이동할 수 있는지 여부를 나타내는 값을 가져오거나 설정한다.
+            </summary>
+            <value>파일이나 디렉토리를 새 위치로 이동할 수 있으면 true, 그렇지 않으면 false. 기본값은 falase</value>
+        </member>
+        <member name="T:Link.EFAM.Common.FileAccessRule">
+            <summary>
+            파일이나 디렉토리에 대한 액세스 규칙(허용되거나 거부된 액세스 권한의 조합)을 나타낸다.
+            </summary>
+        </member>
+        <member name="M:Link.EFAM.Common.FileAccessRule.#ctor(System.String)">
+            <summary>
+            <see cref="T:Link.EFAM.Common.FileAccessRule"/> 클래스의 새 인스턴스를 초기화하여 
+            규칙을 적용할 파일이나 디렉토리의 경로를 지정한다.
+            </summary>
+            <param name="path">규칙을 적용할 파일이나 디렉토리의 경로</param>
+            
+            <exception cref="T:System.ArgumentNullException">path가 null인 경우</exception>
+        </member>
+        <member name="M:Link.EFAM.Common.FileAccessRule.#ctor(System.String,Link.EFAM.Common.FileAccessRights)">
+            <summary>
+            <see cref="T:Link.EFAM.Common.FileAccessRule"/> 클래스의 새 인스턴스를 초기화하여 
+            규칙을 적용할 파일이나 디렉토리의 경로, 허용하거나 거부할 액세스 권한을 지정한다.
+            </summary>
+            <param name="path">규칙을 적용할 파일이나 디렉토리의 경로</param>
+            <param name="fileRights">허용하거나 거부할 액세스 권한을 나타내는 <see cref="T:Link.EFAM.Common.FileAccessRights"/> 개체</param>
+            
+            <exception cref="T:System.ArgumentNullException">path가 null인 경우</exception>
+        </member>
+        <member name="M:Link.EFAM.Common.FileAccessRule.ToString">
+            <summary>
+            현재 인스턴스를 나타내는 문자열을 반환한다.
+            </summary>
+            <returns>현재 인스턴스를 나타내는 문자열</returns>
+            <remarks>
+            <see cref="P:Link.EFAM.Common.FileAccessRule.Path"/> 및 <see cref="P:Link.EFAM.Common.FileAccessRule.AccessRights"/> 속성 문자열의 조합이다.
+            </remarks>
+        </member>
+        <member name="P:Link.EFAM.Common.FileAccessRule.Path">
+            <summary>
+            규칙을 적용할 파일이나 디렉토리의 경로를 가져온다.
+            </summary>
+            <value>규칙을 적용할 파일이나 디렉토리의 경로</value>
+        </member>
+        <member name="P:Link.EFAM.Common.FileAccessRule.AccessRights">
+            <summary>
+            액세스 규칙에 의해 허용되거나 거부된 액세스 권한을 가져오거나 설정한다.
+            </summary>
+            <value>액세스 규칙에 의해 허용되거나 거부된 액세스 권한을 나타내는 <see cref="T:Link.EFAM.Common.FileAccessRights"/> 개체</value>
+        </member>
+        <member name="T:Link.EFAM.Common.FileAction">
+            <summary>
+            파일 또는 디렉토리에 대해 수행된 작업을 지정한다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.FileAction.FileOpened">
+            <summary>
+            파일이 열렸다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.FileAction.FileModified">
+            <summary>
+            파일이 수정되었다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.FileAction.FileCreated">
+            <summary>
+            파일이 생성되었다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.FileAction.FileDeleted">
+            <summary>
+            파일이 삭제되었다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.FileAction.FileMoved">
+            <summary>
+            파일이 새 위치로 이동되었다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.FileAction.FileRenamed">
+            <summary>
+            파일의 이름이 바뀌었다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.FileAction.FileCopied">
+            <summary>
+            파일이 복사되었다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.FileAction.DirectoryCreated">
+            <summary>
+            디렉토리가 생성되었다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.FileAction.DirectoryDeleted">
+            <summary>
+            디렉토리가 삭제되었다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.FileAction.DirectoryMoved">
+            <summary>
+            디렉토리가 새 위치로 이동되었다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.FileAction.DirectoryRenamed">
+            <summary>
+            디렉토리의 이름이 바뀌었다.
+            </summary>
+        </member>
+        <member name="T:Link.EFAM.Common.ProcessKind">
+            <summary>
+            프로세스의 종류를 지정한다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.ProcessKind.NormalProcess">
+            <summary>
+            일반적인 프로세스를 나타낸다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.ProcessKind.SystemProcess">
+            <summary>
+            시스템 프로세스를 나타낸다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.ProcessKind.WindowsExplorer">
+            <summary>
+            "Windows 탐색기" 프로세스를 나타낸다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.ProcessKind.WindowsCommand">
+            <summary>
+            "Windows 명령 처리기" 프로세스를 나타낸다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.ProcessKind.MsOffice">
+            <summary>
+            "Microsoft Office" 응용 프로그램의 프로세스를 나타낸다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.ProcessKind.AntiVirus">
+            <summary>
+            백신 응용 프로그램의 프로세스를 나타낸다.
+            </summary>
+        </member>
+        <member name="F:Link.EFAM.Common.ProcessKind.MaxProcessKind">
+            <summary>
+            이 열거형의 마지막 열거자 값을 나타낸다.
+            </summary>
+        </member>
+    </members>
+</doc>

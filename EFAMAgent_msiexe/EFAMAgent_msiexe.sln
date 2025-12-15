@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "EFAMAgent_msi", "EFAMAgent_msi\EFAMAgent_msi.wixproj", "{9A9B55CA-83A3-4B72-9A20-43420FDC93A1}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "EFAMAgent_exe", "EFAMAgent_exe\EFAMAgent_exe.wixproj", "{FC3ADBA2-A63E-41DD-985F-E4A53F6EE6F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A9B55CA-83A3-4B72-9A20-43420FDC93A1}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{9A9B55CA-83A3-4B72-9A20-43420FDC93A1}.Debug|Any CPU.Build.0 = Debug|x86
+		{9A9B55CA-83A3-4B72-9A20-43420FDC93A1}.Debug|ARM64.ActiveCfg = Debug|x86
+		{9A9B55CA-83A3-4B72-9A20-43420FDC93A1}.Debug|ARM64.Build.0 = Debug|x86
+		{9A9B55CA-83A3-4B72-9A20-43420FDC93A1}.Debug|x64.ActiveCfg = Debug|x86
+		{9A9B55CA-83A3-4B72-9A20-43420FDC93A1}.Debug|x64.Build.0 = Debug|x86
+		{9A9B55CA-83A3-4B72-9A20-43420FDC93A1}.Debug|x86.ActiveCfg = Debug|x86
+		{9A9B55CA-83A3-4B72-9A20-43420FDC93A1}.Debug|x86.Build.0 = Debug|x86
+		{9A9B55CA-83A3-4B72-9A20-43420FDC93A1}.Release|Any CPU.ActiveCfg = Release|x86
+		{9A9B55CA-83A3-4B72-9A20-43420FDC93A1}.Release|Any CPU.Build.0 = Release|x86
+		{9A9B55CA-83A3-4B72-9A20-43420FDC93A1}.Release|ARM64.ActiveCfg = Release|x86
+		{9A9B55CA-83A3-4B72-9A20-43420FDC93A1}.Release|ARM64.Build.0 = Release|x86
+		{9A9B55CA-83A3-4B72-9A20-43420FDC93A1}.Release|x64.ActiveCfg = Release|x86
+		{9A9B55CA-83A3-4B72-9A20-43420FDC93A1}.Release|x64.Build.0 = Release|x86
+		{9A9B55CA-83A3-4B72-9A20-43420FDC93A1}.Release|x86.ActiveCfg = Release|x86
+		{9A9B55CA-83A3-4B72-9A20-43420FDC93A1}.Release|x86.Build.0 = Release|x86
+		{FC3ADBA2-A63E-41DD-985F-E4A53F6EE6F1}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{FC3ADBA2-A63E-41DD-985F-E4A53F6EE6F1}.Debug|Any CPU.Build.0 = Debug|x86
+		{FC3ADBA2-A63E-41DD-985F-E4A53F6EE6F1}.Debug|ARM64.ActiveCfg = Debug|x86
+		{FC3ADBA2-A63E-41DD-985F-E4A53F6EE6F1}.Debug|ARM64.Build.0 = Debug|x86
+		{FC3ADBA2-A63E-41DD-985F-E4A53F6EE6F1}.Debug|x64.ActiveCfg = Debug|x86
+		{FC3ADBA2-A63E-41DD-985F-E4A53F6EE6F1}.Debug|x64.Build.0 = Debug|x86
+		{FC3ADBA2-A63E-41DD-985F-E4A53F6EE6F1}.Debug|x86.ActiveCfg = Debug|x86
+		{FC3ADBA2-A63E-41DD-985F-E4A53F6EE6F1}.Debug|x86.Build.0 = Debug|x86
+		{FC3ADBA2-A63E-41DD-985F-E4A53F6EE6F1}.Release|Any CPU.ActiveCfg = Release|x86
+		{FC3ADBA2-A63E-41DD-985F-E4A53F6EE6F1}.Release|Any CPU.Build.0 = Release|x86
+		{FC3ADBA2-A63E-41DD-985F-E4A53F6EE6F1}.Release|ARM64.ActiveCfg = Release|x86
+		{FC3ADBA2-A63E-41DD-985F-E4A53F6EE6F1}.Release|ARM64.Build.0 = Release|x86
+		{FC3ADBA2-A63E-41DD-985F-E4A53F6EE6F1}.Release|x64.ActiveCfg = Release|x86
+		{FC3ADBA2-A63E-41DD-985F-E4A53F6EE6F1}.Release|x64.Build.0 = Release|x86
+		{FC3ADBA2-A63E-41DD-985F-E4A53F6EE6F1}.Release|x86.ActiveCfg = Release|x86
+		{FC3ADBA2-A63E-41DD-985F-E4A53F6EE6F1}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E9C03CEB-FA92-407D-8969-48971A3D6BFF}
+	EndGlobalSection
+EndGlobal

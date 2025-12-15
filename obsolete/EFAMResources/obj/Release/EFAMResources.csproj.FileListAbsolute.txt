@@ -1,0 +1,14 @@
+D:\MyWorks\EFAM\EFAMAgent_v5.2\EFAMResources\bin\Release\EFAMResources.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.2\EFAMResources\bin\Release\EFAMResources.pdb
+D:\MyWorks\EFAM\EFAMAgent_v5.2\EFAMResources\obj\Release\ResolveAssemblyReference.cache
+D:\MyWorks\EFAM\EFAMAgent_v5.2\EFAMResources\obj\Release\Link.EFAM.Resources.UIResources.resources
+D:\MyWorks\EFAM\EFAMAgent_v5.2\EFAMResources\obj\Release\GenerateResource-ResGen.read.1.tlog
+D:\MyWorks\EFAM\EFAMAgent_v5.2\EFAMResources\obj\Release\GenerateResource-ResGen.write.1.tlog
+D:\MyWorks\EFAM\EFAMAgent_v5.2\EFAMResources\obj\Release\EFAMResources.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.2\EFAMResources\obj\Release\EFAMResources.pdb
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMResources\obj\Release\Link.EFAM.Resources.UIResources.resources
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMResources\obj\Release\EFAMResources.csproj.GenerateResource.Cache
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMResources\obj\Release\EFAMResources.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMResources\obj\Release\EFAMResources.pdb
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMResources\bin\Release\EFAMResources.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMResources\bin\Release\EFAMResources.pdb

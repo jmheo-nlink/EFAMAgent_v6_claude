@@ -1,0 +1,134 @@
+  Link.Core.Properties.Resources.resources - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v2.0.50727
+Assembly LKCorLib, Version=1.0.4.0, Culture=neutral, PublicKeyToken=59057779c68dfdc9: 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class Link.Core.IO.NtPath: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    IsPathRooted(String): PrivateScope, Public, Static, HideBySig
+    GetPathRoot(String): PrivateScope, Public, Static, HideBySig
+    GetDirectoryName(String): PrivateScope, Public, Static, HideBySig
+    GetFileName(String): PrivateScope, Public, Static, HideBySig
+    GetExtension(String): PrivateScope, Public, Static, HideBySig
+    NormalizePath(String): PrivateScope, Public, Static, HideBySig
+Class Link.Core.Net.DnsHelper: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    Lookup(String): PrivateScope, Public, Static, HideBySig
+Struct Link.Core.Net.NetworkResourceType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Link.Core.Net.NetworkResourceType Any = 0 : Public, Static, Literal, HasDefault
+    Link.Core.Net.NetworkResourceType Disk = 1 : Public, Static, Literal, HasDefault
+    Link.Core.Net.NetworkResourceType Print = 2 : Public, Static, Literal, HasDefault
+Class Link.Core.Net.NetworkConnection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Properties:
+    Link.Core.Net.NetworkResourceType ResourceType 'get ' : 
+    System.String LocalName 'get ' : 
+    System.String RemoteName 'get ' : 
+    System.String Name 'get ' : 
+    System.String UserName 'get set' : 
+    Boolean IsPersistent 'get ' : 
+    Boolean IsConnected 'get ' : 
+  Methods:
+    get_ResourceType(): PrivateScope, Public, HideBySig, SpecialName
+    get_LocalName(): PrivateScope, Public, HideBySig, SpecialName
+    get_RemoteName(): PrivateScope, Public, HideBySig, SpecialName
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    get_UserName(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsPersistent(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsConnected(): PrivateScope, Public, HideBySig, SpecialName
+    GetNetworkConnections(NetworkResourceType): PrivateScope, Public, Static, HideBySig
+    GetNetworkConnections(String): PrivateScope, Public, Static, HideBySig
+    Make(String, String): PrivateScope, Public, Static, HideBySig
+    Make(String, String, String, String, Boolean): PrivateScope, Public, Static, HideBySig
+    Cancel(): PrivateScope, Public, HideBySig
+    Cancel(Boolean, Boolean): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class Link.Core.Net.NetworkDrive: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Properties:
+    System.String DriveName 'get ' : 
+    System.String ShareName 'get ' : 
+    Boolean IsPersistent 'get ' : 
+    Boolean IsConnected 'get ' : 
+  Methods:
+    get_DriveName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ShareName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_IsPersistent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_IsConnected(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    GetNetworkDrives(): PrivateScope, Public, Static, HideBySig
+    Connect(String, String): PrivateScope, Public, Static, HideBySig
+    Connect(String, String, String, String, Boolean): PrivateScope, Public, Static, HideBySig
+    SetVolumeLabel(String, String): PrivateScope, Public, Static, HideBySig
+    Disconnect(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Disconnect(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class Link.Core.Runtime.InteropServices.AllocatedMemory: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IEquatable`1[Link.Core.Runtime.InteropServices.AllocatedMemory]
+    System.IDisposable
+  Properties:
+    IntPtr Pointer 'get ' : 
+    Int32 Size 'get ' : 
+    Boolean IsDisposed 'get ' : 
+  Methods:
+    get_Pointer(): PrivateScope, Public, HideBySig, SpecialName
+    get_Size(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsDisposed(): PrivateScope, Public, HideBySig, SpecialName
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    Equals(AllocatedMemory): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Struct Link.Core.Security.Cryptography.SymmetricAlgorithmKind: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Link.Core.Security.Cryptography.SymmetricAlgorithmKind Rijndael = 0 : Public, Static, Literal, HasDefault
+    Link.Core.Security.Cryptography.SymmetricAlgorithmKind DES = 1 : Public, Static, Literal, HasDefault
+    Link.Core.Security.Cryptography.SymmetricAlgorithmKind RC2 = 2 : Public, Static, Literal, HasDefault
+    Link.Core.Security.Cryptography.SymmetricAlgorithmKind TripleDES = 3 : Public, Static, Literal, HasDefault
+Class Link.Core.Security.Cryptography.SymmetricCryptographer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Link.Core.Security.Cryptography.SymmetricAlgorithmKind, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    System.Security.Cryptography.ICryptoTransform Encryptor 'get ' : 
+    System.Security.Cryptography.ICryptoTransform Decryptor 'get ' : 
+  Methods:
+    get_Encryptor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Decryptor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Encrypt(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Decrypt(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class Link.Core.SupportMethods: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean Is64BitOS 'get ' : 
+  Methods:
+    get_Is64BitOS(): PrivateScope, Public, Static, HideBySig, SpecialName
+    IsNullOrWhiteSpace(String): PrivateScope, Public, Static, HideBySig
+Class Link.Core.NtEnvironment: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Properties:
+    Boolean IsOSOlderThanXP 'get ' : 
+    Boolean IsWindowsXP 'get ' : 
+    Boolean IsWindows2003 'get ' : 
+    Boolean IsWindowsVista 'get ' : 
+    Boolean IsWindows7 'get ' : 
+  Methods:
+    get_IsOSOlderThanXP(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_IsWindowsXP(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_IsWindows2003(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_IsWindowsVista(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_IsWindows7(): PrivateScope, Public, Static, HideBySig, SpecialName
+    GetUsableLogicalDrives(): PrivateScope, Public, Static, HideBySig
+Class Link.Core.Win32.WindowsStartupPrograms: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    AddApplication(String, String): PrivateScope, Public, Static, HideBySig
+    RemoveApplication(String): PrivateScope, Public, Static, HideBySig

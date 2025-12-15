@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\FilterOperator\bin\Release\FltOptr32.dll</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles />
+  <SatelliteDlls>
+    <SatelliteDll>
+      <FullPath>C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\FilterOperator\obj\Release\zh-Hant\FltOptr32.resources.dll</FullPath>
+    </SatelliteDll>
+    <SatelliteDll>
+      <FullPath>C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\FilterOperator\obj\Release\zh-Hans\FltOptr32.resources.dll</FullPath>
+    </SatelliteDll>
+    <SatelliteDll>
+      <FullPath>C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\FilterOperator\obj\Release\en-US\FltOptr32.resources.dll</FullPath>
+    </SatelliteDll>
+  </SatelliteDlls>
+  <NonRecipeFileRefs />
+</Project>

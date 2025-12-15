@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+	 xmlns:util="http://schemas.microsoft.com/wix/UtilExtension"
+	 xmlns:ui="http://schemas.microsoft.com/wix/UIExtension">
+
+	<!--설치 파일 정보 설정-->
+	<Product Id="*" Name="EFAM" Language="1033" Version="6.0.7.4" Manufacturer="(c) LINK Co., Ltd. All rights reserved" UpgradeCode="4ff47544-3259-49d6-b484-3d9317c2012b">
+		<Package InstallerVersion="500" Compressed="yes" InstallScope="perMachine" InstallPrivileges="elevated" />
+
+		<Icon Id="IconEFAM" SourceFile="..\..\EFAMAgent\ResourceFiles\efam_icon.ico" />
+		<Property Id="ARPPRODUCTICON" Value="IconEFAM" />
+
+		<Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+
+
+		<WixVariable Id="WixUIBannerBmp" Value="..\..\EFAMAgent\ResourceFiles\efam_icon_493x58.bmp" />
+		<WixVariable Id="WixUIDialogBmp" Value="..\..\EFAMAgent\ResourceFiles\efam_icon_493x314.bmp" />
+		<WixVariable Id="WixUIIconBmp"   Value="..\..\EFAMAgent\ResourceFiles\efam_icon_32x32.bmp" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate EmbedCab="yes" />
+
+
+		<Feature Id="ProductFeature" Title="E-FAM Agent" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+		</Feature>
+
+
+	</Product>
+	<!--설치 진행 중인 프로그레스 대화창만 노출-->
+	<Fragment>
+		<UIRef Id="WixUI_ProgressOnly"/>
+	</Fragment>
+	<!--설치 UI 설정-->
+	<Fragment>
+		<UI>
+			<!-- 원하는 Built-in UI 테마를 끌어옵니다 -->
+			<UIRef Id="WixUI_Mondo" />
+			<!-- Maintenance 모드(이미 설치된 버전을 다시 실행)일 때 제거/복구 대화상자로 이동하도록 Publish 이벤트 추가 -->
+			<Publish Dialog="WelcomeDlg"
+					 Control="Next"
+					 Event="NewDialog"
+					 Value="MaintenanceTypeDlg">
+				Installed AND NOT REMOVE
+			</Publish>
+		</UI>
+	</Fragment>
+
+	<!--설치될 디렉토리 설정-->
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="DesktopFolder" Name="Desktop" />
+			<Directory Id="WindowsVolumes">
+				<Directory Id="ProgramFiles86" Name="Program Files (x86)">
+					<Directory Id="INSTALLFOLDER" Name="E-FAM">
+					</Directory>
+				</Directory>
+			</Directory>
+		</Directory>
+	</Fragment>
+
+	<!--바탕화면 바로가기 설정-->
+	<Fragment>
+		<DirectoryRef Id="DesktopFolder">
+			<Component Id="cmpDesktopShortcut" Guid="{5B0B0F08-078A-4029-8C07-8E25DE746CF0}">
+				<!-- EFAM.exe가 설치된 폴더로 가리키는 바로가기 -->
+				<Shortcut
+				  Id="DesktopShortcut"
+				  Name="E-FAM"
+				  Description="Launch EFAM"
+				  Target="[INSTALLFOLDER]EFAM.exe"
+				  WorkingDirectory="INSTALLFOLDER"
+				  Icon="IconEFAM"
+				IconIndex="0" />
+				<!-- Component의 KeyPath 역할을 해 줄 레지스트리키 -->
+				<RegistryValue
+				  Root="HKCU"
+				  Key="Software\LINK\E-FAM Agent"
+				  Name="installed"
+				  Type="integer"
+				  Value="1"
+				  KeyPath="yes" />
+			</Component>
+		</DirectoryRef>
+	</Fragment>
+
+	<!--설치 폴더 정보 설정-->
+	<Fragment>
+		<DirectoryRef Id="INSTALLFOLDER">
+			<Component Id="ComponentFactoryKryptonToolkitdll" Guid="{A9DD6050-E287-48B0-877A-A1E2B926AE7E}">
+				<File Id="filE212B53898B69DC7EA15CA00E2548583" KeyPath="yes" Source="..\..\EFAMAgent\bin\Release\ComponentFactory.Krypton.Toolkit.dll" />
+			</Component>
+			<Component Id="EFAMexe" Guid="{80DAC306-DD21-44B6-B0CC-44FF2490A473}">
+				<File Id="fil4C1812325308430A3C957176EBF1ABB7" KeyPath="yes" Source="..\..\EFAMAgent\bin\Release\EFAM.exe" />
+			</Component>
+			<Component Id="EFAMexeconfig" Guid="{5BDB79D3-C876-4AD5-BD22-04D8491FDC36}">
+				<File Id="fil2BECB087584018D7B67A8D5150CF4A40" KeyPath="yes" Source="..\..\EFAMAgent\bin\Release\EFAM.exe.config" />
+			</Component>
+			<Component Id="EFAMCoredll" Guid="{20E70BC3-74F8-4067-AF50-40EA26A185CD}">
+				<File Id="filD2D2B47F3CF94D1768731DE6E6A520F9" KeyPath="yes" Source="..\..\EFAMAgent\bin\Release\EFAMCore.dll" />
+			</Component>
+			<Component Id="EFAMNgin.dll" Guid="{FA847622-10DC-4E5A-AE0B-EFAEC29BABBA}">
+				<File Id="fil16C330DAEF832FEF66879E3B268EEA8B" KeyPath="yes" Source="..\..\EFAMAgent\bin\Release\EFAMNgin.dll" />
+			</Component>
+			<Component Id="EFAMNgin.XmlSerializers.dll" Guid="{F5FE15F0-12EF-44D5-904D-5F9C9440115C}">
+				<File Id="fil2CE0B72C7FA49C3602A2FE68BC36EFD1" KeyPath="yes" Source="..\..\EFAMAgent\bin\Release\EFAMNgin.XmlSerializers.dll" />
+			</Component>
+			<Component Id="FltOptr32.dll" Guid="{85B58E90-F591-4E15-A69D-39927D8B89D4}">
+				<File Id="fil3AA947F3F60E3135672FBE78361BBA0D" KeyPath="yes" Source="..\..\EFAMAgent\bin\Release\FltOptr32.dll" />
+			</Component>
+			<Component Id="FltOptr64.dll" Guid="{6E7DB51B-4D93-4432-BD8D-99DC0E032720}">
+				<File Id="filF85CB13A5D07F78B05C4DEB5984F770D" KeyPath="yes" Source="..\..\EFAMAgent\bin\Release\FltOptr64.dll" />
+			</Component>
+			<Component Id="LKCorLib.dll" Guid="{0F4AE5FA-57E5-48A6-986F-307AC875D469}">
+				<File Id="fil5AED9CB0261EDF1C514A217B359C5896" KeyPath="yes" Source="..\..\EFAMAgent\bin\Release\LKCorLib.dll" />
+			</Component>
+			<Component Id="log4net.dll" Guid="{F12B5DAB-BF61-4A50-A05C-43CE8941F9D7}">
+				<File Id="fil28F7A9478894C77C5F6C2A95DAA4B459" KeyPath="yes" Source="..\..\EFAMAgent\bin\Release\log4net.dll" />
+			</Component>
+			<Component Id="Registry.reg" Guid="{D60A402E-1C89-44FA-87F5-F7CC8561FB22}">
+				<File Id="fil8093CE719B9A9D6C66D8B3D2B7C84B97" KeyPath="yes" Source="..\..\EFAMAgent\bin\Release\Registry.reg" />
+			</Component>
+			<Directory Id="diren" Name="en">
+				<Component Id="enEFAMresourcesdll" Guid="{E7224B16-2101-4995-8042-D849C888EFE4}">
+					<File Id="fil5C7735709A291E1FFBA146A1B17790ZC" KeyPath="yes" Source="..\..\EFAMAgent\bin\Release\en\EFAM.resources.dll" />
+				</Component>
+			</Directory>
+			<Directory Id="direnUS" Name="en-US">
+				<Component Id="enUSEFAMresourcesdll" Guid="{C6239958-DB40-4297-9E4F-3904DBC9119C}">
+					<File Id="fil5C7735709A291E1FFBA146A1B17790FC" KeyPath="yes" Source="..\..\EFAMAgent\bin\Release\en-US\EFAM.resources.dll" />
+				</Component>
+				<Component Id="enUSEFAMCoreresourcesdll" Guid="{03093D18-0809-442E-B3B4-DF6913AEB061}">
+					<File Id="fil3A8DBA94830CCFFBB74D9600C9146692" KeyPath="yes" Source="..\..\EFAMAgent\bin\Release\en-US\EFAMCore.resources.dll" />
+				</Component>
+				<Component Id="enUSEFAMNginresourcesdll" Guid="{94E8F296-7320-4634-B53A-38BAC6B837F5}">
+					<File Id="fil7C09A10CA33FBD708A87B82FB8882251" KeyPath="yes" Source="..\..\EFAMAgent\bin\Release\en-US\EFAMNgin.resources.dll" />
+				</Component>
+			</Directory>
+			<Directory Id="dirzhHans" Name="zh-Hans">
+				<Component Id="zhHansEFAMresourcesdll" Guid="{D34184C3-266C-478C-9308-AB18335448AC}">
+					<File Id="filE3ABF752C435E8B884199451AE93DC8D" KeyPath="yes" Source="..\..\EFAMAgent\bin\Release\zh-Hans\EFAM.resources.dll" />
+				</Component>
+				<Component Id="zhHansEFAMCoreresourcesdll" Guid="{FC05B5B1-7311-4035-BCA8-4D21BD876E16}">
+					<File Id="fil42E3E261FE36B8E8B688321C97331090" KeyPath="yes" Source="..\..\EFAMAgent\bin\Release\zh-Hans\EFAMCore.resources.dll" />
+				</Component>
+				<Component Id="zhHansEFAMNginresourcesdll" Guid="{A7EF0236-D5E8-4E96-851C-A71B28B96FB2}">
+					<File Id="filA799F99D6887DD42182AB8DB6F82BCDC" KeyPath="yes" Source="..\..\EFAMAgent\bin\Release\zh-Hans\EFAMNgin.resources.dll" />
+				</Component>
+			</Directory>
+			<Directory Id="dirzhHant" Name="zh-Hant">
+				<Component Id="zhHantEFAMresourcesdll" Guid="{5BD100A2-0D90-46C6-9320-19FCF4F03F67}">
+					<File Id="fil117EBC198E5D988F88FE9CB9B22ADC2A" KeyPath="yes" Source="..\..\EFAMAgent\bin\Release\zh-Hant\EFAM.resources.dll" />
+				</Component>
+				<Component Id="zhHantEFAMCoreresourcesdll" Guid="{3FD80175-225A-430B-80B2-5D18FA2DEEFB}">
+					<File Id="fil939532B770C50EE1DB321E4D46CE010C" KeyPath="yes" Source="..\..\EFAMAgent\bin\Release\zh-Hant\EFAMCore.resources.dll" />
+				</Component>
+				<Component Id="zhHantEFAMNginresourcesdll" Guid="{99C6E3DD-BE17-468D-BA73-875DAFB9B07E}">
+					<File Id="fil7426C29C2EE71A5549068E57F79F61B9" KeyPath="yes" Source="..\..\EFAMAgent\bin\Release\zh-Hant\EFAMNgin.resources.dll" />
+				</Component>
+			</Directory>
+			<Component Id="FacFltWin10" Guid="{61257EF6-A633-47DA-8EB3-374BCCFF81FA}">
+				<ServiceControl
+				  Id="StopFacFltWin10"
+				  Name="FacFltWin10"
+				  Stop="install"
+				  Wait="yes" />
+				<File Source="..\..\Drivers\FacFltWin10.sys" KeyPath="yes" />
+				<ServiceControl
+				  Id="StartFacFltWin10"
+				  Name="FacFltWin10"
+				  Stop="install"
+				  Wait="yes" />
+			</Component>
+			<Component Id="FacFltWin8" Guid="{FC94B8B5-8125-4F45-B70A-0C5437BCD1AC}">
+				<ServiceControl
+				  Id="StopFacFltWin8"
+				  Name="FacFltWin8"
+				  Stop="install"
+				  Wait="yes" />
+				<File Source="..\..\Drivers\FacFltWin8.sys" KeyPath="yes" />
+				<ServiceControl
+				  Id="StartFacFltWin8"
+				  Name="FacFltWin8"
+				  Stop="install"
+				  Wait="yes" />
+			</Component>
+			<Component Id="FacFltWin7" Guid="{34E1529F-2F30-4E38-80EB-92B8C34B19F8}">
+				<ServiceControl
+				  Id="StopFacFltWin7"
+				  Name="FacFltWin7"
+				  Stop="install"
+				  Wait="yes" />
+				<File Source="..\..\Drivers\FacFltWin7.sys" KeyPath="yes" />
+				<ServiceControl
+				  Id="StartFacFltWin7"
+				  Name="FacFltWin7"
+				  Stop="install"
+				  Wait="yes" />
+			</Component>
+			<Component Id="FacFltWin81" Guid="{8B605187-F063-4560-8370-1171D21C8A6A}">
+				<ServiceControl
+				  Id="StopFacFltWin81"
+				  Name="FacFltWin81"
+				  Stop="install"
+				  Wait="yes" />
+				<File Source="..\..\Drivers\FacFltWin81.sys" KeyPath="yes" />
+				<ServiceControl
+				  Id="StartFacFltWin81"
+				  Name="FacFltWin81"
+				  Stop="install"
+				  Wait="yes" />
+			</Component>
+			<Component Id="Updaterexe" Guid="{5AE4F79C-D810-49BF-9427-80B2F855E109}">
+				<File Source="C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\EFAMUpdater\EFAMUpdater\bin\Release\Updater.exe" KeyPath="yes" />
+			</Component>
+			<Component Id="Updaterexeconfig" Guid="{AA16C5DD-726E-4B35-8E78-FED6B97AFF7C}">
+				<File Source="C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\EFAMUpdater\EFAMUpdater\bin\Release\Updater.exe.config" KeyPath="yes" />
+			</Component>
+		</DirectoryRef>
+	</Fragment>
+	<Fragment>
+		<ComponentGroup Id="ProductComponents">
+			<ComponentRef Id="ComponentFactoryKryptonToolkitdll" />
+			<ComponentRef Id="EFAMexe" />
+			<ComponentRef Id="EFAMexeconfig" />
+			<ComponentRef Id="EFAMCoredll" />
+			<ComponentRef Id="EFAMNgin.dll" />
+			<ComponentRef Id="EFAMNgin.XmlSerializers.dll" />
+			<ComponentRef Id="FltOptr32.dll" />
+			<ComponentRef Id="FltOptr64.dll" />
+			<ComponentRef Id="LKCorLib.dll" />
+			<ComponentRef Id="log4net.dll" />
+			<ComponentRef Id="Registry.reg" />
+			<ComponentRef Id="enUSEFAMresourcesdll" />
+			<ComponentRef Id="enUSEFAMCoreresourcesdll" />
+			<ComponentRef Id="enUSEFAMNginresourcesdll" />
+			<ComponentRef Id="enEFAMresourcesdll" />
+			<ComponentRef Id="zhHansEFAMresourcesdll" />
+			<ComponentRef Id="zhHansEFAMCoreresourcesdll" />
+			<ComponentRef Id="zhHansEFAMNginresourcesdll" />
+			<ComponentRef Id="zhHantEFAMresourcesdll" />
+			<ComponentRef Id="zhHantEFAMCoreresourcesdll" />
+			<ComponentRef Id="zhHantEFAMNginresourcesdll" />
+			<ComponentRef Id="FacFltWin10" />
+			<ComponentRef Id="FacFltWin8" />
+			<ComponentRef Id="FacFltWin7" />
+			<ComponentRef Id="FacFltWin81" />
+			<ComponentRef Id="Updaterexe" />
+			<ComponentRef Id="Updaterexeconfig" />
+			<ComponentRef Id="cmpDesktopShortcut" />
+		</ComponentGroup>
+	</Fragment>
+</Wix>

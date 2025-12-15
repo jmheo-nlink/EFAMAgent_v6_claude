@@ -1,0 +1,752 @@
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\bin\Release\EFAM.exe.config
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\bin\Release\EFAM.exe
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\bin\Release\EFAM.pdb
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\bin\Release\ComponentFactory.Krypton.Toolkit.dll
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\bin\Release\DlkBase.dll
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\bin\Release\EFAMCommon.dll
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\bin\Release\EFAMNgin.dll
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\bin\Release\FltOptr.dll
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\bin\Release\log4net.dll
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\bin\Release\DlkBase.pdb
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\bin\Release\DlkBase.xml
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\bin\Release\EFAMCommon.pdb
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\bin\Release\EFAMCommon.xml
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\bin\Release\EFAMNgin.pdb
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\bin\Release\EFAMNgin.xml
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\bin\Release\FltOptr.pdb
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\bin\Release\FltOptr.xml
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\bin\Release\log4net.xml
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\bin\Release\en-US\DlkBase.resources.dll
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\bin\Release\en-US\FltOptr.resources.dll
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\bin\Release\EFAMNgin.XmlSerializers.dll
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\obj\Release\ResolveAssemblyReference.cache
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.resources
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.AboutBox.resources
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ChangePasswordDialog.resources
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ConfigDialog.resources
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.LoaderDialog.resources
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.MainForm.resources
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ViewLogDialog.resources
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ViewPermissionsDialog.resources
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.RecycleBinDialog.resources
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\obj\Release\GenerateResource-ResGen.read.1.tlog
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\obj\Release\GenerateResource-ResGen.write.1.tlog
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\obj\Release\EFAM.exe
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgent\obj\Release\EFAM.pdb
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\EFAM.exe.config
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\EFAM.exe
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\EFAM.pdb
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\en-US\EFAM.resources.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\zh-Hans\EFAM.resources.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\zh-Hant\EFAM.resources.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\ComponentFactory.Krypton.Toolkit.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\EFAMCore.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\EFAMNgin.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\LKCorLib.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\log4net.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\EFAMCore.pdb
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\EFAMCore.xml
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\EFAMNgin.pdb
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\EFAMNgin.xml
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\LKCorLib.xml
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\log4net.xml
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\en-US\EFAMCore.resources.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\zh-Hans\EFAMCore.resources.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\zh-Hant\EFAMCore.resources.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\en-US\EFAMNgin.resources.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\zh-Hans\EFAMNgin.resources.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\zh-Hant\EFAMNgin.resources.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\EFAMNgin.XmlSerializers.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.resources
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.AboutBox.resources
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ChangePasswordDialog.resources
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ConfigDialog.resources
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.LoaderDialog.resources
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.MainForm.resources
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ManagerInfoDialog.resources
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ViewLogDialog.resources
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ViewPermissionsDialog.resources
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.RecycleBinDialog.resources
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.en-US.resources
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.zh-Hans.resources
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.zh-Hant.resources
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\EFAMAgent.csproj.GenerateResource.Cache
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\en-US\EFAM.resources.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\zh-Hans\EFAM.resources.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\zh-Hant\EFAM.resources.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\EFAM.exe
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\EFAM.pdb
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\EFAM.exe.config
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\EFAM.exe
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\EFAM.pdb
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\en-US\EFAM.resources.dll
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\zh-Hans\EFAM.resources.dll
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\zh-Hant\EFAM.resources.dll
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\ComponentFactory.Krypton.Toolkit.dll
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\EFAMCore.dll
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\EFAMNgin.dll
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\LKCorLib.dll
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\log4net.dll
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\EFAMCore.pdb
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\EFAMCore.xml
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\EFAMNgin.pdb
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\EFAMNgin.xml
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\LKCorLib.xml
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\log4net.xml
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\en-US\EFAMCore.resources.dll
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\zh-Hans\EFAMCore.resources.dll
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\zh-Hant\EFAMCore.resources.dll
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\en-US\EFAMNgin.resources.dll
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\zh-Hans\EFAMNgin.resources.dll
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\zh-Hant\EFAMNgin.resources.dll
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\bin\Release\EFAMNgin.XmlSerializers.dll
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.resources
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.AboutBox.resources
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ChangePasswordDialog.resources
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ConfigDialog.resources
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.LoaderDialog.resources
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.MainForm.resources
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ManagerInfoDialog.resources
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ViewLogDialog.resources
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ViewPermissionsDialog.resources
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.RecycleBinDialog.resources
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.en-US.resources
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.zh-Hans.resources
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.zh-Hant.resources
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\EFAMAgent.csproj.GenerateResource.Cache
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\en-US\EFAM.resources.dll
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\zh-Hans\EFAM.resources.dll
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\zh-Hant\EFAM.resources.dll
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\EFAM.exe
+E:\Temp\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgent\obj\Release\EFAM.pdb
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\bin\Release\EFAM.exe
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\bin\Release\EFAM.exe.config
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\bin\Release\ComponentFactory.Krypton.Toolkit.dll
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\bin\Release\EFAMCore.dll
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\bin\Release\EFAMNgin.dll
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\bin\Release\LKCorLib.dll
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\bin\Release\log4net.dll
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\bin\Release\EFAMCore.pdb
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\bin\Release\EFAMCore.xml
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\bin\Release\EFAMNgin.pdb
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\bin\Release\EFAMNgin.xml
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\bin\Release\LKCorLib.xml
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\bin\Release\log4net.xml
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\bin\Release\en-US\EFAMCore.resources.dll
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\bin\Release\zh-Hans\EFAMCore.resources.dll
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\bin\Release\zh-Hant\EFAMCore.resources.dll
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\bin\Release\en-US\EFAMNgin.resources.dll
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\bin\Release\zh-Hans\EFAMNgin.resources.dll
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\bin\Release\zh-Hant\EFAMNgin.resources.dll
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\bin\Release\EFAMNgin.XmlSerializers.dll
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\obj\Release\EFAMAgent.csprojResolveAssemblyReference.cache
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.resources
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.AboutBox.resources
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ChangePasswordDialog.resources
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ConfigDialog.resources
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.LoaderDialog.resources
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.MainForm.resources
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ManagerInfoDialog.resources
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ViewLogDialog.resources
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ViewPermissionsDialog.resources
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.RecycleBinDialog.resources
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.en-US.resources
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.zh-Hans.resources
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.zh-Hant.resources
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\obj\Release\EFAMAgent.csproj.GenerateResource.Cache
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\obj\Release\en-US\EFAM.resources.dll
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\obj\Release\zh-Hans\EFAM.resources.dll
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\obj\Release\zh-Hant\EFAM.resources.dll
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\obj\Release\EFAM.exe
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1\EFAMAgent\obj\Release\EFAM.pdb
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\bin\Release\EFAM.exe.config
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\bin\Release\EFAM.exe
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\bin\Release\EFAM.pdb
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\bin\Release\en-US\EFAM.resources.dll
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\bin\Release\zh-Hans\EFAM.resources.dll
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\bin\Release\zh-Hant\EFAM.resources.dll
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\bin\Release\ComponentFactory.Krypton.Toolkit.dll
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\bin\Release\EFAMCore.dll
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\bin\Release\EFAMNgin.dll
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\bin\Release\LKCorLib.dll
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\bin\Release\log4net.dll
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\bin\Release\EFAMCore.pdb
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\bin\Release\EFAMCore.xml
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\bin\Release\EFAMNgin.pdb
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\bin\Release\EFAMNgin.xml
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\bin\Release\LKCorLib.xml
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\bin\Release\log4net.xml
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\bin\Release\en-US\EFAMCore.resources.dll
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\bin\Release\zh-Hans\EFAMCore.resources.dll
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\bin\Release\zh-Hant\EFAMCore.resources.dll
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\bin\Release\en-US\EFAMNgin.resources.dll
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\bin\Release\zh-Hans\EFAMNgin.resources.dll
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\bin\Release\zh-Hant\EFAMNgin.resources.dll
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\bin\Release\EFAMNgin.XmlSerializers.dll
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.resources
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.AboutBox.resources
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ChangePasswordDialog.resources
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ConfigDialog.resources
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.LoaderDialog.resources
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.MainForm.resources
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ManagerInfoDialog.resources
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ViewLogDialog.resources
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ViewPermissionsDialog.resources
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.RecycleBinDialog.resources
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.en-US.resources
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.zh-Hans.resources
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.zh-Hant.resources
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\obj\Release\EFAMAgent.csproj.GenerateResource.Cache
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\obj\Release\en-US\EFAM.resources.dll
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\obj\Release\zh-Hans\EFAM.resources.dll
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\obj\Release\zh-Hant\EFAM.resources.dll
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\obj\Release\EFAM.exe
+C:\Users\DJJUNG\Desktop\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\obj\Release\EFAM.pdb
+F:\123\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\bin\Release\EFAM.exe.config
+F:\123\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\obj\Release\EFAM.exe
+F:\123\Workspace\EFAMAgent_v5.1 - 복사본\EFAMAgent\obj\Release\EFAM.pdb
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\bin\Release\EFAM.exe.config
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\obj\Release\EFAM.exe
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\obj\Release\EFAM.pdb
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\bin\Release\EFAM.exe
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\bin\Release\EFAM.pdb
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\bin\Release\en-US\EFAM.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\bin\Release\zh-Hans\EFAM.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\bin\Release\zh-Hant\EFAM.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\bin\Release\ComponentFactory.Krypton.Toolkit.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\bin\Release\EFAMCore.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\bin\Release\EFAMNgin.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\bin\Release\LKCorLib.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\bin\Release\log4net.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\bin\Release\EFAMCore.pdb
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\bin\Release\EFAMCore.xml
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\bin\Release\EFAMNgin.pdb
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\bin\Release\EFAMNgin.xml
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\bin\Release\LKCorLib.xml
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\bin\Release\log4net.xml
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\bin\Release\en-US\EFAMCore.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\bin\Release\zh-Hans\EFAMCore.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\bin\Release\zh-Hant\EFAMCore.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\bin\Release\en-US\EFAMNgin.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\bin\Release\zh-Hans\EFAMNgin.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\bin\Release\zh-Hant\EFAMNgin.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\bin\Release\EFAMNgin.XmlSerializers.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\obj\Release\EFAMAgent.csprojResolveAssemblyReference.cache
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.resources
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.AboutBox.resources
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ChangePasswordDialog.resources
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ConfigDialog.resources
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.LoaderDialog.resources
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.MainForm.resources
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ManagerInfoDialog.resources
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ViewLogDialog.resources
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ViewPermissionsDialog.resources
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.RecycleBinDialog.resources
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.en-US.resources
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.zh-Hans.resources
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.zh-Hant.resources
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\obj\Release\EFAMAgent.csproj.GenerateResource.Cache
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\obj\Release\en-US\EFAM.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\obj\Release\zh-Hans\EFAM.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5\EFAMAgent\obj\Release\zh-Hant\EFAM.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\bin\Release\EFAM.exe.config
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\obj\Release\EFAM.exe
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\obj\Release\EFAM.pdb
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\bin\Release\EFAM.exe
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\bin\Release\EFAM.pdb
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\bin\Release\en-US\EFAM.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\bin\Release\zh-Hans\EFAM.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\bin\Release\zh-Hant\EFAM.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\bin\Release\ComponentFactory.Krypton.Toolkit.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\bin\Release\EFAMCore.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\bin\Release\EFAMNgin.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\bin\Release\LKCorLib.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\bin\Release\log4net.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\bin\Release\EFAMCore.pdb
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\bin\Release\EFAMCore.xml
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\bin\Release\EFAMNgin.pdb
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\bin\Release\EFAMNgin.xml
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\bin\Release\LKCorLib.xml
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\bin\Release\log4net.xml
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\bin\Release\en-US\EFAMCore.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\bin\Release\zh-Hans\EFAMCore.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\bin\Release\zh-Hant\EFAMCore.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\bin\Release\en-US\EFAMNgin.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\bin\Release\zh-Hans\EFAMNgin.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\bin\Release\zh-Hant\EFAMNgin.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\bin\Release\EFAMNgin.XmlSerializers.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\obj\Release\EFAMAgent.csprojResolveAssemblyReference.cache
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.resources
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.AboutBox.resources
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ChangePasswordDialog.resources
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ConfigDialog.resources
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.LoaderDialog.resources
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.MainForm.resources
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ManagerInfoDialog.resources
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ViewLogDialog.resources
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ViewPermissionsDialog.resources
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.RecycleBinDialog.resources
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.en-US.resources
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.zh-Hans.resources
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.zh-Hant.resources
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\obj\Release\EFAMAgent.csproj.GenerateResource.Cache
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\obj\Release\en-US\EFAM.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\obj\Release\zh-Hans\EFAM.resources.dll
+C:\Users\DJJUNG\Desktop\EFAMAgent_v5 - 복사본\EFAMAgent\obj\Release\zh-Hant\EFAM.resources.dll
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\EFAM.exe.config
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\EFAM.exe
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\EFAM.pdb
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\EFAM.exe
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\EFAM.pdb
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\en-US\EFAM.resources.dll
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\zh-Hans\EFAM.resources.dll
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\zh-Hant\EFAM.resources.dll
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\ComponentFactory.Krypton.Toolkit.dll
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\EFAMCore.dll
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\EFAMNgin.dll
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\LKCorLib.dll
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\log4net.dll
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\EFAMCore.pdb
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\EFAMCore.xml
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\EFAMNgin.pdb
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\EFAMNgin.xml
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\LKCorLib.xml
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\log4net.xml
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\en-US\EFAMCore.resources.dll
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\zh-Hans\EFAMCore.resources.dll
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\zh-Hant\EFAMCore.resources.dll
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\en-US\EFAMNgin.resources.dll
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\zh-Hans\EFAMNgin.resources.dll
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\zh-Hant\EFAMNgin.resources.dll
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\EFAMNgin.XmlSerializers.dll
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\EFAMAgent.csprojResolveAssemblyReference.cache
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.resources
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.AboutBox.resources
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ChangePasswordDialog.resources
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ConfigDialog.resources
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.LoaderDialog.resources
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.MainForm.resources
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ManagerInfoDialog.resources
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ViewLogDialog.resources
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ViewPermissionsDialog.resources
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.RecycleBinDialog.resources
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.en-US.resources
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.zh-Hans.resources
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.zh-Hant.resources
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\EFAMAgent.csproj.GenerateResource.Cache
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\en-US\EFAM.resources.dll
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\zh-Hans\EFAM.resources.dll
+D:\Development\Workspace\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\zh-Hant\EFAM.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\EFAM.exe.config
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\EFAM.exe
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\EFAM.pdb
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\EFAM.exe
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\EFAM.pdb
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\en-US\EFAM.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\zh-Hans\EFAM.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\zh-Hant\EFAM.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\ComponentFactory.Krypton.Toolkit.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\EFAMCore.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\EFAMNgin.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\LKCorLib.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\log4net.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\EFAMCore.pdb
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\EFAMCore.xml
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\EFAMNgin.pdb
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\EFAMNgin.xml
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\LKCorLib.xml
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\log4net.xml
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\en-US\EFAMCore.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\zh-Hans\EFAMCore.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\zh-Hant\EFAMCore.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\en-US\EFAMNgin.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\zh-Hans\EFAMNgin.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\zh-Hant\EFAMNgin.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\bin\Release\EFAMNgin.XmlSerializers.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\EFAMAgent.csprojResolveAssemblyReference.cache
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.resources
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.AboutBox.resources
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ChangePasswordDialog.resources
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ConfigDialog.resources
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.LoaderDialog.resources
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.MainForm.resources
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ManagerInfoDialog.resources
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ViewLogDialog.resources
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ViewPermissionsDialog.resources
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.RecycleBinDialog.resources
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.en-US.resources
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.zh-Hans.resources
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.zh-Hant.resources
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\EFAMAgent.csproj.GenerateResource.Cache
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\en-US\EFAM.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\zh-Hans\EFAM.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6_HHI\EFAMAgent\obj\Release\zh-Hant\EFAM.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\bin\Release\EFAM.exe.config
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\obj\Release\EFAM.exe
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\obj\Release\EFAM.pdb
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\bin\Release\EFAM.exe
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\bin\Release\EFAM.pdb
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\bin\Release\en-US\EFAM.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\bin\Release\zh-Hans\EFAM.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\bin\Release\zh-Hant\EFAM.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\bin\Release\ComponentFactory.Krypton.Toolkit.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\bin\Release\EFAMCore.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\bin\Release\EFAMNgin.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\bin\Release\LKCorLib.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\bin\Release\log4net.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\bin\Release\EFAMCore.pdb
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\bin\Release\EFAMCore.xml
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\bin\Release\EFAMNgin.pdb
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\bin\Release\EFAMNgin.xml
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\bin\Release\LKCorLib.xml
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\bin\Release\log4net.xml
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\bin\Release\en-US\EFAMCore.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\bin\Release\zh-Hans\EFAMCore.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\bin\Release\zh-Hant\EFAMCore.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\bin\Release\en-US\EFAMNgin.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\bin\Release\zh-Hans\EFAMNgin.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\bin\Release\zh-Hant\EFAMNgin.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\bin\Release\EFAMNgin.XmlSerializers.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\obj\Release\EFAMAgent.csprojResolveAssemblyReference.cache
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.resources
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.AboutBox.resources
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ChangePasswordDialog.resources
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ConfigDialog.resources
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.LoaderDialog.resources
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.MainForm.resources
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ManagerInfoDialog.resources
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ViewLogDialog.resources
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ViewPermissionsDialog.resources
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.RecycleBinDialog.resources
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.en-US.resources
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.zh-Hans.resources
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.zh-Hant.resources
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\obj\Release\EFAMAgent.csproj.GenerateResource.Cache
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\obj\Release\en-US\EFAM.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\obj\Release\zh-Hans\EFAM.resources.dll
+D:\Development\Product\E-FAM\Source\v6\EFAMAgent_v6\EFAMAgent\obj\Release\zh-Hant\EFAM.resources.dll
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\EFAM.exe.config
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\EFAM.exe
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\EFAM.pdb
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\EFAM.exe
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\EFAM.pdb
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\en-US\EFAM.resources.dll
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\zh-Hans\EFAM.resources.dll
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\zh-Hant\EFAM.resources.dll
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\ComponentFactory.Krypton.Toolkit.dll
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\EFAMCore.dll
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\EFAMNgin.dll
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\LKCorLib.dll
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\log4net.dll
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\EFAMCore.pdb
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\EFAMCore.xml
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\EFAMNgin.pdb
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\EFAMNgin.xml
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\LKCorLib.xml
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\log4net.xml
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\en-US\EFAMCore.resources.dll
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\zh-Hans\EFAMCore.resources.dll
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\zh-Hant\EFAMCore.resources.dll
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\en-US\EFAMNgin.resources.dll
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\zh-Hans\EFAMNgin.resources.dll
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\zh-Hant\EFAMNgin.resources.dll
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\EFAMNgin.XmlSerializers.dll
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\EFAMAgent.csprojResolveAssemblyReference.cache
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.resources
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.AboutBox.resources
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ChangePasswordDialog.resources
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ConfigDialog.resources
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.LoaderDialog.resources
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.MainForm.resources
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ManagerInfoDialog.resources
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ViewLogDialog.resources
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ViewPermissionsDialog.resources
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.RecycleBinDialog.resources
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.en-US.resources
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.zh-Hans.resources
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.zh-Hant.resources
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\EFAMAgent.csproj.GenerateResource.Cache
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\en-US\EFAM.resources.dll
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\zh-Hans\EFAM.resources.dll
+C:\DJJUNG\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\zh-Hant\EFAM.resources.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\EFAM.exe.config
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\EFAM.exe
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\EFAM.pdb
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\EFAM.exe
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\EFAM.pdb
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\en-US\EFAM.resources.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\zh-Hans\EFAM.resources.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\zh-Hant\EFAM.resources.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\ComponentFactory.Krypton.Toolkit.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\EFAMCore.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\EFAMNgin.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\LKCorLib.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\log4net.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\EFAMCore.pdb
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\EFAMCore.xml
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\EFAMNgin.pdb
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\EFAMNgin.xml
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\LKCorLib.xml
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\log4net.xml
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\en-US\EFAMCore.resources.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\zh-Hans\EFAMCore.resources.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\zh-Hant\EFAMCore.resources.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\en-US\EFAMNgin.resources.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\zh-Hans\EFAMNgin.resources.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\zh-Hant\EFAMNgin.resources.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\bin\Release\EFAMNgin.XmlSerializers.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\EFAMAgent.csprojResolveAssemblyReference.cache
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.resources
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.AboutBox.resources
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ChangePasswordDialog.resources
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ConfigDialog.resources
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.LoaderDialog.resources
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.MainForm.resources
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ManagerInfoDialog.resources
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ViewLogDialog.resources
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ViewPermissionsDialog.resources
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.RecycleBinDialog.resources
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.en-US.resources
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.zh-Hans.resources
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.zh-Hant.resources
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\EFAMAgent.csproj.GenerateResource.Cache
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\en-US\EFAM.resources.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\zh-Hans\EFAM.resources.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\zh-Hant\EFAM.resources.dll
+D:\Development\Workspace\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.AlertDialog.resources
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\bin\Release\EFAM.exe.config
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\obj\Release\EFAM.exe
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\obj\Release\EFAM.pdb
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\bin\Release\EFAM.exe
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\bin\Release\EFAM.pdb
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\bin\Release\en-US\EFAM.resources.dll
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\bin\Release\zh-Hans\EFAM.resources.dll
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\bin\Release\zh-Hant\EFAM.resources.dll
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\bin\Release\ComponentFactory.Krypton.Toolkit.dll
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\bin\Release\EFAMCore.dll
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\bin\Release\EFAMNgin.dll
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\bin\Release\LKCorLib.dll
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\bin\Release\log4net.dll
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\bin\Release\EFAMCore.pdb
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\bin\Release\EFAMCore.xml
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\bin\Release\EFAMNgin.pdb
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\bin\Release\EFAMNgin.xml
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\bin\Release\LKCorLib.xml
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\bin\Release\log4net.xml
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\bin\Release\en-US\EFAMCore.resources.dll
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\bin\Release\zh-Hans\EFAMCore.resources.dll
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\bin\Release\zh-Hant\EFAMCore.resources.dll
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\bin\Release\en-US\EFAMNgin.resources.dll
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\bin\Release\zh-Hans\EFAMNgin.resources.dll
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\bin\Release\zh-Hant\EFAMNgin.resources.dll
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\bin\Release\EFAMNgin.XmlSerializers.dll
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\obj\Release\EFAMAgent.csprojResolveAssemblyReference.cache
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.resources
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.AboutBox.resources
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.AlertDialog.resources
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ChangePasswordDialog.resources
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ConfigDialog.resources
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.LoaderDialog.resources
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.MainForm.resources
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ManagerInfoDialog.resources
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ViewLogDialog.resources
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ViewPermissionsDialog.resources
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.RecycleBinDialog.resources
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.en-US.resources
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.zh-Hans.resources
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.zh-Hant.resources
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\obj\Release\EFAMAgent.csproj.GenerateResource.Cache
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\obj\Release\en-US\EFAM.resources.dll
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\obj\Release\zh-Hans\EFAM.resources.dll
+D:\Development\Source\EFAMAgent_v6\EFAMAgent\obj\Release\zh-Hant\EFAM.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\bin\Release\EFAM.exe.config
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\bin\Release\EFAM.exe
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\bin\Release\EFAM.pdb
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\bin\Release\en-US\EFAM.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\bin\Release\zh-Hans\EFAM.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\bin\Release\zh-Hant\EFAM.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\bin\Release\ComponentFactory.Krypton.Toolkit.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\bin\Release\EFAMCore.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\bin\Release\EFAMNgin.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\bin\Release\LKCorLib.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\bin\Release\log4net.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\bin\Release\EFAMCore.pdb
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\bin\Release\EFAMCore.xml
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\bin\Release\EFAMNgin.pdb
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\bin\Release\EFAMNgin.xml
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\bin\Release\LKCorLib.xml
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\bin\Release\log4net.xml
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\bin\Release\en-US\EFAMCore.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\bin\Release\zh-Hans\EFAMCore.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\bin\Release\zh-Hant\EFAMCore.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\bin\Release\en-US\EFAMNgin.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\bin\Release\zh-Hans\EFAMNgin.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\bin\Release\zh-Hant\EFAMNgin.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\bin\Release\EFAMNgin.XmlSerializers.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\obj\Release\EFAMAgent.csproj.AssemblyReference.cache
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.AboutBox.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.AlertDialog.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ChangePasswordDialog.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ConfigDialog.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.LoaderDialog.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.MainForm.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ManagerInfoDialog.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ViewLogDialog.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ViewPermissionsDialog.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.RecycleBinDialog.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.en-US.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.zh-Hans.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.zh-Hant.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\obj\Release\EFAMAgent.csproj.GenerateResource.cache
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\obj\Release\EFAMAgent.csproj.CoreCompileInputs.cache
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\obj\Release\en-US\EFAM.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\obj\Release\zh-Hans\EFAM.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\obj\Release\zh-Hant\EFAM.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\obj\Release\EFAMAgent.csproj.Up2Date
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\obj\Release\EFAM.exe
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALL\EFAMAgent\obj\Release\EFAM.pdb
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\bin\Release\EFAM.exe.config
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\bin\Release\EFAM.exe
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\bin\Release\EFAM.pdb
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\bin\Release\en-US\EFAM.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\bin\Release\zh-Hans\EFAM.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\bin\Release\zh-Hant\EFAM.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\bin\Release\ComponentFactory.Krypton.Toolkit.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\bin\Release\EFAMCore.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\bin\Release\EFAMNgin.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\bin\Release\LKCorLib.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\bin\Release\log4net.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\bin\Release\EFAMCore.pdb
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\bin\Release\EFAMCore.xml
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\bin\Release\EFAMNgin.pdb
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\bin\Release\EFAMNgin.xml
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\bin\Release\LKCorLib.xml
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\bin\Release\log4net.xml
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\bin\Release\en-US\EFAMCore.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\bin\Release\zh-Hans\EFAMCore.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\bin\Release\zh-Hant\EFAMCore.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\bin\Release\en-US\EFAMNgin.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\bin\Release\zh-Hans\EFAMNgin.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\bin\Release\zh-Hant\EFAMNgin.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\bin\Release\EFAMNgin.XmlSerializers.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\obj\Release\EFAMAgent.csproj.AssemblyReference.cache
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.AboutBox.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.AlertDialog.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ChangePasswordDialog.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ConfigDialog.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.LoaderDialog.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.MainForm.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ManagerInfoDialog.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ViewLogDialog.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ViewPermissionsDialog.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.RecycleBinDialog.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.en-US.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.zh-Hans.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.zh-Hant.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\obj\Release\EFAMAgent.csproj.GenerateResource.cache
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\obj\Release\EFAMAgent.csproj.CoreCompileInputs.cache
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\obj\Release\en-US\EFAM.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\obj\Release\zh-Hans\EFAM.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\obj\Release\zh-Hant\EFAM.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\obj\Release\EFAMAgent.csproj.Up2Date
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\obj\Release\EFAM.exe
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_ONLYINSTALLx86\EFAMAgent\obj\Release\EFAM.pdb
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\bin\Release\EFAM.exe.config
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\bin\Release\EFAM.exe
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\bin\Release\EFAM.pdb
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\bin\Release\en-US\EFAM.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\bin\Release\zh-Hans\EFAM.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\bin\Release\zh-Hant\EFAM.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\bin\Release\ComponentFactory.Krypton.Toolkit.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\bin\Release\EFAMCore.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\bin\Release\EFAMNgin.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\bin\Release\LKCorLib.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\bin\Release\log4net.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\bin\Release\EFAMCore.pdb
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\bin\Release\EFAMCore.xml
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\bin\Release\EFAMNgin.pdb
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\bin\Release\EFAMNgin.xml
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\bin\Release\LKCorLib.xml
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\bin\Release\log4net.xml
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\bin\Release\en-US\EFAMCore.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\bin\Release\zh-Hans\EFAMCore.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\bin\Release\zh-Hant\EFAMCore.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\bin\Release\en-US\EFAMNgin.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\bin\Release\zh-Hans\EFAMNgin.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\bin\Release\zh-Hant\EFAMNgin.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\bin\Release\EFAMNgin.XmlSerializers.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\obj\Release\EFAMAgent.csproj.AssemblyReference.cache
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.AboutBox.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.AlertDialog.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ChangePasswordDialog.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ConfigDialog.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.LoaderDialog.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.MainForm.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ManagerInfoDialog.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ViewLogDialog.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ViewPermissionsDialog.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.RecycleBinDialog.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.en-US.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.zh-Hans.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.zh-Hant.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\obj\Release\EFAMAgent.csproj.GenerateResource.cache
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\obj\Release\EFAMAgent.csproj.CoreCompileInputs.cache
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\obj\Release\en-US\EFAM.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\obj\Release\zh-Hans\EFAM.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\obj\Release\zh-Hant\EFAM.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\obj\Release\EFAMAgent.csproj.Up2Date
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\obj\Release\EFAM.exe
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[240315]EFAMAgent_v6)_HDElectric\EFAMAgent\obj\Release\EFAM.pdb
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\bin\Release\EFAM.exe.config
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\bin\Release\EFAM.exe
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\bin\Release\EFAM.pdb
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\bin\Release\en\EFAM.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\bin\Release\en-US\EFAM.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\bin\Release\zh-Hans\EFAM.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\bin\Release\zh-Hant\EFAM.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\bin\Release\ComponentFactory.Krypton.Toolkit.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\bin\Release\EFAMCore.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\bin\Release\EFAMNgin.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\bin\Release\LKCorLib.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\bin\Release\log4net.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\bin\Release\EFAMCore.pdb
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\bin\Release\EFAMCore.xml
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\bin\Release\EFAMNgin.pdb
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\bin\Release\EFAMNgin.xml
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\bin\Release\LKCorLib.xml
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\bin\Release\log4net.xml
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\bin\Release\en-US\EFAMCore.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\bin\Release\zh-Hans\EFAMCore.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\bin\Release\zh-Hant\EFAMCore.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\bin\Release\en-US\EFAMNgin.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\bin\Release\zh-Hans\EFAMNgin.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\bin\Release\zh-Hant\EFAMNgin.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\bin\Release\EFAMNgin.XmlSerializers.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\obj\Release\EFAMAgent.csproj.AssemblyReference.cache
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.AboutBox.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.AlertDialog.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ChangePasswordDialog.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ConfigDialog.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.LoaderDialog.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.MainForm.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ManagerInfoDialog.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ViewLogDialog.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.ViewPermissionsDialog.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\obj\Release\Link.EFAM.Agent.UI.RecycleBinDialog.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.en.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.en-US.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.zh-Hans.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\obj\Release\Link.EFAM.Agent.Properties.Resources.zh-Hant.resources
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\obj\Release\EFAMAgent.csproj.GenerateResource.cache
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\obj\Release\EFAMAgent.csproj.CoreCompileInputs.cache
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\obj\Release\en\EFAM.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\obj\Release\en-US\EFAM.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\obj\Release\zh-Hans\EFAM.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\obj\Release\zh-Hant\EFAM.resources.dll
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\obj\Release\EFAMAgent.csproj.Up2Date
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\obj\Release\EFAM.exe
+C:\Users\HEO\Link\EFAM\[240912]EFAM\03_EFAMv6_Agent_Source\[251211]EFAMAgent_v6)_en\EFAMAgent\obj\Release\EFAM.pdb

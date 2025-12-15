@@ -1,0 +1,10 @@
+Windows Registry Editor Version 5.00
+
+; EFAMAgent_v5 Filter 경로 삭제
+[-HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\EfamFacFlt]
+
+; EFAMAgent_v6 Filter 경로 삭제
+[-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\efamFilter]
+
+; EFAMAgent_v6 Filter 경로 삭제 (DEMO)
+[-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\mypFilter]

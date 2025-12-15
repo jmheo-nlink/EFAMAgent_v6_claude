@@ -1,0 +1,8 @@
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgentCustom\bin\Debug\EFAM.dll
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgentCustom\bin\Debug\EFAM.pdb
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgentCustom\obj\Debug\ResolveAssemblyReference.cache
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgentCustom\obj\Debug\EFAM.dll
+D:\MyWorks\EFAM\EFAMAgent\EFAMAgentCustom\obj\Debug\EFAM.pdb
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgentCustom\obj\Debug\EFAM.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgentCustom\obj\Debug\EFAM.pdb
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMAgentCustom\obj\Debug\EFAMAgentCustom.csprojResolveAssemblyReference.cache

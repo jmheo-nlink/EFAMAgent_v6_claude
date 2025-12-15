@@ -1,0 +1,267 @@
+﻿#region 변경 이력
+/*
+ * Author : Link mskoo (2011. 6. 14)
+ * 
+ * ====================================================================================================================
+ * Date         Name            Description of Change
+ * --------------------------------------------------------------------------------------------------------------------
+ * 2011-06-14   mskoo           최초 작성.
+ *                              
+ * 2011-09-23   mskoo           5.0 버전 릴리즈.
+ * 
+ * 2011-09-29   mskoo           속성 추가.
+ *                              - IsDomainComputer
+ *                              
+ * 2011-11-03   mskoo           속성 추가.
+ *                              - ServerUrl
+ *                              
+ * 2012-02-11   mskoo           클래스 이름을 'AgentStorage'에서 'AgentStore'로 변경.
+ * 
+ * 2013-05-18   mskoo           속성 추가.
+ *                              - DeniedSharedDrives
+ * ====================================================================================================================
+ */
+#endregion
+
+using System;
+using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.DirectoryServices.ActiveDirectory;
+
+namespace Link.EFAM.Agent
+{
+    using Link.EFAM.Agent.Configuration;
+    using Link.EFAM.Core;
+    using Link.EFAM.Engine;
+
+    /// <summary>
+    /// E-FAM Agent 응용 프로그램에서 액세스할 수 있는 데이터 저장소를 나타낸다.
+    /// </summary>
+    class AgentStore
+    {
+        private string m_userId = String.Empty;
+        private string m_password = String.Empty;
+        private bool m_inSameDomain = false;
+        private bool m_hideForm = false;
+        private Credential m_credential = null;
+        private FileAccessControl m_accCtrl = null;
+        private List<SharedDrive> m_sharedDriveList = null;
+        private NameValueCollection m_hostNameColl = null;
+        private PolicyAutoReloader m_policyReloader = null;
+
+        #region 속성
+        #region Singleton 인스턴스
+
+        private static AgentStore m_instance = null;
+
+        /// <summary>
+        /// 캐시된 <see cref="AgentStore"/> 인스턴스를 반환한다.
+        /// </summary>
+        /// <value>캐시된 <see cref="AgentStore"/> 개체</value>
+        public static AgentStore Store
+        {
+            get
+            {
+                if (m_instance == null) m_instance = new AgentStore();
+
+                return m_instance;
+            } // get
+        }
+
+        #endregion
+
+        #region 사용자 입력
+
+        /// <summary>
+        /// 사용자가 입력한 사용자 ID를 가져오거나 설정한다.
+        /// </summary>
+        /// <value>사용자가 입력한 사용자 ID. 기본값은 빈 문자열("")</value>
+        public string InputedUserId
+        {
+            get { return m_userId; }
+            set
+            {
+                m_userId = (value != null) ? value : String.Empty;
+            }
+        }
+
+        /// <summary>
+        /// 사용자가 입력한 비밀번호를 가져오거나 설정한다.
+        /// </summary>
+        /// <value>사용자가 입력한 비밀번호. 기본값은 빈 문자열("")</value>
+        public string InputedPassword
+        {
+            get { return m_password; }
+            set
+            {
+                m_password = (value != null) ? value : String.Empty;
+            }
+        }
+
+        #endregion
+
+        #region 자격 증명 관련
+
+        /// <summary>
+        /// 사용자가 인증되었는지 여부를 나타내는 값을 가져온다.
+        /// </summary>
+        /// <value>사용자가 인증되었으면 true, 그렇지 않으면 false</value>
+        public bool IsAuthenticated
+        {
+            get
+            {
+                return (m_credential != null && m_credential.IsAuthenticated);
+            }
+        }
+
+        /// <summary>
+        /// 로그인한 사용자의 자격 증명을 가져오거나 설정한다.
+        /// </summary>
+        /// <value>사용자 자격 증명을 나타내는 <see cref="Credential"/> 개체</value>
+        public Credential UserCredential
+        {
+            get { return m_credential; }
+            set { m_credential = value; }
+        }
+
+        #endregion
+
+        /// <summary>
+        /// 로컬 컴퓨터가 도메인에 가입되어 있는지 여부를 나타내는 값을 가져온다.
+        /// </summary>
+        /// <value>로컬 컴퓨터가 도메인에 가입되어 있으면 true, 그렇지 않으면 false</value>
+        //public bool IsDomainComputer
+        //{
+        //    get { return (m_domain != null); }
+        //    //get { return true; }
+        //}
+
+        /// <summary>
+        /// 로컬 컴퓨터가 NAS와 같은 도메인에 있는지 여부를 나타내는 값을 가져온다.
+        /// </summary>
+        /// <value>로컬 컴퓨터가 NAS와 같은 도메인에 있으면 true, 그렇지 않으면 false</value>
+        public bool IsInSameDomainWithNAS
+        {
+            get { return m_inSameDomain; }
+        }
+
+        /// <summary>
+        /// 로컬 컴퓨터가 NAS와 같은 도메인에 있을 때
+        /// 로그인 폼, 로드/언로드 폼 및 알림 영역 아이콘을 숨겨야 하는지 여부를 나타내는 값을 가져온다.
+        /// </summary>
+        /// <value>로그인 폼, 로드/언로드 폼 및 알림 영역 아이콘을 숨겨야 하면 true, 그렇지 않으면 false</value>
+        public bool HideFormInSameDomainWithNAS
+        {
+            get { return m_hideForm; }
+        }
+
+        /// <summary>
+        /// 원격 파일 및 디렉토리에 대한 액세스 제어를 가져오거나 설정한다.
+        /// </summary>
+        /// <value>원격 파일 및 디렉토리에 대한 액세스 제어를 나타내는 <see cref="FileAccessControl"/> 개체</value>
+        public FileAccessControl FileAccessControl
+        {
+            get { return m_accCtrl; }
+            set { m_accCtrl = value; }
+        }
+
+        /// <summary>
+        /// 네트워크 드라이브의 목록을 가져오거나 설정한다.
+        /// </summary>
+        /// <value>네트워크 드라이브의 목록</value>
+        public List<SharedDrive> SharedDrives
+        {
+            get { return m_sharedDriveList; }
+            set
+            {
+                m_sharedDriveList = (value != null) ? value : new List<SharedDrive>();
+            }
+        }
+
+        /// <summary>
+        /// IP 주소와 호스트 이름의 컬렉션을 가져온다.
+        /// </summary>
+        /// <value>IP 주소와 호스트 이름의 컬렉션인 <see cref="NameValueCollection"/> 개체</value>
+        public NameValueCollection HostNameCollection
+        {
+            get { return m_hostNameColl; }
+            set
+            {
+                m_hostNameColl = (value != null) ? value : new NameValueCollection();
+            }
+        }
+
+        public PolicyAutoReloader PolicyReloader
+        {
+            get { return m_policyReloader; }
+            set { m_policyReloader = value; }
+        }
+
+#if INTEROP_SWORK_HHISB // ========================================================================
+        private List<SharedDrive> m_deniedDriveList = new List<SharedDrive>();
+
+        /// <summary>
+        /// 엑세스가 거부된 공유 드라이브 목록을 가져오거나 설정한다.
+        /// </summary>
+        /// <value>액세스가 거부된 공유 드라이브의 목록</value>
+        public List<SharedDrive> DeniedSharedDrives
+        {
+            get { return m_deniedDriveList; }
+            set
+            {
+                m_deniedDriveList = (value != null) ? value : new List<SharedDrive>();
+            }
+        }
+#endif  // INTEROP_SWORK_HHISB ====================================================================
+
+        #endregion
+
+        #region 생성자
+
+        /// <summary>
+        /// <see cref="AgentStore"/> 클래스의 새 인스턴스를 초기화한다.
+        /// </summary>
+        private AgentStore()
+        {
+            Domain domain = null;
+
+            try
+            {
+                domain = Domain.GetComputerDomain();
+            }
+            catch { }
+            finally
+            {
+                m_hostNameColl = new NameValueCollection();
+                m_sharedDriveList = new List<SharedDrive>();
+                if (domain != null)
+                {
+                    m_inSameDomain = AgentSettings.Default.IsInSameDomainWithNAS;
+                    m_hideForm = (m_inSameDomain && AgentSettings.Default.HideFormInSameDomainWithNAS);
+                }
+            } // finally
+        }
+
+        #endregion
+
+        #region 메소드
+
+        /// <summary>
+        /// 데이터 저장소의 모든 데이터를 제거한다.
+        /// </summary>
+        public void Clear()
+        {
+            this.InputedUserId = null;
+            this.InputedPassword = null;
+            m_credential = null;
+            m_accCtrl = null;
+            m_hostNameColl.Clear();
+            m_sharedDriveList.Clear();
+#if INTEROP_SWORK_HHISB // ========================================================================
+            m_deniedDriveList.Clear();
+#endif  // INTEROP_SWORK_HHISB ====================================================================
+        }
+
+        #endregion
+    }
+}

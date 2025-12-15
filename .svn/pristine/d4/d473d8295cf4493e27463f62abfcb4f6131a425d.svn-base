@@ -1,0 +1,599 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutBox_Text" xml:space="preserve">
+    <value>About E-FAM</value>
+    <comment>AboutBox</comment>
+  </data>
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Button_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Button_Delete" xml:space="preserve">
+    <value>Delete</value>
+    <comment>RecycleBinDialog</comment>
+  </data>
+  <data name="Button_Empty" xml:space="preserve">
+    <value>Empty</value>
+    <comment>RecycleBinDialog</comment>
+  </data>
+  <data name="Button_Login" xml:space="preserve">
+    <value>Log In</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Button_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Button_Restore" xml:space="preserve">
+    <value>Restore</value>
+    <comment>RecycleBinDialog</comment>
+  </data>
+  <data name="Button_Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="Calendar_Today" xml:space="preserve">
+    <value>Today:</value>
+  </data>
+  <data name="ChangePasswordDialog_Text" xml:space="preserve">
+    <value>Change Password</value>
+    <comment>ChangePasswordDialog</comment>
+  </data>
+  <data name="Check_AutoLogin" xml:space="preserve">
+    <value>Auto-Login</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Check_AutoLoginSetting" xml:space="preserve">
+    <value>Log in automatically at startup</value>
+    <comment>ConfigDialog</comment>
+  </data>
+  <data name="Check_AutoRun" xml:space="preserve">
+    <value>Auto-Run at Windows startup</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Check_AutoRunSetting" xml:space="preserve">
+    <value>Run the application automatically when Windows starts</value>
+    <comment>ConfigDialog</comment>
+  </data>
+  <data name="Column_Account" xml:space="preserve">
+    <value>User/Group</value>
+    <comment>ViewPermissionsDialog</comment>
+  </data>
+  <data name="Column_CopyRights" xml:space="preserve">
+    <value>Copy</value>
+    <comment>ViewPermissionsDialog</comment>
+  </data>
+  <data name="Column_CreateDirRights" xml:space="preserve">
+    <value>Create Folder</value>
+    <comment>ViewPermissionsDialog</comment>
+  </data>
+  <data name="Column_Date" xml:space="preserve">
+    <value>Date</value>
+    <comment>ViewLogDialog</comment>
+  </data>
+  <data name="Column_DateDeleted" xml:space="preserve">
+    <value>Date Deleted</value>
+    <comment>RecycleBinDialog</comment>
+  </data>
+  <data name="Column_DeleteRights" xml:space="preserve">
+    <value>Delete</value>
+    <comment>ViewPermissionsDialog</comment>
+  </data>
+  <data name="Column_DirPath" xml:space="preserve">
+    <value>Path</value>
+    <comment>ViewPermissionsDialog</comment>
+  </data>
+  <data name="Column_DriveName" xml:space="preserve">
+    <value>Drive</value>
+    <comment>ConfigDialog</comment>
+  </data>
+  <data name="Column_FileAction" xml:space="preserve">
+    <value>Action</value>
+    <comment>ViewLogDialog</comment>
+  </data>
+  <data name="Column_FileName" xml:space="preserve">
+    <value>Name</value>
+    <comment>RecycleBinDialog</comment>
+  </data>
+  <data name="Column_FilePath" xml:space="preserve">
+    <value>Path</value>
+    <comment>ViewLogDialog</comment>
+  </data>
+  <data name="Column_ListDirRights" xml:space="preserve">
+    <value>List Folder</value>
+    <comment>ViewPermissionsDialog</comment>
+  </data>
+  <data name="Column_Manager" xml:space="preserve">
+    <value>Managers</value>
+    <comment>ViewPermissionsDialog</comment>
+  </data>
+  <data name="Column_MoveRights" xml:space="preserve">
+    <value>Move</value>
+    <comment>ViewPermissionsDialog</comment>
+  </data>
+  <data name="Column_NewFilePath" xml:space="preserve">
+    <value>New Path</value>
+    <comment>ViewLogDialog</comment>
+  </data>
+  <data name="Column_NoInherit" xml:space="preserve">
+    <value>No Inherit</value>
+    <comment>ViewPermissionsDialog</comment>
+  </data>
+  <data name="Column_NoPropagate" xml:space="preserve">
+    <value>No Propagate</value>
+    <comment>ViewPermissionsDialog</comment>
+  </data>
+  <data name="Column_OriginalDirectory" xml:space="preserve">
+    <value>Original Location</value>
+    <comment>RecycleBinDialog</comment>
+  </data>
+  <data name="Column_ReadRights" xml:space="preserve">
+    <value>Read</value>
+    <comment>ViewPermissionsDialog</comment>
+  </data>
+  <data name="Column_RenameRights" xml:space="preserve">
+    <value>Rename</value>
+    <comment>ViewPermissionsDialog</comment>
+  </data>
+  <data name="Column_SharedFolder" xml:space="preserve">
+    <value>Shared Folder</value>
+    <comment>ConfigDialog</comment>
+  </data>
+  <data name="Column_UseDrive" xml:space="preserve">
+    <value>Use</value>
+    <comment>ConfigDialog</comment>
+  </data>
+  <data name="Column_WriteRights" xml:space="preserve">
+    <value>Write</value>
+    <comment>ViewPermissionsDialog</comment>
+  </data>
+  <data name="ConfigDialog_Text" xml:space="preserve">
+    <value>Preferences</value>
+    <comment>ConfigDialog</comment>
+  </data>
+  <data name="Config_ConnectionSetting" xml:space="preserve">
+    <value>Connection</value>
+    <comment>ConfigDialog</comment>
+  </data>
+  <data name="Config_DriveSetting" xml:space="preserve">
+    <value>Drives</value>
+    <comment>ConfigDialog</comment>
+  </data>
+  <data name="Config_GeneralSetting" xml:space="preserve">
+    <value>General</value>
+    <comment>ConfigDialog</comment>
+  </data>
+  <data name="Desc_ServerConnSetting" xml:space="preserve">
+    <value>Type the server address to connect to.</value>
+    <comment>ConfigDialog</comment>
+  </data>
+  <data name="Error_ChangePasswordFailure" xml:space="preserve">
+    <value>Failed to change password because an internal error occurred.</value>
+    <comment>ChangePasswordDialog</comment>
+  </data>
+  <data name="Error_ExceptionThrowed" xml:space="preserve">
+    <value>The operation was aborted because an unexpected error occurred.</value>
+  </data>
+  <data name="Error_ExceptionThrowedInProgress" xml:space="preserve">
+    <value>The operation was aborted because an error occurred while {0}.</value>
+    <comment>LoaderDialog</comment>
+  </data>
+  <data name="Error_InvalidUrlFormat" xml:space="preserve">
+    <value>Server address is not of a legal URL form.</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Error_PasswordExpired" xml:space="preserve">
+    <value>Your password has expired. Please change your password.</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Error_SoapExceptionThrowed" xml:space="preserve">
+    <value>The server could not process request.</value>
+  </data>
+  <data name="Error_WebExceptionThrowed" xml:space="preserve">
+    <value>Could not connect to the server.</value>
+  </data>
+  <data name="Error_WrongOldPassword" xml:space="preserve">
+    <value>Old password is incorrect. Please type an old password again.</value>
+    <comment>ChangePasswordDialog</comment>
+  </data>
+  <data name="Info_ApplySettingOnRelogin" xml:space="preserve">
+    <value>{0} setting will not take effect until E-FAM is restarted.</value>
+    <comment>ConfigDialog</comment>
+  </data>
+  <data name="Info_ChangePasswordSuccess" xml:space="preserve">
+    <value>Password was changed.</value>
+    <comment>ChangePasswordDialog</comment>
+  </data>
+  <data name="Info_InProgress" xml:space="preserve">
+    <value>{0}...</value>
+    <comment>LoaderDialog</comment>
+  </data>
+  <data name="Label_All" xml:space="preserve">
+    <value>All</value>
+    <comment>ViewLogDialog</comment>
+  </data>
+  <data name="Label_BeginDate" xml:space="preserve">
+    <value>From:</value>
+    <comment>ViewLogDialog</comment>
+  </data>
+  <data name="Label_ConfirmPassword" xml:space="preserve">
+    <value>Confirm password</value>
+    <comment>ChangePasswordDialog</comment>
+  </data>
+  <data name="Label_Department" xml:space="preserve">
+    <value>Department:</value>
+    <comment>ManagerInfoDialog</comment>
+  </data>
+  <data name="Label_Email" xml:space="preserve">
+    <value>E-mail:</value>
+    <comment>ManagerInfoDialog</comment>
+  </data>
+  <data name="Label_EndDate" xml:space="preserve">
+    <value>To:</value>
+    <comment>ViewLogDialog</comment>
+  </data>
+  <data name="Label_FileAction" xml:space="preserve">
+    <value>Action:</value>
+    <comment>ViewLogDialog</comment>
+  </data>
+  <data name="Label_FileName" xml:space="preserve">
+    <value>Filename:</value>
+    <comment>ViewLogDialog</comment>
+  </data>
+  <data name="Label_JobTitle" xml:space="preserve">
+    <value>Job title:</value>
+    <comment>ManagerInfoDialog</comment>
+  </data>
+  <data name="Label_Manager" xml:space="preserve">
+    <value>Manager</value>
+    <comment>ManagerInfoDialog</comment>
+  </data>
+  <data name="Label_Name" xml:space="preserve">
+    <value>Name:</value>
+    <comment>ManagerInfoDialog</comment>
+  </data>
+  <data name="Label_NetworkDriveSetting" xml:space="preserve">
+    <value>Shared Drives</value>
+    <comment>ConfigDialog</comment>
+  </data>
+  <data name="Label_NewPassword" xml:space="preserve">
+    <value>New password</value>
+    <comment>ChangePasswordDialog</comment>
+  </data>
+  <data name="Label_OldPassword" xml:space="preserve">
+    <value>Old pasword</value>
+    <comment>ChangePasswordDialog</comment>
+  </data>
+  <data name="Label_Password" xml:space="preserve">
+    <value>Password</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Label_Period" xml:space="preserve">
+    <value>Period:</value>
+    <comment>RecycleBinDialog</comment>
+  </data>
+  <data name="Label_PhoneNumber" xml:space="preserve">
+    <value>Phone number:</value>
+    <comment>ManagerInfoDialog</comment>
+  </data>
+  <data name="Label_RunSetting" xml:space="preserve">
+    <value>Startup</value>
+    <comment>ConfigDialog</comment>
+  </data>
+  <data name="Label_ServerAddress" xml:space="preserve">
+    <value>Server address (URL):</value>
+    <comment>ConfigDialog</comment>
+  </data>
+  <data name="Label_ServerConnSetting" xml:space="preserve">
+    <value>Server Connection</value>
+    <comment>ConfigDialog</comment>
+  </data>
+  <data name="Label_UserId" xml:space="preserve">
+    <value>User ID</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="MainForm_Text" xml:space="preserve">
+    <value>E-FAM</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="ManagerInfoDialog_Text" xml:space="preserve">
+    <value>Manager Information</value>
+    <comment>ManagerInfoDialog</comment>
+  </data>
+  <data name="Menu_About" xml:space="preserve">
+    <value>&amp;About E-FAM</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Menu_ChangePassword" xml:space="preserve">
+    <value>Change Password</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Menu_Config" xml:space="preserve">
+    <value>Preferences</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Menu_Exit" xml:space="preserve">
+    <value>E&amp;xit</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Menu_HelpDesk" xml:space="preserve">
+    <value>&amp;Help Desk</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Menu_Login" xml:space="preserve">
+    <value>Log In</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Menu_Logout" xml:space="preserve">
+    <value>Log Out</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Menu_ManagePermissions" xml:space="preserve">
+    <value>Manage Permissions</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Menu_RecycleBin" xml:space="preserve">
+    <value>Recycle Bin</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Menu_ViewLog" xml:space="preserve">
+    <value>View Logs</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Menu_ViewPermissions" xml:space="preserve">
+    <value>View Permissions</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="MsgBox_Caption" xml:space="preserve">
+    <value>E-FAM</value>
+  </data>
+  <data name="NotifyText_LoggedIn" xml:space="preserve">
+    <value>E-FAM (Logged In)</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="NotifyText_LoggedOut" xml:space="preserve">
+    <value>E-FAM (Logged Out)</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="NotifyTipTitle_LoggedIn" xml:space="preserve">
+    <value>E-FAM Log In</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="NotifyTipTitle_LoggedOut" xml:space="preserve">
+    <value>E-FAM Log Out</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="NotifyTip_LoggedIn" xml:space="preserve">
+    <value>You have logged in to E-FAM.</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="NotifyTip_LoggedOut" xml:space="preserve">
+    <value>You have logged out from E-FAM.</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Quest_OverwriteFile" xml:space="preserve">
+    <value>Do you want to overwrite an existing destination file?</value>
+    <comment>RecycleBinDialog</comment>
+  </data>
+  <data name="RecycleBinDialog_Text" xml:space="preserve">
+    <value>Recycle Bin</value>
+    <comment>RecycleBinDialog</comment>
+  </data>
+  <data name="RecycleBin_DeletingFile" xml:space="preserve">
+    <value>Deleting files.</value>
+    <comment>RecycleBinDialog</comment>
+  </data>
+  <data name="RecycleBin_RestoringFile" xml:space="preserve">
+    <value>Restoring files.</value>
+    <comment>RecycleBinDialog</comment>
+  </data>
+  <data name="SCSWork_FailedToGetInformation" xml:space="preserve">
+    <value>An error occurred while getting information about S-Work.</value>
+    <comment>SWork</comment>
+  </data>
+  <data name="SCSWork_FailedToSetSecureDriveInfo" xml:space="preserve">
+    <value>The operation was aborted because an error occurred while setting secure drive information to S-Work.</value>
+    <comment>SWork</comment>
+  </data>
+  <data name="SCSWork_NotInstalled" xml:space="preserve">
+    <value>S-Work has not been installed. Please install S-Work.</value>
+    <comment>SWork</comment>
+  </data>
+  <data name="SCSWork_NotLoggedIn" xml:space="preserve">
+    <value>You are not logged in to S-Work. Please log in to S-Work.</value>
+    <comment>SWork</comment>
+  </data>
+  <data name="Step_ConnectingNetworkDrive" xml:space="preserve">
+    <value>Connecting shared drives</value>
+    <comment>LoaderDialog</comment>
+  </data>
+  <data name="Step_DisconnectingNetworkDrive" xml:space="preserve">
+    <value>Disconnecting shared drives</value>
+    <comment>LoaderDialog</comment>
+  </data>
+  <data name="Step_GettingDataFromServer" xml:space="preserve">
+    <value>Getting date from the server</value>
+    <comment>LoaderDialog</comment>
+  </data>
+  <data name="Step_LoadingEFAM" xml:space="preserve">
+    <value>Loading E-FAM</value>
+    <comment>LoaderDialog</comment>
+  </data>
+  <data name="Step_UnloadingEFAM" xml:space="preserve">
+    <value>Unloading E-FAM</value>
+    <comment>LoaderDialog</comment>
+  </data>
+  <data name="ToolTip_CannotChangeUse" xml:space="preserve">
+    <value>Secure shared drives must be used.</value>
+    <comment>SWork</comment>
+  </data>
+  <data name="ViewLogDialog_Text" xml:space="preserve">
+    <value>View Logs</value>
+    <comment>ViewLogDialog</comment>
+  </data>
+  <data name="ViewPermissionsDialog_Text" xml:space="preserve">
+    <value>View Permissions</value>
+    <comment>ViewPermissionsDialog</comment>
+  </data>
+  <data name="Warn_FileAlreadyExists" xml:space="preserve">
+    <value>File '{0}' already exists in the original location.</value>
+    <comment>RecycleBinDialog</comment>
+  </data>
+  <data name="Warn_InputConfirmPassword" xml:space="preserve">
+    <value>Please re-type a new password in the Confirm password field.</value>
+    <comment>ChangePasswordDialog</comment>
+  </data>
+  <data name="Warn_InputNewPassword" xml:space="preserve">
+    <value>Please type a new password.</value>
+    <comment>ChangePasswordDialog</comment>
+  </data>
+  <data name="Warn_InputOldPassword" xml:space="preserve">
+    <value>Please type an old password.</value>
+    <comment>ChangePasswordDialog</comment>
+  </data>
+  <data name="Warn_InputStrongPassword" xml:space="preserve">
+    <value>Password must be at least {0} characters, with at least 1 digit and 1 special character.</value>
+    <comment>ChangePasswordDialog</comment>
+  </data>
+  <data name="Warn_InputUserId" xml:space="preserve">
+    <value>Please type user ID.</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Warn_NewPwdAndConfirmPwdMismatch" xml:space="preserve">
+    <value>New password does not match confirm password.</value>
+    <comment>ChangePasswordDialog</comment>
+  </data>
+  <data name="Warn_NewPwdIsEqualToOldPwd" xml:space="preserve">
+    <value>New password should not be same as old password. Please type a different password.</value>
+    <comment>ChangePasswordDialog</comment>
+  </data>
+  <data name="Warn_NewPwdIsEqualToUserId" xml:space="preserve">
+    <value>New password should not be same as user ID. Please type a different password.</value>
+    <comment>ChangePasswordDialog</comment>
+  </data>
+  <data name="Warn_SomeNetwkDrvIsNotConnected" xml:space="preserve">
+    <value>Failed to connect to some shared drives.</value>
+    <comment>LoaderDialog</comment>
+  </data>
+  <data name="Warn_TooManySharedDrives" xml:space="preserve">
+    <value>The maximum number of allowed shared drives in Windows has been exceeded. The maximum number is {0}.</value>
+    <comment>LoaderDialog</comment>
+  </data>
+</root>

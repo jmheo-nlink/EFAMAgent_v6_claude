@@ -1,0 +1,510 @@
+﻿namespace Link.EFAM.Agent.UI
+{
+    partial class MainForm
+    {
+        /// <summary>
+        /// 필수 디자이너 변수입니다.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// 사용 중인 모든 리소스를 정리합니다.
+        /// </summary>
+        /// <param name="disposing">관리되는 리소스를 삭제해야 하면 true이고, 그렇지 않으면 false입니다.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form 디자이너에서 생성한 코드
+
+        /// <summary>
+        /// 디자이너 지원에 필요한 메서드입니다.
+        /// 이 메서드의 내용을 코드 편집기로 수정하지 마십시오.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            this.trayIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.trayCtxMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.mnuLogin = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuLogout = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.mnuChangePassword = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuManagePerms = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuViewPerms = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuViewLog = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRecycleBin = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.mnuConfig = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.mnuHelpDesk = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuAbout = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.mnuExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.tlpnlContainer = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpnlTop = new System.Windows.Forms.TableLayoutPanel();
+            this.picLogo = new System.Windows.Forms.PictureBox();
+            this.pnlBottom = new System.Windows.Forms.Panel();
+            this.pnlContentBack = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.tlpnlContent = new System.Windows.Forms.TableLayoutPanel();
+            this.grpLogin = new ComponentFactory.Krypton.Toolkit.KryptonGroup();
+            this.grpOptions = new ComponentFactory.Krypton.Toolkit.KryptonGroup();
+            this.chkAutoLogin = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.chkAutoRun = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.lblPassword = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lblUserId = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.txtPassword = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtUserId = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.btnLogin = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.bgWorker = new System.ComponentModel.BackgroundWorker();
+            this.krtTkManager = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
+            this.krtGlobalPalette = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
+            this.tmrKeepNetwkConn = new System.Windows.Forms.Timer(this.components);
+            this.tmrStartAutoReloader = new System.Windows.Forms.Timer(this.components);
+            this.bgCmdWorker = new System.ComponentModel.BackgroundWorker();
+            this.trayCtxMenu.SuspendLayout();
+            this.tlpnlContainer.SuspendLayout();
+            this.tlpnlTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlContentBack)).BeginInit();
+            this.pnlContentBack.SuspendLayout();
+            this.tlpnlContent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grpLogin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpLogin.Panel)).BeginInit();
+            this.grpLogin.Panel.SuspendLayout();
+            this.grpLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grpOptions)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpOptions.Panel)).BeginInit();
+            this.grpOptions.Panel.SuspendLayout();
+            this.grpOptions.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // trayIcon
+            // 
+            this.trayIcon.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.trayIcon.ContextMenuStrip = this.trayCtxMenu;
+            this.trayIcon.Text = "E-FAM";
+            this.trayIcon.Visible = true;
+            this.trayIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.trayIcon_MouseDoubleClick);
+            // 
+            // trayCtxMenu
+            // 
+            this.trayCtxMenu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.trayCtxMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuLogin,
+            this.mnuLogout,
+            this.mnuSeparator1,
+            this.mnuChangePassword,
+            this.mnuManagePerms,
+            this.mnuViewPerms,
+            this.mnuViewLog,
+            this.mnuRecycleBin,
+            this.mnuSeparator2,
+            this.mnuConfig,
+            this.mnuSeparator3,
+            this.mnuHelpDesk,
+            this.mnuAbout,
+            this.mnuSeparator4,
+            this.mnuExit});
+            this.trayCtxMenu.Name = "ctxmnuNotify";
+            this.trayCtxMenu.Size = new System.Drawing.Size(217, 270);
+            // 
+            // mnuLogin
+            // 
+            this.mnuLogin.Name = "mnuLogin";
+            this.mnuLogin.Size = new System.Drawing.Size(216, 22);
+            this.mnuLogin.Text = "Menu_Login";
+            this.mnuLogin.Click += new System.EventHandler(this.mnuLogin_Click);
+            // 
+            // mnuLogout
+            // 
+            this.mnuLogout.Name = "mnuLogout";
+            this.mnuLogout.Size = new System.Drawing.Size(216, 22);
+            this.mnuLogout.Text = "Menu_Logout";
+            this.mnuLogout.Click += new System.EventHandler(this.mnuLogout_Click);
+            // 
+            // mnuSeparator1
+            // 
+            this.mnuSeparator1.Name = "mnuSeparator1";
+            this.mnuSeparator1.Size = new System.Drawing.Size(213, 6);
+            // 
+            // mnuChangePassword
+            // 
+            this.mnuChangePassword.Name = "mnuChangePassword";
+            this.mnuChangePassword.Size = new System.Drawing.Size(216, 22);
+            this.mnuChangePassword.Text = "Menu_ChangePassword";
+            this.mnuChangePassword.Click += new System.EventHandler(this.mnuChangePassword_Click);
+            // 
+            // mnuManagePerms
+            // 
+            this.mnuManagePerms.Name = "mnuManagePerms";
+            this.mnuManagePerms.Size = new System.Drawing.Size(216, 22);
+            this.mnuManagePerms.Text = "Menu_ManagePermissions";
+            this.mnuManagePerms.Click += new System.EventHandler(this.mnuManagePerms_Click);
+            // 
+            // mnuViewPerms
+            // 
+            this.mnuViewPerms.Name = "mnuViewPerms";
+            this.mnuViewPerms.Size = new System.Drawing.Size(216, 22);
+            this.mnuViewPerms.Text = "Menu_ViewPermissions";
+            this.mnuViewPerms.Click += new System.EventHandler(this.mnuViewPerms_Click);
+            // 
+            // mnuViewLog
+            // 
+            this.mnuViewLog.Name = "mnuViewLog";
+            this.mnuViewLog.Size = new System.Drawing.Size(216, 22);
+            this.mnuViewLog.Text = "Menu_ViewLog";
+            this.mnuViewLog.Click += new System.EventHandler(this.mnuViewLog_Click);
+            // 
+            // mnuRecycleBin
+            // 
+            this.mnuRecycleBin.Name = "mnuRecycleBin";
+            this.mnuRecycleBin.Size = new System.Drawing.Size(216, 22);
+            this.mnuRecycleBin.Text = "Menu_RecycleBin";
+            this.mnuRecycleBin.Click += new System.EventHandler(this.mnuRecycleBin_Click);
+            // 
+            // mnuSeparator2
+            // 
+            this.mnuSeparator2.Name = "mnuSeparator2";
+            this.mnuSeparator2.Size = new System.Drawing.Size(213, 6);
+            // 
+            // mnuConfig
+            // 
+            this.mnuConfig.Name = "mnuConfig";
+            this.mnuConfig.Size = new System.Drawing.Size(216, 22);
+            this.mnuConfig.Text = "Menu_Config";
+            this.mnuConfig.Click += new System.EventHandler(this.mnuConfig_Click);
+            // 
+            // mnuSeparator3
+            // 
+            this.mnuSeparator3.Name = "mnuSeparator3";
+            this.mnuSeparator3.Size = new System.Drawing.Size(213, 6);
+            // 
+            // mnuHelpDesk
+            // 
+            this.mnuHelpDesk.Name = "mnuHelpDesk";
+            this.mnuHelpDesk.Size = new System.Drawing.Size(216, 22);
+            this.mnuHelpDesk.Text = "Menu_HelpDesk";
+            this.mnuHelpDesk.Click += new System.EventHandler(this.mnuHelpDesk_Click);
+            // 
+            // mnuAbout
+            // 
+            this.mnuAbout.Name = "mnuAbout";
+            this.mnuAbout.Size = new System.Drawing.Size(216, 22);
+            this.mnuAbout.Text = "Menu_About";
+            this.mnuAbout.Click += new System.EventHandler(this.mnuAbout_Click);
+            // 
+            // mnuSeparator4
+            // 
+            this.mnuSeparator4.Name = "mnuSeparator4";
+            this.mnuSeparator4.Size = new System.Drawing.Size(213, 6);
+            // 
+            // mnuExit
+            // 
+            this.mnuExit.Name = "mnuExit";
+            this.mnuExit.Size = new System.Drawing.Size(216, 22);
+            this.mnuExit.Text = "Menu_Exit";
+            this.mnuExit.Click += new System.EventHandler(this.mnuExit_Click);
+            // 
+            // tlpnlContainer
+            // 
+            this.tlpnlContainer.ColumnCount = 1;
+            this.tlpnlContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpnlContainer.Controls.Add(this.tlpnlTop, 0, 0);
+            this.tlpnlContainer.Controls.Add(this.pnlBottom, 0, 2);
+            this.tlpnlContainer.Controls.Add(this.pnlContentBack, 0, 1);
+            this.tlpnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpnlContainer.Location = new System.Drawing.Point(0, 0);
+            this.tlpnlContainer.Name = "tlpnlContainer";
+            this.tlpnlContainer.RowCount = 3;
+            this.tlpnlContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 121F));
+            this.tlpnlContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpnlContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 4F));
+            this.tlpnlContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpnlContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpnlContainer.Size = new System.Drawing.Size(378, 272);
+            this.tlpnlContainer.TabIndex = 0;
+            // 
+            // tlpnlTop
+            // 
+            this.tlpnlTop.BackgroundImage = global::Link.EFAM.Agent.Properties.Resources.Login_Top;
+            this.tlpnlTop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tlpnlTop.ColumnCount = 1;
+            this.tlpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpnlTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpnlTop.Controls.Add(this.picLogo, 0, 0);
+            this.tlpnlTop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpnlTop.Location = new System.Drawing.Point(0, 0);
+            this.tlpnlTop.Margin = new System.Windows.Forms.Padding(0);
+            this.tlpnlTop.Name = "tlpnlTop";
+            this.tlpnlTop.RowCount = 1;
+            this.tlpnlTop.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpnlTop.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 121F));
+            this.tlpnlTop.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 121F));
+            this.tlpnlTop.Size = new System.Drawing.Size(378, 121);
+            this.tlpnlTop.TabIndex = 0;
+            // 
+            // picLogo
+            // 
+            this.picLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.picLogo.BackColor = System.Drawing.Color.Transparent;
+            this.picLogo.Image = global::Link.EFAM.Agent.Properties.Resources.Login_Logo;
+            this.picLogo.Location = new System.Drawing.Point(84, 22);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(210, 76);
+            this.picLogo.TabIndex = 0;
+            this.picLogo.TabStop = false;
+            // 
+            // pnlBottom
+            // 
+            this.pnlBottom.BackgroundImage = global::Link.EFAM.Agent.Properties.Resources.Login_Bottom;
+            this.pnlBottom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlBottom.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBottom.Location = new System.Drawing.Point(0, 268);
+            this.pnlBottom.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlBottom.Name = "pnlBottom";
+            this.pnlBottom.Size = new System.Drawing.Size(378, 4);
+            this.pnlBottom.TabIndex = 2;
+            // 
+            // pnlContentBack
+            // 
+            this.pnlContentBack.Controls.Add(this.tlpnlContent);
+            this.pnlContentBack.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContentBack.Location = new System.Drawing.Point(0, 121);
+            this.pnlContentBack.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlContentBack.Name = "pnlContentBack";
+            this.pnlContentBack.Size = new System.Drawing.Size(378, 147);
+            this.pnlContentBack.TabIndex = 1;
+            // 
+            // tlpnlContent
+            // 
+            this.tlpnlContent.BackColor = System.Drawing.Color.Transparent;
+            this.tlpnlContent.ColumnCount = 1;
+            this.tlpnlContent.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpnlContent.Controls.Add(this.grpLogin, 0, 0);
+            this.tlpnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpnlContent.Location = new System.Drawing.Point(0, 0);
+            this.tlpnlContent.Name = "tlpnlContent";
+            this.tlpnlContent.RowCount = 1;
+            this.tlpnlContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpnlContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 147F));
+            this.tlpnlContent.Size = new System.Drawing.Size(378, 147);
+            this.tlpnlContent.TabIndex = 0;
+            // 
+            // grpLogin
+            // 
+            this.grpLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.grpLogin.Location = new System.Drawing.Point(23, 21);
+            this.grpLogin.Margin = new System.Windows.Forms.Padding(0);
+            this.grpLogin.Name = "grpLogin";
+            // 
+            // grpLogin.Panel
+            // 
+            this.grpLogin.Panel.Controls.Add(this.grpOptions);
+            this.grpLogin.Panel.Controls.Add(this.lblPassword);
+            this.grpLogin.Panel.Controls.Add(this.lblUserId);
+            this.grpLogin.Panel.Controls.Add(this.txtPassword);
+            this.grpLogin.Panel.Controls.Add(this.txtUserId);
+            this.grpLogin.Panel.Controls.Add(this.btnLogin);
+            this.grpLogin.Panel.Padding = new System.Windows.Forms.Padding(8, 0, 8, 4);
+            this.grpLogin.Size = new System.Drawing.Size(332, 104);
+            this.grpLogin.TabIndex = 0;
+            // 
+            // grpOptions
+            // 
+            this.grpOptions.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.grpOptions.Location = new System.Drawing.Point(8, 66);
+            this.grpOptions.Name = "grpOptions";
+            // 
+            // grpOptions.Panel
+            // 
+            this.grpOptions.Panel.Controls.Add(this.chkAutoLogin);
+            this.grpOptions.Panel.Controls.Add(this.chkAutoRun);
+            this.grpOptions.Size = new System.Drawing.Size(314, 32);
+            this.grpOptions.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top;
+            this.grpOptions.TabIndex = 5;
+            // 
+            // chkAutoLogin
+            // 
+            this.chkAutoLogin.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.NormalControl;
+            this.chkAutoLogin.Location = new System.Drawing.Point(192, 8);
+            this.chkAutoLogin.Name = "chkAutoLogin";
+            this.chkAutoLogin.Size = new System.Drawing.Size(118, 20);
+            this.chkAutoLogin.TabIndex = 1;
+            this.chkAutoLogin.Text = "Check_AutoLogin";
+            this.chkAutoLogin.Values.Text = "Check_AutoLogin";
+            // 
+            // chkAutoRun
+            // 
+            this.chkAutoRun.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.NormalControl;
+            this.chkAutoRun.Location = new System.Drawing.Point(8, 8);
+            this.chkAutoRun.Name = "chkAutoRun";
+            this.chkAutoRun.Size = new System.Drawing.Size(109, 20);
+            this.chkAutoRun.TabIndex = 0;
+            this.chkAutoRun.Text = "Check_AutoRun";
+            this.chkAutoRun.Values.Text = "Check_AutoRun";
+            // 
+            // lblPassword
+            // 
+            this.lblPassword.AutoSize = false;
+            this.lblPassword.Location = new System.Drawing.Point(8, 36);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(88, 20);
+            this.lblPassword.StateCommon.LongText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Far;
+            this.lblPassword.StateCommon.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Far;
+            this.lblPassword.TabIndex = 2;
+            this.lblPassword.Values.Text = "Label_Password";
+            // 
+            // lblUserId
+            // 
+            this.lblUserId.AutoSize = false;
+            this.lblUserId.Location = new System.Drawing.Point(8, 12);
+            this.lblUserId.Name = "lblUserId";
+            this.lblUserId.Size = new System.Drawing.Size(88, 20);
+            this.lblUserId.StateCommon.LongText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Far;
+            this.lblUserId.StateCommon.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Far;
+            this.lblUserId.TabIndex = 0;
+            this.lblUserId.Values.Text = "Label_UserId";
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.AlwaysActive = false;
+            this.txtPassword.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Ribbon;
+            this.txtPassword.Location = new System.Drawing.Point(96, 36);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '●';
+            this.txtPassword.Size = new System.Drawing.Size(128, 20);
+            this.txtPassword.TabIndex = 3;
+            this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.Enter += new System.EventHandler(this.TextBox_Enter);
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_KeyPress);
+            // 
+            // txtUserId
+            // 
+            this.txtUserId.AlwaysActive = false;
+            this.txtUserId.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Ribbon;
+            this.txtUserId.Location = new System.Drawing.Point(96, 12);
+            this.txtUserId.Name = "txtUserId";
+            this.txtUserId.Size = new System.Drawing.Size(128, 20);
+            this.txtUserId.TabIndex = 1;
+            this.txtUserId.Enter += new System.EventHandler(this.TextBox_Enter);
+            this.txtUserId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_KeyPress);
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Location = new System.Drawing.Point(232, 12);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(88, 44);
+            this.btnLogin.TabIndex = 4;
+            this.btnLogin.Values.Text = "Button_Login";
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // bgWorker
+            // 
+            this.bgWorker.WorkerReportsProgress = true;
+            this.bgWorker.WorkerSupportsCancellation = true;
+            this.bgWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgWorker_DoWork);
+            this.bgWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgWorker_RunWorkerCompleted);
+            // 
+            // krtTkManager
+            // 
+            this.krtTkManager.GlobalPalette = this.krtGlobalPalette;
+            this.krtTkManager.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Custom;
+            // 
+            // tmrKeepNetwkConn
+            // 
+            this.tmrKeepNetwkConn.Interval = 1800000;
+            this.tmrKeepNetwkConn.Tick += new System.EventHandler(this.tmrKeepNetwkConn_Tick);
+            // 
+            // tmrStartAutoReloader
+            // 
+            this.tmrStartAutoReloader.Tick += new System.EventHandler(this.tmrStartAutoReloader_Tick);
+            // 
+            // bgCmdWorker
+            // 
+            this.bgCmdWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgCmdWorker_DoWork);
+            this.bgCmdWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgCmdWorker_RunWorkerCompleted);
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(378, 272);
+            this.Controls.Add(this.tlpnlContainer);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "E-FAM";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
+            this.Load += new System.EventHandler(this.MainForm_Load);
+            this.trayCtxMenu.ResumeLayout(false);
+            this.tlpnlContainer.ResumeLayout(false);
+            this.tlpnlTop.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlContentBack)).EndInit();
+            this.pnlContentBack.ResumeLayout(false);
+            this.tlpnlContent.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grpLogin.Panel)).EndInit();
+            this.grpLogin.Panel.ResumeLayout(false);
+            this.grpLogin.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grpLogin)).EndInit();
+            this.grpLogin.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grpOptions.Panel)).EndInit();
+            this.grpOptions.Panel.ResumeLayout(false);
+            this.grpOptions.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grpOptions)).EndInit();
+            this.grpOptions.ResumeLayout(false);
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.NotifyIcon trayIcon;
+        private System.Windows.Forms.ContextMenuStrip trayCtxMenu;
+        private System.Windows.Forms.ToolStripMenuItem mnuLogin;
+        private System.Windows.Forms.ToolStripMenuItem mnuLogout;
+        private System.Windows.Forms.ToolStripSeparator mnuSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem mnuExit;
+        private System.Windows.Forms.TableLayoutPanel tlpnlContainer;
+        private System.ComponentModel.BackgroundWorker bgWorker;
+        private System.Windows.Forms.ToolStripSeparator mnuSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem mnuConfig;
+        private System.Windows.Forms.ToolStripSeparator mnuSeparator3;
+        private System.Windows.Forms.Panel pnlBottom;
+        private System.Windows.Forms.TableLayoutPanel tlpnlTop;
+        private System.Windows.Forms.PictureBox picLogo;
+        private System.Windows.Forms.ToolStripMenuItem mnuChangePassword;
+        private ComponentFactory.Krypton.Toolkit.KryptonManager krtTkManager;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel pnlContentBack;
+        private System.Windows.Forms.TableLayoutPanel tlpnlContent;
+        private ComponentFactory.Krypton.Toolkit.KryptonGroup grpLogin;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtPassword;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtUserId;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnLogin;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblPassword;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblUserId;
+        private ComponentFactory.Krypton.Toolkit.KryptonGroup grpOptions;
+        private ComponentFactory.Krypton.Toolkit.KryptonCheckBox chkAutoLogin;
+        private ComponentFactory.Krypton.Toolkit.KryptonCheckBox chkAutoRun;
+        private System.Windows.Forms.ToolStripMenuItem mnuAbout;
+        private System.Windows.Forms.ToolStripSeparator mnuSeparator4;
+        private ComponentFactory.Krypton.Toolkit.KryptonPalette krtGlobalPalette;
+        private System.Windows.Forms.ToolStripMenuItem mnuHelpDesk;
+        private System.Windows.Forms.ToolStripMenuItem mnuManagePerms;
+        private System.Windows.Forms.Timer tmrKeepNetwkConn;
+        private System.Windows.Forms.ToolStripMenuItem mnuViewLog;
+        private System.Windows.Forms.ToolStripMenuItem mnuViewPerms;
+        private System.Windows.Forms.ToolStripMenuItem mnuRecycleBin;
+        private System.Windows.Forms.Timer tmrStartAutoReloader;
+        private System.ComponentModel.BackgroundWorker bgCmdWorker;
+    }
+}
+

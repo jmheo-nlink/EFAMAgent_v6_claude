@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+    <!-- 바탕화면/시작메뉴 바로가기를 생성하는 컴포넌트들입니다. -->
+    <!-- 실제 실행 파일 경로가 확정되면 Target="[INSTALLFOLDER]YourExe.exe" 등을 수정하세요. -->
+    <!-- 위 컴포넌트들을 Feature에 포함하려면 ComponentGroupRef 또는 직접 ComponentRef를 추가하세요. -->
+    <ComponentGroup Id="ShortcutsGroup">
+    </ComponentGroup>
+  </Fragment>
+</Wix>

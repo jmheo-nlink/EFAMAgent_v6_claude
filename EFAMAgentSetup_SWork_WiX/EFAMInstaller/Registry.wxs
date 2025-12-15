@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+    <!-- InstallShield의 Registry 테이블을 WiX RegistryValue로 변환한 조각입니다. -->
+    <ComponentGroup Id="RegistryGroup">
+      <Component Id="RegCmp1" Guid="*">
+        <RegistryValue Root="HKLM" Key="" Type="string" Value="" KeyPath="yes" />
+      </Component>
+      <Component Id="RegCmp2" Guid="*">
+        <RegistryValue Root="HKLM" Key="" Type="string" Value="" KeyPath="yes" />
+      </Component>
+      <Component Id="RegCmp3" Guid="*">
+        <RegistryValue Root="HKLM" Key="" Type="string" Value="" KeyPath="yes" />
+      </Component>
+      <Component Id="RegCmp4" Guid="*">
+        <RegistryValue Root="HKLM" Key="" Type="string" Value="" KeyPath="yes" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>

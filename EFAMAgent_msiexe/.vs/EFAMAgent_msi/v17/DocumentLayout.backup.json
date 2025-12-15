@@ -1,0 +1,57 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\HEO\\Link\\EFAM\\[240912]EFAM\\03_EFAMv6_Agent_Source\\[240315]EFAMAgent_v6)_HDElectric\\EFAMAgent_msi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9A9B55CA-83A3-4B72-9A20-43420FDC93A1}|EFAMAgent_msi\\EFAMAgent_msi.wixproj|C:\\Users\\HEO\\Link\\EFAM\\[240912]EFAM\\03_EFAMv6_Agent_Source\\[240315]EFAMAgent_v6)_HDElectric\\EFAMAgent_msi\\EFAMAgent_msi\\Product.wxs||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{9A9B55CA-83A3-4B72-9A20-43420FDC93A1}|EFAMAgent_msi\\EFAMAgent_msi.wixproj|solutionrelative:EFAMAgent_msi\\Product.wxs||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Product.wxs",
+              "DocumentMoniker": "C:\\Users\\HEO\\Link\\EFAM\\[240912]EFAM\\03_EFAMv6_Agent_Source\\[240315]EFAMAgent_v6)_HDElectric\\EFAMAgent_msi\\EFAMAgent_msi\\Product.wxs",
+              "RelativeDocumentMoniker": "EFAMAgent_msi\\Product.wxs",
+              "ToolTip": "C:\\Users\\HEO\\Link\\EFAM\\[240912]EFAM\\03_EFAMv6_Agent_Source\\[240315]EFAMAgent_v6)_HDElectric\\EFAMAgent_msi\\EFAMAgent_msi\\Product.wxs",
+              "RelativeToolTip": "EFAMAgent_msi\\Product.wxs",
+              "ViewState": "AgIAAM8AAAAAAAAAAAAIwOAAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-07-07T05:15:52.562Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

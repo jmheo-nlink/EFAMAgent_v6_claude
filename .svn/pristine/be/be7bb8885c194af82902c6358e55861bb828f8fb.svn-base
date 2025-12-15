@@ -1,0 +1,441 @@
+﻿#region 변경 이력
+/*
+ * Author : Link mskoo (2011. 4. 6)
+ * 
+ * ====================================================================================================================
+ * Date         Name            Description of Change
+ * --------------------------------------------------------------------------------------------------------------------
+ * 2011-04-06   mskoo           최초 작성.
+ * 
+ * 2011-09-23   mskoo           5.0 버전 릴리즈. (변경 이력 정리)
+ * 
+ * 2011-10-06   mskoo           사용자 이름이 빈 문자열이면 기본 사용자 이름을 사용하여 네트워크 드라이브를 연결하도록
+ *                              코드를 수정.
+ *                              - GetNetworkDrives()
+ *                              
+ * 2012-04-20   mskoo           로컬 컴퓨터의 IP 주소와 MAC 주소를 사용하도록 수정.
+ *                              - EFAMService(Credential)
+ *                              - WriteDeleteLogForRecycleBin(string)
+ *                              
+ * 2012-10-11   mskoo           메소드 추가.
+ *                              - EmptyRecycleBinByUser()
+ *                              
+ * 2013-05-14   mskoo           중복된 공유 드라이브가 없는 목록을 반환하도록 수정.
+ *                              - GetSharedDrives()
+ *                              - GetSharedDrivesForSWork()
+ *                              
+ * 2014-05-15   jake.9          서버에서 지정한 드라이브 이름을 사용하도록 수정.
+ *                              - GetSharedDrives()
+ * ====================================================================================================================
+ */
+#endregion
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+// log4net 라이브러리
+// .NET용 개발 라이브러리
+//using Link.DLK.Net;
+//using Link.DLK.Security.Cryptography;
+using Link.Core.Security.Cryptography;
+
+namespace Link.EFAM.Engine.Services
+{
+    //using DnsUtility = Link.DLK.Net.DnsUtility;
+    using Link.EFAM.Common;
+    using Link.EFAM.Core;
+    using Link.EFAM.Engine.InternalServices;
+    using Link.EFAM.Security;
+    using Link.EFAM.Security.AccessControl;
+    using Link.EFAM.Security.Principal;
+    using Resource = Link.EFAM.Engine.Properties.Resources;
+
+    /// <summary>
+    /// 웹 서비스로 E-FAM 서비스에 액세스할 수 있게 해 준다.
+    /// </summary>
+    public class EFAMService
+    {
+        private Credential m_credential = null;
+        private EFAMAgentWebService m_webService = null;
+        private SymmetricCryptographer m_crypto = null;
+        private string m_ipAddr = null;
+
+        #region 생성자
+
+        /// <summary>
+        /// 지정한 사용자 자격 증명을 사용하여 <see cref="EFAMService"/> 클래스의 새 인스턴스를 초기화한다.
+        /// </summary>
+        /// <param name="credential">사용자 자격 증명을 나타내는 <see cref="Credential"/> 개체</param>
+        /// 
+        /// <exception cref="ArgumentNullException">credential이 null인 경우</exception>
+        public EFAMService(Credential credential)
+        {
+            if (credential == null) throw new ArgumentNullException("credential");
+
+            m_credential = credential;
+            m_webService = WSClientProxyFactory.CreateAgentWSClientProxy(credential.ServerUrl);
+            m_crypto = new SymmetricCryptographer(Constants.CryptoPassword, Constants.CryptoKeySalt);
+            m_ipAddr = NetworkUtility.GetIPAddress();
+        }
+
+        #endregion
+
+        #region 메소드
+
+        /// <summary>
+        /// 액세스를 제어할 네트워크 공유들의 UNC 이름 목록을 가져온다.
+        /// </summary>
+        /// <returns>네트워크 공유들의 UNC 이름 배열. 네트워크 공유가 없으면 빈 배열</returns>
+        /// 
+        /// <exception cref="System.Net.WebException">HTTP 상태 오류가 발생한 경우</exception>
+        /// <exception cref="System.Web.Services.Protocols.SoapException">
+        /// 서버 컴퓨터에 요청이 도달했지만 성공적으로 처리되지 않은 경우
+        /// </exception>
+        public string[] GetNetworkShareNames()
+        {
+            //
+            // TODO: 인증된 사용자가 아닐 경우 처리할 코드를 추가
+            //
+
+            List<string> list = new List<string>();
+            ShareDrive[] shares = null;
+
+            // 웹 서비스 메소드를 호출하여 네트워크 공유 목록을 가져온다.
+            shares = m_webService.GetShareDriveList();
+
+            foreach (ShareDrive share in shares)
+            {
+                list.Add(share.ShareDrivePath);
+            }
+
+            return list.ToArray();
+        }
+
+        /// <summary>
+        /// 연결할 네트워크 드라이브의 목록을 가져온다.
+        /// </summary>
+        /// <returns>연결할 네트워크 드라이브의 목록</returns>
+        /// 
+        /// <exception cref="System.Net.WebException">HTTP 상태 오류가 발생한 경우</exception>
+        /// <exception cref="System.Web.Services.Protocols.SoapException">
+        /// 서버 컴퓨터에 요청이 도달했지만 성공적으로 처리되지 않은 경우
+        /// </exception>
+        /// <exception cref="FormatException">
+        /// 공백 문자를 제외한 text의 길이가 0이 아니거나 4의 배수가 아닌 경우<br/>
+        /// - 또는 -<br/>
+        /// text의 형식이 잘못된 경우
+        /// </exception>
+        /// <exception cref="System.Security.Cryptography.CryptographicException">
+        /// 데이터를 해독하는데 사용한 비밀 키 또는 암호화 알고리즘이 데이터를 암호화할 때 사용한 것과 다른 경우
+        /// </exception>
+        public List<SharedDrive> GetSharedDrives()
+        {
+            //
+            // TODO: 인증된 사용자가 아닐 경우 처리할 코드를 추가
+            //
+
+            Dictionary<string, SharedDrive> collection 
+                = new Dictionary<string, SharedDrive>(StringComparer.OrdinalIgnoreCase);
+            SharedDrive sharedDrive = null;
+#if (INTEROP_SWORK || INTEROP_SWORK_HHISB)  // ====================================================
+            UserSecurityDrive[] driveInfos = null;
+#else   // ========================================================================================
+            UserDrive[] driveInfos = null;
+#endif  // INTEROP_SWORK || INTEROP_SWORK_HHISB ===================================================
+            string userName = null;
+            string password = null;
+            string key = null;
+
+#if (INTEROP_SWORK || INTEROP_SWORK_HHISB)  // ====================================================
+            // 웹 서비스 메소드를 호출하여 사용자 드라이브 목록을 가져온다.
+            driveInfos = m_webService.GetUserDriveListByUserID_Swork(m_credential.UserId);
+
+            foreach (UserSecurityDrive driveInfo in driveInfos)
+            {
+#else   // ========================================================================================
+            // 웹 서비스 메소드를 호출하여 사용자 드라이브 목록을 가져온다.
+            driveInfos = m_webService.GetUserDriveListByUserID(m_credential.UserId);
+
+            foreach (UserDrive driveInfo in driveInfos)
+            {
+#endif  // INTEROP_SWORK || INTEROP_SWORK_HHISB ===================================================
+                userName = m_crypto.Decrypt(driveInfo.LoginUserID);
+                password = m_crypto.Decrypt(driveInfo.LoginUserPwd);
+
+                //
+                // 네트워크 드라이브에 대한 정보를 설정한다.
+                sharedDrive = new SharedDrive(driveInfo.ManagedFolderPath);
+                if (userName.Length != 0)
+                {
+                    sharedDrive.UserName = userName;
+                    sharedDrive.Password = password;
+                }
+                // 로컬 드라이브에 매핑할 경우
+                if (driveInfo.Connect)
+                {
+                    if (driveInfo.ConnectDriveName.Length != 0)
+                    {
+                        sharedDrive.DriveName = "";
+                        sharedDrive.IsFixedDriveName = true;
+                    }
+                    else
+                    {
+                        sharedDrive.DriveName = "*";
+                    }
+                    sharedDrive.VolumeLabel = driveInfo.ManagedFolderName;
+                } // if (driveInfo.Connect)
+#if (INTEROP_SWORK || INTEROP_SWORK_HHISB)  // ====================================================
+                sharedDrive.IsSecure = driveInfo.IsSecure;
+#endif  // INTEROP_SWORK || INTEROP_SWORK_HHISB ===================================================
+
+                key = sharedDrive.DriveName + "$" + sharedDrive.ShareName;
+                if (!collection.ContainsKey(key))
+                {
+                    collection.Add(key, sharedDrive);
+                }
+            } // foreach ( UserDrive ) / foreach ( UserSecurityDrive )
+
+            return (new List<SharedDrive>(collection.Values));
+        }
+
+        /// <summary>
+        /// 사용자의 비밀번호를 변경한다.
+        /// </summary>
+        /// <param name="newPassword">변경할 새 비밀번호</param>
+        /// <returns>비밀번호가 성공적으로 변경되었으면 true, 그렇지 않으면 false</returns>
+        /// 
+        /// <exception cref="ArgumentNullException">newPassword가 null인 경우</exception>
+        /// <exception cref="System.Net.WebException">HTTP 상태 오류가 발생한 경우</exception>
+        /// <exception cref="System.Web.Services.Protocols.SoapException">
+        /// 서버 컴퓨터에 요청이 도달했지만 성공적으로 처리되지 않은 경우
+        /// </exception>
+        public bool ChangeUserPassword(string newPassword)
+        {
+            if (newPassword == null) throw new ArgumentNullException("newPassword");
+            //
+            // TODO: 인증된 사용자가 아닐 경우 처리할 코드를 추가
+            //
+
+            bool changed = false;
+
+            // 웹 서비스 메소드를 호출하여 비밀번호를 변경한다.
+            changed = m_webService.ChangePwd(m_crypto.Encrypt(m_credential.UserId),
+                                             m_crypto.Encrypt(newPassword));
+
+            return changed;
+        }
+
+        /// <summary>
+        /// 휴지통에서 휴지통 항목의 목록을 가져온다.
+        /// </summary>
+        /// <returns>휴지통 항목의 목록</returns>
+        /// 
+        /// <exception cref="System.Net.WebException">HTTP 상태 오류가 발생한 경우</exception>
+        /// <exception cref="System.Web.Services.Protocols.SoapException">
+        /// 서버 컴퓨터에 요청이 도달했지만 성공적으로 처리되지 않은 경우
+        /// </exception>
+        public List<RecycleBinItem> GetRecycleBinItems()
+        {
+            //
+            // TODO: 인증된 사용자가 아닐 경우 처리할 코드를 추가
+            //
+
+            List<RecycleBinItem> itemList = new List<RecycleBinItem>();
+            RecycleBinItem item = null;
+            FileLog[] fileLogs = null;
+            string userId = m_credential.UserId;
+
+            // 웹 서비스 메소드를 호출하여 검색된 로그들을 가져온다.
+            fileLogs = m_webService.GetFileLogList("", userId, "", "DELETE", "", "");
+
+            foreach (FileLog log in fileLogs)
+            {
+                if (!File.Exists(log.Dest)) continue;
+
+                //
+                // 휴지통 항목을 생성하여 목록에 추가한다.
+                //
+                try
+                {
+                    item = new RecycleBinItem(log.Dest, log.Src, DateTime.Parse(log.Date), userId);
+                    itemList.Add(item);
+                }
+                catch { }
+            } // foreach ( FileLog )
+
+            return itemList;
+        }
+
+        /// <summary>
+        /// 휴지통에서 삭제한 파일의 로그를 기록한다.
+        /// </summary>
+        /// <param name="path">삭제한 파일의 경로</param>
+        /// 
+        /// <exception cref="ArgumentNullException">path가 null인 경우</exception>
+        /// <exception cref="ArgumentException">path가 길이가 0인 문자열이거나 공백만 포함한 경우</exception>
+        /// <exception cref="System.Net.WebException">HTTP 상태 오류가 발생한 경우</exception>
+        /// <exception cref="System.Web.Services.Protocols.SoapException">
+        /// 서버 컴퓨터에 요청이 도달했지만 성공적으로 처리되지 않은 경우
+        /// </exception>
+        public void WriteDeleteLogForRecycleBin(string path)
+        {
+            if (path == null) throw new ArgumentNullException("path");
+            if (path.Trim().Length == 0)
+            {
+                throw new ArgumentException(Resource.Argument_WhiteSpaceString, "path");
+            }
+
+            // 웹 서비스 메소드를 호출하여 로그를 저장한다.
+            m_webService.WriteLog(m_credential.UserId, path, "", "DELETE", m_ipAddr);
+        }
+
+        /// <summary>
+        /// 휴지통에 있는 모든 파일들을 삭제한다.
+        /// </summary>
+        /// 
+        /// <exception cref="System.Net.WebException">HTTP 상태 오류가 발생한 경우</exception>
+        /// <exception cref="System.Web.Services.Protocols.SoapException">
+        /// 서버 컴퓨터에 요청이 도달했지만 성공적으로 처리되지 않은 경우
+        /// </exception>
+        public void EmptyRecycleBinByUser()
+        {
+            // 웹 서비스 메소드를 호출하여 휴지통 폴더에서 파일들을 삭제한다.
+            m_webService.DeletePrivateRecyBinFile(m_credential.UserId);
+        }
+
+        public EFAMPermission[] GetAccessRules()
+        {
+            // 웹 서비스 메소드를 호출하여 사용자의 권한 목록을 가져온다.
+            return m_webService.GetPermissionListByUserID(m_credential.UserId);
+        }
+
+        /// <summary>
+        /// 사용자에 대해 설정된 액세스 규칙의 컬렉션을 가져온다.
+        /// </summary>
+        /// <returns>사용자에 대해 설정된 액세스 규칙의 컬렉션</returns>
+        /// 
+        /// <exception cref="System.Net.WebException">HTTP 상태 오류가 발생한 경우</exception>
+        /// <exception cref="System.Web.Services.Protocols.SoapException">
+        /// 서버 컴퓨터에 요청이 도달했지만 성공적으로 처리되지 않은 경우
+        /// </exception>
+        public AccessControlPolicy GetSecurityPolicy()
+        {
+            //
+            // TODO: 인증된 사용자가 아닐 경우 처리할 코드를 추가
+            //
+
+            AccessControlPolicy policy = new AccessControlPolicy();
+            DirectorySecurity dirSecurity = null;
+            FileSystemAccessRule rule = null;
+            FileSystemRights rights;
+            EFAMPermission[] permissions = null;
+
+            // 웹 서비스 메소드를 호출하여 사용자의 권한 목록을 가져온다.
+            permissions = m_webService.GetPermissionListByUserID(m_credential.UserId);
+
+            foreach (EFAMPermission permission in permissions)
+            {
+                dirSecurity = policy.GetAccessControl(permission.DrivePath);
+                if (dirSecurity == null)
+                {
+                    dirSecurity = new DirectorySecurity();
+                    policy.SetAccessControl(permission.DrivePath, dirSecurity);
+                }
+
+                //
+                // 액세스 규칙을 생성하여 컬렉션에 추가한다.
+                //
+                rights = (FileSystemRights)0;
+                if (permission.CanRead) rights |= FileSystemRights.Read;
+                if (permission.CanWrite) rights |= FileSystemRights.Write;
+                if (permission.CanCopy) rights |= FileSystemRights.CopyFiles;
+                if (permission.CanList) rights |= FileSystemRights.ListDirectory;
+                if (permission.CanCreateFolder) rights |= FileSystemRights.CreateDirectories;
+                if (permission.CanDelete) rights |= FileSystemRights.Delete;
+                if (permission.CanRename) rights |= FileSystemRights.Rename;
+                if (permission.CanMove) rights |= FileSystemRights.Move;
+
+                rule = new FileSystemAccessRule(new Account(permission.UserID), rights, 
+                                                permission.CanNotInherit, permission.CanNotPropagate);
+                dirSecurity.SetAccessRule(rule);
+                //ruleColl.Add(new FileAccessRule(permission.DrivePath, fileRights));
+            } // foreach ( EFAMPermission )
+
+            return policy;
+        }
+
+        /// <summary>
+        /// 지정한 파일 및 수행된 작업에 대한 로그를 검색한다.
+        /// </summary>
+        /// <param name="fileName">로그를 검색할 파일의 이름</param>
+        /// <param name="action">로그를 검색할 수행된 작업을 나타내는 문자열</param>
+        /// <param name="beginDate">로그를 검색할 날짜 범위의 시작 일자</param>
+        /// <param name="endDate">로그를 검색할 날짜 범위의 종료 일자</param>
+        /// <returns>검색된 로그가 포함된 <see cref="FileLog"/> 형식의 배열</returns>
+        /// 
+        /// <exception cref="System.Net.WebException">HTTP 상태 오류가 발생한 경우</exception>
+        /// <exception cref="System.Web.Services.Protocols.SoapException">
+        /// 서버 컴퓨터에 요청이 도달했지만 성공적으로 처리되지 않은 경우
+        /// </exception>
+        public FileLog[] SearchLog(string fileName, string action, string beginDate, string endDate)
+        {
+            //
+            // TODO: 인증된 사용자가 아닐 경우 처리할 코드를 추가
+            //
+
+            FileLog[] fileLogs = null;
+
+            fileName = (fileName == null) ? String.Empty : fileName.Trim();
+            action = (action == null) ? String.Empty : action.Trim();
+            beginDate = (beginDate == null) ? String.Empty : beginDate.Trim();
+            endDate = (endDate == null) ? String.Empty : endDate.Trim();
+
+            // 웹 서비스 메소드를 호출하여 검색된 로그들을 가져온다.
+            fileLogs = m_webService.GetFileLogList(
+                "", m_credential.UserId, fileName, action, beginDate, endDate);
+
+            return fileLogs;
+        }
+
+        public ServerProfile GetAgentProfile()
+        {
+            //
+            // TODO: 인증된 사용자가 아닐 경우 처리할 코드를 추가
+            //
+            ServerProfile profile = null;
+
+            profile = m_webService.getServerProfile();
+
+            return profile;
+        }
+
+        public string[] GetFixedFolders()
+        {
+            //
+            // TODO: 인증된 사용자가 아닐 경우 처리할 코드를 추가
+            //
+
+#if FOOSUNG // ====================================================================================
+            return m_webService.GetFolderSetValueListbyUserID(m_crypto.Encrypt(m_credential.UserId));
+#else   // ========================================================================================
+            return m_webService.GetFolderSetValueList();
+#endif  // FOOSUNG ================================================================================
+        }
+
+        public UserInfo[] GetManagerList(string path)
+        {
+            if (path == null) throw new ArgumentNullException("path");
+            //
+            // TODO: 인증된 사용자가 아닐 경우 처리할 코드를 추가
+            //
+
+            UserInfo[] managers = null;
+
+            managers = m_webService.GetManagerList(path);
+
+            return managers;
+        }
+
+        #endregion
+    }
+}

@@ -1,0 +1,315 @@
+  Link.EFAM.Properties.Resources.resources - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v2.0.50727
+Assembly EFAMCore, Version=5.1.11.0, Culture=neutral, PublicKeyToken=698f0cd3e1d709b1: 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly LKCorLib, Version=1.0.4.0, Culture=neutral, PublicKeyToken=59057779c68dfdc9: 
+	hash=None, flags=None
+Assembly System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly log4net, Version=1.2.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a: 
+	hash=None, flags=None
+Class Link.EFAM.AppResources.AppResource: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  Methods:
+    GetString(String, Object[]): PrivateScope, Public, Static, HideBySig
+    GetString(String): PrivateScope, Public, Static, HideBySig
+Class Link.EFAM.Common.Constants: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Fields:
+    System.String FacFilterName = EfamFacFlt : Public, Static, Literal, HasDefault
+    System.String CryptoPassword = Link_EFAM : Public, Static, Literal, HasDefault
+    System.String CryptoKeySalt = EFAM_WebService : Public, Static, Literal, HasDefault
+Class Link.EFAM.Common.FileAccessRights: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean AllowRead 'get set' : 
+    Boolean AllowWrite 'get set' : 
+    Boolean AllowCopyFiles 'get set' : 
+    Boolean AllowListDirectory 'get set' : 
+    Boolean AllowCreateDirectories 'get set' : 
+    Boolean AllowDelete 'get set' : 
+    Boolean AllowRename 'get set' : 
+    Boolean AllowMove 'get set' : 
+  Methods:
+    get_AllowRead(): PrivateScope, Public, HideBySig, SpecialName
+    set_AllowRead(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_AllowWrite(): PrivateScope, Public, HideBySig, SpecialName
+    set_AllowWrite(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_AllowCopyFiles(): PrivateScope, Public, HideBySig, SpecialName
+    set_AllowCopyFiles(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_AllowListDirectory(): PrivateScope, Public, HideBySig, SpecialName
+    set_AllowListDirectory(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_AllowCreateDirectories(): PrivateScope, Public, HideBySig, SpecialName
+    set_AllowCreateDirectories(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_AllowDelete(): PrivateScope, Public, HideBySig, SpecialName
+    set_AllowDelete(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_AllowRename(): PrivateScope, Public, HideBySig, SpecialName
+    set_AllowRename(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_AllowMove(): PrivateScope, Public, HideBySig, SpecialName
+    set_AllowMove(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    Clone(): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class Link.EFAM.Common.FileAccessRule: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, Link.EFAM.Common.FileAccessRights): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String Path 'get ' : 
+    Link.EFAM.Common.FileAccessRights AccessRights 'get set' : 
+  Methods:
+    get_Path(): PrivateScope, Public, HideBySig, SpecialName
+    get_AccessRights(): PrivateScope, Public, HideBySig, SpecialName
+    set_AccessRights(FileAccessRights): PrivateScope, Public, HideBySig, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Struct Link.EFAM.Common.FileAction: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Link.EFAM.Common.FileAction FileOpened = 0 : Public, Static, Literal, HasDefault
+    Link.EFAM.Common.FileAction FileModified = 1 : Public, Static, Literal, HasDefault
+    Link.EFAM.Common.FileAction FileCreated = 2 : Public, Static, Literal, HasDefault
+    Link.EFAM.Common.FileAction FileDeleted = 3 : Public, Static, Literal, HasDefault
+    Link.EFAM.Common.FileAction FileMoved = 4 : Public, Static, Literal, HasDefault
+    Link.EFAM.Common.FileAction FileRenamed = 5 : Public, Static, Literal, HasDefault
+    Link.EFAM.Common.FileAction FileCopied = 6 : Public, Static, Literal, HasDefault
+    Link.EFAM.Common.FileAction DirectoryCreated = 7 : Public, Static, Literal, HasDefault
+    Link.EFAM.Common.FileAction DirectoryDeleted = 8 : Public, Static, Literal, HasDefault
+    Link.EFAM.Common.FileAction DirectoryMoved = 9 : Public, Static, Literal, HasDefault
+    Link.EFAM.Common.FileAction DirectoryRenamed = 10 : Public, Static, Literal, HasDefault
+Struct Link.EFAM.Common.ProcessKind: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Link.EFAM.Common.ProcessKind NormalProcess = 0 : Public, Static, Literal, HasDefault
+    Link.EFAM.Common.ProcessKind SystemProcess = 1 : Public, Static, Literal, HasDefault
+    Link.EFAM.Common.ProcessKind WindowsExplorer = 2 : Public, Static, Literal, HasDefault
+    Link.EFAM.Common.ProcessKind WindowsCommand = 3 : Public, Static, Literal, HasDefault
+    Link.EFAM.Common.ProcessKind MsOffice = 4 : Public, Static, Literal, HasDefault
+    Link.EFAM.Common.ProcessKind AntiVirus = 5 : Public, Static, Literal, HasDefault
+    Link.EFAM.Common.ProcessKind MaxProcessKind = 6 : Public, Static, Literal, HasDefault
+Interface Link.EFAM.Core.IFacFilterAdapter: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    OnWorkersStarted(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnWorkersExited(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnProcessCreated(ProcessCreatedEventArgs): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetPermissions(Int32, String, Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetProcessKind(Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    WriteLog(Int32, String, String, FileAction): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Link.EFAM.Core.IFacFilterOperator: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    Int32 ThreadCount 'get set' : 
+    Int32 RequestCount 'get set' : 
+    Boolean AllowSaveAs 'get set' : 
+    Boolean UseRecycleBin 'get set' : 
+    System.String RecycleBinDirectoryName 'get ' : 
+    Link.EFAM.Core.IFacFilterAdapter Adapter 'get set' : 
+  Methods:
+    get_ThreadCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ThreadCount(Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_RequestCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_RequestCount(Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_AllowSaveAs(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_AllowSaveAs(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_UseRecycleBin(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_UseRecycleBin(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_RecycleBinDirectoryName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Adapter(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Adapter(IFacFilterAdapter): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    ConnectFilter(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    DisconnectFilter(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ActivateFilter(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    DeactivateFilter(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SetRemotePaths(String[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SetCacheDirectoryOfMsOffice(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SetTemporaryPaths(String[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class Link.EFAM.Core.ProcessCreatedEventArgs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.EventArgs
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 ProcessId 'get ' : 
+    Link.EFAM.Common.ProcessKind Kind 'get set' : 
+  Methods:
+    get_ProcessId(): PrivateScope, Public, HideBySig, SpecialName
+    get_Kind(): PrivateScope, Public, HideBySig, SpecialName
+    set_Kind(ProcessKind): PrivateScope, Public, HideBySig, SpecialName
+Class Link.EFAM.Core.SharedDrive: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Link.Core.Net.NetworkDrive
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String ShareName 'get ' : 
+    System.String DriveName 'get set' : 
+    System.String VolumeLabel 'get set' : 
+    System.String UserName 'get set' : 
+    System.String Password 'get set' : 
+    Boolean IsSecure 'get set' : 
+    Boolean Usable 'get set' : 
+    Boolean IsFixedDriveName 'get set' : 
+  Methods:
+    get_ShareName(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_DriveName(): PrivateScope, Public, HideBySig, SpecialName
+    set_DriveName(String): PrivateScope, Public, HideBySig, SpecialName
+    get_VolumeLabel(): PrivateScope, Public, HideBySig, SpecialName
+    set_VolumeLabel(String): PrivateScope, Public, HideBySig, SpecialName
+    get_UserName(): PrivateScope, Public, HideBySig, SpecialName
+    set_UserName(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Password(): PrivateScope, Public, HideBySig, SpecialName
+    set_Password(String): PrivateScope, Public, HideBySig, SpecialName
+    get_IsSecure(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsSecure(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Usable(): PrivateScope, Public, HideBySig, SpecialName
+    set_Usable(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_IsFixedDriveName(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsFixedDriveName(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    Connect(): PrivateScope, Public, HideBySig
+    Connect(String, String): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class Link.EFAM.Core.SharedDriveHelper: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    CancelExistingNetworkConnections(IEnumerable`1): PrivateScope, Public, Static, HideBySig
+    ConnectSharedDrives(IEnumerable`1): PrivateScope, Public, Static, HideBySig
+    DisconnectSharedDrives(IEnumerable`1): PrivateScope, Public, Static, HideBySig
+    IsExceeded(IEnumerable`1): PrivateScope, Public, Static, HideBySig
+Class Link.EFAM.Security.AccessControlPolicy: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String[] Directories 'get ' : 
+  Methods:
+    get_Directories(): PrivateScope, Public, HideBySig, SpecialName
+    SetAccessControl(String, DirectorySecurity): PrivateScope, Public, HideBySig
+    GetAccessControl(String): PrivateScope, Public, HideBySig
+Struct Link.EFAM.Security.AccessControl.AuthorizationRuleAction: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Link.EFAM.Security.AccessControl.AuthorizationRuleAction Allow = 0 : Public, Static, Literal, HasDefault
+    Link.EFAM.Security.AccessControl.AuthorizationRuleAction Deny = 1 : Public, Static, Literal, HasDefault
+Class Link.EFAM.Security.AccessControl.AuthorizationRule: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Link.EFAM.Security.Principal.ApplicationIdentifier, Link.EFAM.Security.AccessControl.AuthorizationRuleAction): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Link.EFAM.Security.Principal.ApplicationIdentifier Identity 'get ' : 
+    Link.EFAM.Security.AccessControl.AuthorizationRuleAction Action 'get ' : 
+  Methods:
+    get_Identity(): PrivateScope, Public, HideBySig, SpecialName
+    get_Action(): PrivateScope, Public, HideBySig, SpecialName
+Class Link.EFAM.Security.AccessControl.DirectorySecurity: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetAccessRules(): PrivateScope, Public, HideBySig
+    SetAccessRule(FileSystemAccessRule): PrivateScope, Public, HideBySig
+    RemoveAccessRule(FileSystemAccessRule): PrivateScope, Public, HideBySig
+    RemoveAccessRuleAll(): PrivateScope, Public, HideBySig
+    SetNamingRule(NamingRule): PrivateScope, Public, HideBySig
+    GetNamingRules(): PrivateScope, Public, HideBySig
+    RemoveNamingRule(NamingRule): PrivateScope, Public, HideBySig
+    RemoveNamingRuleAll(): PrivateScope, Public, HideBySig
+Struct Link.EFAM.Security.AccessControl.FileSystemRights: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Link.EFAM.Security.AccessControl.FileSystemRights Read = 1 : Public, Static, Literal, HasDefault
+    Link.EFAM.Security.AccessControl.FileSystemRights Write = 2 : Public, Static, Literal, HasDefault
+    Link.EFAM.Security.AccessControl.FileSystemRights CopyFiles = 4 : Public, Static, Literal, HasDefault
+    Link.EFAM.Security.AccessControl.FileSystemRights ListDirectory = 16 : Public, Static, Literal, HasDefault
+    Link.EFAM.Security.AccessControl.FileSystemRights CreateDirectories = 32 : Public, Static, Literal, HasDefault
+    Link.EFAM.Security.AccessControl.FileSystemRights Delete = 256 : Public, Static, Literal, HasDefault
+    Link.EFAM.Security.AccessControl.FileSystemRights Rename = 512 : Public, Static, Literal, HasDefault
+    Link.EFAM.Security.AccessControl.FileSystemRights Move = 1024 : Public, Static, Literal, HasDefault
+    Link.EFAM.Security.AccessControl.FileSystemRights FullControl = 1847 : Public, Static, Literal, HasDefault
+Class Link.EFAM.Security.AccessControl.FileSystemAccessRule: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Link.EFAM.Security.Principal.Account, Link.EFAM.Security.AccessControl.FileSystemRights): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Link.EFAM.Security.Principal.Account, Link.EFAM.Security.AccessControl.FileSystemRights, Boolean, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Link.EFAM.Security.Principal.Account Identity 'get ' : 
+    Link.EFAM.Security.AccessControl.FileSystemRights Rights 'get ' : 
+    Boolean NoInherit 'get ' : 
+    Boolean NoPropagate 'get ' : 
+  Methods:
+    get_Identity(): PrivateScope, Public, HideBySig, SpecialName
+    get_Rights(): PrivateScope, Public, HideBySig, SpecialName
+    get_NoInherit(): PrivateScope, Public, HideBySig, SpecialName
+    get_NoPropagate(): PrivateScope, Public, HideBySig, SpecialName
+Class Link.EFAM.Security.AccessControl.NamingRule: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String Pattern 'get ' : 
+  Methods:
+    get_Pattern(): PrivateScope, Public, HideBySig, SpecialName
+    IsMatch(String): PrivateScope, Public, HideBySig
+Class Link.EFAM.Security.AccessControl.RuleCollection: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Collections.ReadOnlyCollectionBase
+  Properties:
+    Link.EFAM.Security.AccessControl.FileSystemAccessRule Item [Int32] 'get ' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    CopyTo(FileSystemAccessRule[], Int32): PrivateScope, Public, HideBySig
+Class Link.EFAM.Security.AccessManager: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  Properties:
+    Link.EFAM.Security.AccessControlPolicy Policy 'get ' : 
+    System.Collections.Generic.Dictionary`2[System.String,System.String] NetBIOSNameMapping 'get ' : 
+    System.Collections.Generic.IEnumerable`1[System.String] FixedDirectories 'get set' : 
+  Methods:
+    get_Policy(): PrivateScope, Public, HideBySig, SpecialName
+    get_NetBIOSNameMapping(): PrivateScope, Public, HideBySig, SpecialName
+    get_FixedDirectories(): PrivateScope, Public, HideBySig, SpecialName
+    set_FixedDirectories(IEnumerable`1): PrivateScope, Public, HideBySig, SpecialName
+    GetManager(): PrivateScope, Public, Static, HideBySig
+    IsFixedDirectory(String): PrivateScope, Public, HideBySig
+    OnDirectoryMoved(String, String): PrivateScope, Public, HideBySig
+    ApplyPolicy(AccessControlPolicy, NameValueCollection): PrivateScope, Public, HideBySig
+    GetFileIOPermission(String): PrivateScope, Public, HideBySig
+    Rename(String, String): PrivateScope, Public, HideBySig
+    DeleteRules(String): PrivateScope, Public, HideBySig
+Struct Link.EFAM.Security.FileIOPermissionAccess: AutoLayout, AnsiClass, Class, Public, Sealed, Serializable
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Link.EFAM.Security.FileIOPermissionAccess NoAccess = 0 : Public, Static, Literal, HasDefault
+    Link.EFAM.Security.FileIOPermissionAccess Read = 1 : Public, Static, Literal, HasDefault
+    Link.EFAM.Security.FileIOPermissionAccess Write = 2 : Public, Static, Literal, HasDefault
+    Link.EFAM.Security.FileIOPermissionAccess CopyFiles = 4 : Public, Static, Literal, HasDefault
+    Link.EFAM.Security.FileIOPermissionAccess ListDirectory = 16 : Public, Static, Literal, HasDefault
+    Link.EFAM.Security.FileIOPermissionAccess CreateDirectories = 32 : Public, Static, Literal, HasDefault
+    Link.EFAM.Security.FileIOPermissionAccess Delete = 256 : Public, Static, Literal, HasDefault
+    Link.EFAM.Security.FileIOPermissionAccess Rename = 512 : Public, Static, Literal, HasDefault
+    Link.EFAM.Security.FileIOPermissionAccess Move = 1024 : Public, Static, Literal, HasDefault
+    Link.EFAM.Security.FileIOPermissionAccess AllAccess = 1847 : Public, Static, Literal, HasDefault
+Class Link.EFAM.Security.Principal.IdentityReference: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+  Properties:
+    System.String Value 'get ' : 
+  Methods:
+    op_Equality(IdentityReference, IdentityReference): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Inequality(IdentityReference, IdentityReference): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Value(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig, Abstract
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig, Abstract
+    ToString(): PrivateScope, Public, Virtual, HideBySig, Abstract
+Class Link.EFAM.Security.Principal.Account: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :Link.EFAM.Security.Principal.IdentityReference
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String Value 'get ' : 
+  Methods:
+    op_Equality(Account, Account): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Inequality(Account, Account): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Value(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class Link.EFAM.Security.Principal.ApplicationIdentifier: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :Link.EFAM.Security.Principal.IdentityReference
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IEquatable`1[Link.EFAM.Security.Principal.ApplicationIdentifier]
+  Properties:
+    Link.EFAM.Security.Principal.ApplicationIdentifier All 'get ' : 
+    Boolean IsAll 'get ' : 
+    System.String Value 'get ' : 
+  Methods:
+    op_Equality(ApplicationIdentifier, ApplicationIdentifier): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Inequality(ApplicationIdentifier, ApplicationIdentifier): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_All(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_IsAll(): PrivateScope, Public, HideBySig, SpecialName
+    get_Value(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    Equals(ApplicationIdentifier): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask

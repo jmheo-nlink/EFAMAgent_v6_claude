@@ -1,0 +1,85 @@
+  FilterOperator.Resources.resources - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v2.0.50727
+Assembly FltOptr64, Version=5.1.*, Culture=고정 언어(고정 국가): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly Microsoft.VisualC, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly log4net, Version=1.2.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a: 
+	hash=None, flags=None
+Assembly LKCorLib, Version=1.0.4.0, Culture=neutral, PublicKeyToken=59057779c68dfdc9: 
+	hash=None, flags=None
+Assembly EFAMCore, Version=5.1.11.0, Culture=neutral, PublicKeyToken=698f0cd3e1d709b1: 
+	hash=None, flags=None
+Class Link.EFAM.Engine.Filter.FilterMessaging: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    IntPtr CommunicationPort 'get set' : 
+  Methods:
+    get_CommunicationPort(): PrivateScope, Public, HideBySig, SpecialName
+    set_CommunicationPort(IntPtr): PrivateScope, Public, HideBySig, SpecialName
+    SendMessage(IntPtr, Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ReplyMessage(IntPtr, Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class Link.EFAM.Engine.Filter.FacFilterMessaging: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Link.EFAM.Engine.Filter.FilterMessaging
+  Properties:
+    Link.EFAM.Core.IFacFilterAdapter Adapter 'get set' : 
+  Methods:
+    get_Adapter(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Adapter(IFacFilterAdapter): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Class Link.EFAM.Engine.Filter.FacFilterWorker: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Link.EFAM.Engine.Filter.FacFilterMessaging
+    Void .ctor(IntPtr, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Threading.ManualResetEvent WaitHandle 'get set' : 
+  Methods:
+    get_WaitHandle(): PrivateScope, Public, HideBySig, SpecialName
+    DoWork(): PrivateScope, Public, HideBySig
+Class Link.EFAM.Engine.Filter.AssemblyResource: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    GetString(String): PrivateScope, Public, Static, HideBySig
+Class Link.EFAM.Engine.Filter.FacFilterOperator: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Link.EFAM.Engine.Filter.FacFilterMessaging
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    Link.EFAM.Core.IFacFilterOperator
+    System.IDisposable
+  Properties:
+    System.String RecycleBinDirectoryName 'get ' : 
+    Boolean AllowSaveAs 'get set' : 
+    Boolean UseRecycleBin 'get set' : 
+    Int32 RequestCount 'get set' : 
+    Int32 ThreadCount 'get set' : 
+  Methods:
+    get_ThreadCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ThreadCount(Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_RequestCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_RequestCount(Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_UseRecycleBin(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_UseRecycleBin(Boolean(HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_AllowSaveAs(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_AllowSaveAs(Boolean(HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_RecycleBinDirectoryName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ConnectFilter(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    DisconnectFilter(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ActivateFilter(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    DeactivateFilter(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SetRemotePaths(String[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SetCacheDirectoryOfMsOffice(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SetTemporaryPaths(String[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Monitor_DoWork(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Link.EFAM.Engine.Filter.Utils: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    ConcatenateRemotePaths(String[], Char(HasFieldMarshal)): PrivateScope, Public, Static, HideBySig
+    CloseObjectHandle(IntPtr): PrivateScope, Public, Static, HideBySig
+Class Link.EFAM.Engine.Filter.Win32Utils: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Methods:
+    AdjustPrivilege(String, Boolean(HasFieldMarshal)): PrivateScope, Public, Static, HideBySig

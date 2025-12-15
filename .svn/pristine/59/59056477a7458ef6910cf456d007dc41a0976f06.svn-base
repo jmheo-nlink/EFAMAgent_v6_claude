@@ -1,0 +1,281 @@
+﻿#region 변경 이력
+/*
+ * Author : Link mskoo (2013. 2. 9)
+ * 
+ * ====================================================================================================================
+ * Date         Name            Description of Change
+ * --------------------------------------------------------------------------------------------------------------------
+ * 2013-02-09   mskoo           최초 작성.
+ * 
+ * 2013-05-14   mskoo           변경된 NetworkDrive 클래스에 맞게 코드를 수정.
+ * ====================================================================================================================
+ */
+#endregion
+
+using System;
+using Microsoft.Win32;
+// .NET 라이브러리
+using Link.Core.Net;
+
+namespace Link.EFAM.Core
+{
+    using SupportMethods = Link.Core.SupportMethods;
+    using Resources = Link.EFAM.Properties.Resources;
+
+    /// <summary>
+    /// 공유 드라이브를 나타낸다.
+    /// </summary>
+    public class SharedDrive : NetworkDrive
+    {
+        private string m_shareName = null;
+        private string m_driveName = String.Empty;
+        private string m_volumeLabel = String.Empty;
+        private string m_userName = null;
+        private string m_password = null;
+        private bool m_isSecure = false;
+        private bool m_usable = true;
+
+        #region 속성
+
+        /// <summary>
+        /// 공유 드라이브로 연결한 네트워크 공유의 UNC 이름을 가져온다.
+        /// </summary>
+        /// <value>공유 드라이브로 연결한 네트워크 공유의 UNC 이름</value>
+        public override string ShareName
+        {
+            get { return m_shareName; }
+        }
+
+        /// <summary>
+        /// 공유 드라이브에 사용할 드라이브 이름을 가져오거나 설정한다.
+        /// </summary>
+        /// <value>공유 드라이브에 사용할 드라이브 이름. 기본값은 빈 문자열("")</value>
+        /// <remarks>
+        /// 이 속성은 C: 또는 E:와 같이 공유 드라이브에 할당할 이름이다.
+        /// 별표(*)를 사용하여 다음 사용 가능한 드라이브 이름을 지정할 수 있다.<br/>
+        /// <br/>
+        /// 공유 드라이브를 연결한 후에 <see cref="DriveName"/> 값을 변경하면 변경 내용이 적용되지 않는다.
+        /// </remarks>
+        public new string DriveName
+        {
+            get { return m_driveName; }
+            set 
+            {
+                m_driveName = (value != null) ? value : String.Empty;
+            }
+        }
+
+        /// <summary>
+        /// 공유 드라이브의 볼륨 레이블을 가져오거나 설정한다.
+        /// </summary>
+        /// <value>공유 드라이브의 볼륨 레이블. 기본값은 빈 문자열("")</value>
+        /// 
+        /// <exception cref="System.Security.SecurityException">
+        /// 사용자에게 레지스트리 키를 만들거나 수정하는 데 필요한 권한이 없는 경우
+        /// </exception>
+        /// <exception cref="UnauthorizedAccessException"><see cref="RegistryKey"/>에 쓸 수 없는 경우</exception>
+        public string VolumeLabel
+        {
+            get { return m_volumeLabel; }
+            set
+            {
+                m_volumeLabel = (value != null) ? value : String.Empty;
+
+                NetworkDrive.SetVolumeLabel(m_shareName, m_volumeLabel);
+            }
+        }
+
+        /// <summary>
+        /// 공유 드라이브를 연결하는데 사용할 사용자 이름을 가져오거나 설정한다.
+        /// </summary>
+        /// <value>공유 드라이브를 연결하는데 사용할 사용자 이름</value>
+        /// <remarks>
+        /// 공유 드라이브를 연결한 후에 <see cref="UserName"/> 값을 변경하면 변경 내용이 적용되지 않는다.
+        /// </remarks>
+        public string UserName
+        {
+            get { return m_userName; }
+            set { m_userName = value; }
+        }
+
+        /// <summary>
+        /// 공유 드라이브를 연결하는데 사용할 사용자 비밀번호를 가져오거나 설정한다.
+        /// </summary>
+        /// <value>드라이브를 연결하는데 사용할 비밀번호</value>
+        /// <remarks>
+        /// 공유 드라이브를 연결한 후에 <see cref="Password"/> 값을 변경하면 변경 내용이 적용되지 않는다.
+        /// </remarks>
+        public string Password
+        {
+            get { return m_password; }
+            set { m_password = value; }
+        }
+
+        /// <summary>
+        /// 공유 드라이브가 보안 드라이브인지 여부를 나타내는 값을 가져오거나 설정한다.
+        /// </summary>
+        /// <value>공유 드라이브가 보안 드라이브이면 <b>true</b>, 그렇지 않으면 <b>false</b></value>
+        public bool IsSecure
+        {
+            get { return m_isSecure; }
+            set { m_isSecure = value; }
+        }
+
+        /// <summary>
+        /// 공유 드라이브를 사용할 수 있는지 여부를 나타내는 값을 가져오거나 설정한다.
+        /// </summary>
+        /// <value>공유 드라이브를 사용할 수 있으면 <b>true</b>, 그렇지 않으면 <b>false</b></value>
+        public bool Usable
+        {
+            get { return m_usable; }
+            set { m_usable = value; }
+        }
+        
+        #endregion
+
+        #region 생성자
+
+        /// <summary>
+        /// <see cref="SharedDrive"/> 클래스의 새 인스턴스를 초기화하고,
+        /// 공유 드라이브로 연결할 네트워크 공유의 UNC 이름을 지정한다.
+        /// </summary>
+        /// <param name="shareName">공유 드라이브로 연결할 네트워크 공유의 UNC 이름</param>
+        /// 
+        /// <exception cref="ArgumentNullException"><paramref name="shareName"/>이 <b>null</b>인 경우</exception>
+        /// <exception cref="ArgumentException">
+        /// <paramref name="shareName"/>이 길이가 0인 문자열이거나, 공백만 포함하는 경우
+        /// </exception>
+        public SharedDrive(string shareName)
+            : base()
+        {
+            if (shareName == null) throw new ArgumentNullException("shareName");
+            if (shareName.Length == 0)
+            {
+                throw new ArgumentException(Resources.Argument_UNCPathEmpty);
+            }
+            if (SupportMethods.IsNullOrWhiteSpace(shareName))
+            {
+                throw new ArgumentException(Resources.Argument_UNCPathIllegal);
+            }
+
+            m_shareName = shareName;
+        }
+
+        #endregion
+
+        #region 메소드
+
+        /// <summary>
+        /// 공유 드라이브를 연결한다.
+        /// </summary>
+        /// <returns>
+        /// 공유 드라이브가 연결된 경우 <b>true</b>, 이미 공유 드라이브가 연결되어 있는 경우 <b>false</b>
+        /// </returns>
+        /// <remarks>
+        /// <see cref="UserName"/> 속성이 <b>null</b>이면 
+        /// 기본 사용자 이름(프로세스에 대한 사용자 컨텍스트에서 제공)을 사용한다.<br/>
+        /// <see cref="Password"/> 속성이 <b>null</b>이면 
+        /// <see cref="UserName"/> 속성에 지정한 사용자와 관련된 현재 기본 비밀번호를 사용한다.<br/>
+        /// <br/>
+        /// <see cref="DriveName"/> 속성이 빈 문자열("")인 경우 드라이브 이름이 할당되지 않은 공유 드라이브를 연결한다.<br/>
+        /// <br/>
+        /// 시스템이 자동으로 드라이브 문자를 할당할 때 드라이브 문자는 Z:부터 C:까지 역순으로 할당된다.<br/>
+        /// </remarks>
+        /// 
+        /// <exception cref="InvalidOperationException">
+        /// <see cref="ShareName"/> 속성에 지정된 네트워크 공유를 찾을 수 없는 경우<br/>
+        /// - 또는 -<br/>
+        /// <see cref="DriveName"/> 속성에 지정한 드라이브 이름이 유효하지 않은 경우<br/>
+        /// - 또는 -<br/>
+        /// <see cref="DriveName"/> 속성에 지정한 드라이브 이름이 이미 사용 중이거나 
+        /// 다른 네트워크 공유에 대한 연결에 저장된 경우<br/>
+        /// - 또는 -<br/>
+        /// 알 수 없는 사용자이거나 틀린 비밀번호이기 때문에 로그인에 실패한 경우<br/>
+        /// - 또는 -<br/>
+        /// 잘못된 네트워크 경로이거나 네트워크 공급자를 사용할 수 없는 경우<br/>
+        /// - 또는 -<br/>
+        /// 네트워크를 사용할 수 없는 경우
+        /// </exception>
+        /// <exception cref="UnauthorizedAccessException">네트워크 공유에 대한 액세스 권한이 없는 경우</exception>
+        /// <exception cref="System.ComponentModel.Win32Exception">시스템 API에 액세스하는 동안 오류가 발생한 경우</exception>
+        public bool Connect()
+        {
+            NetworkConnection netwkConn = null;
+            bool disconnected = !this.IsConnected;
+
+            if (disconnected)
+            {
+                netwkConn = NetworkConnection.Make(
+                    this.DriveName, m_shareName, m_userName, m_password, false);
+
+                this.NetworkConnection = netwkConn;
+                this.DriveName = netwkConn.LocalName;
+            }
+
+            return disconnected;
+        }
+
+        /// <summary>
+        /// 지정한 사용자 이름과 비밀번호를 사용하여 공유 드라이브를 연결한다.
+        /// </summary>
+        /// <param name="userName">공유 드라이브를 연결하는데 사용할 사용자 이름</param>
+        /// <param name="password">공유 드라이브를 연결하는데 사용할 비밀번호</param>
+        /// <returns>
+        /// 공유 드라이브가 연결된 경우 <b>true</b>, 이미 공유 드라이브가 연결되어 있는 경우 <b>false</b>
+        /// </returns>
+        /// <remarks>
+        /// <paramref name="userName"/>이 <b>null</b>이면 
+        /// 기본 사용자 이름(프로세스에 대한 사용자 컨텍스트에서 제공)을 사용한다.<br/>
+        /// <paramref name="password"/>가 <b>null</b>이면 
+        /// <paramref name="userName"/>에 지정한 사용자와 관련된 현재 기본 비밀번호를 사용한다.<br/>
+        /// <br/>
+        /// <see cref="DriveName"/> 속성이 빈 문자열("")인 경우 드라이브 이름이 할당되지 않은 공유 드라이브를 연결한다.<br/>
+        /// <br/>
+        /// 시스템이 자동으로 드라이브 문자를 할당할 때 드라이브 문자는 Z:부터 C:까지 역순으로 할당된다.<br/>
+        /// </remarks>
+        /// 
+        /// <exception cref="InvalidOperationException">
+        /// <see cref="ShareName"/> 속성에 지정된 네트워크 공유를 찾을 수 없는 경우<br/>
+        /// - 또는 -<br/>
+        /// <see cref="DriveName"/> 속성에 지정한 드라이브 이름이 유효하지 않은 경우<br/>
+        /// - 또는 -<br/>
+        /// <see cref="DriveName"/> 속성에 지정한 드라이브 이름이 이미 사용 중이거나 
+        /// 다른 네트워크 공유에 대한 연결에 저장된 경우<br/>
+        /// - 또는 -<br/>
+        /// 알 수 없는 사용자이거나 틀린 비밀번호이기 때문에 로그인에 실패한 경우<br/>
+        /// - 또는 -<br/>
+        /// 잘못된 네트워크 경로이거나 네트워크 공급자를 사용할 수 없는 경우<br/>
+        /// - 또는 -<br/>
+        /// 네트워크를 사용할 수 없는 경우
+        /// </exception>
+        /// <exception cref="UnauthorizedAccessException">네트워크 공유에 대한 액세스 권한이 없는 경우</exception>
+        /// <exception cref="System.ComponentModel.Win32Exception">시스템 API에 액세스하는 동안 오류가 발생한 경우</exception>
+        public new bool Connect(string userName, string password)
+        {
+            m_userName = userName;
+            m_password = password;
+
+            return Connect();
+        }
+
+        #endregion
+
+        #region Object 멤버
+
+        /// <summary>
+        /// 현재 <see cref="SharedDrive"/>의 문자열 표현을 반환한다.
+        /// </summary>
+        /// <returns>현재 <see cref="SharedDrive"/>의 문자열 표현</returns>
+        public override string ToString()
+        {
+            if (this.NetworkConnection != null)
+            {
+                return base.ToString();
+            }
+
+            return ("Disconnected, " + m_driveName + " (" + m_shareName + ")");
+        }
+
+        #endregion
+    }
+}

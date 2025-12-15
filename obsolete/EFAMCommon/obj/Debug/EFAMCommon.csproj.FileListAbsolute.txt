@@ -1,0 +1,11 @@
+D:\MyWorks\EFAM\EFAMEngine\EFAMCommon\bin\Debug\EFAMCommon.dll
+D:\MyWorks\EFAM\EFAMEngine\EFAMCommon\bin\Debug\EFAMCommon.pdb
+D:\MyWorks\EFAM\EFAMEngine\EFAMCommon\obj\Debug\ResolveAssemblyReference.cache
+D:\MyWorks\EFAM\EFAMEngine\EFAMCommon\obj\Debug\EFAMCommon.dll
+D:\MyWorks\EFAM\EFAMEngine\EFAMCommon\obj\Debug\EFAMCommon.pdb
+D:\MyWorks\EFAM\EFAMEngine\EFAMCommon\bin\Debug\EFAMCommon.xml
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMCommon\bin\Debug\EFAMCommon.xml
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMCommon\bin\Debug\EFAMCommon.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMCommon\bin\Debug\EFAMCommon.pdb
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMCommon\obj\Debug\EFAMCommon.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.1\EFAMCommon\obj\Debug\EFAMCommon.pdb

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "fnYV4ZyXRtw=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\HEO\\Link\\EFAM\\[240912]EFAM\\03_EFAMv6_Agent_Source\\[240315]EFAMAgent_v6)_HDElectric\\EFAMAgent_msiexe\\EFAMAgent_exe\\EFAMAgent_exe_v4.wixproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\HEO\\.nuget\\packages\\wixtoolset.bal.wixext\\4.0.6\\wixtoolset.bal.wixext.4.0.6.nupkg.sha512",
+    "C:\\Users\\HEO\\.nuget\\packages\\wixtoolset.util.wixext\\4.0.6\\wixtoolset.util.wixext.4.0.6.nupkg.sha512"
+  ],
+  "logs": []
+}

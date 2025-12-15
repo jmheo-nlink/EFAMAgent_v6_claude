@@ -1,0 +1,629 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="AboutBox_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resourcefiles\efam_icon_68x68.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AboutBox_Text" xml:space="preserve">
+    <value>E-FAM 정보</value>
+    <comment>AboutBox</comment>
+  </data>
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>취소</value>
+  </data>
+  <data name="Button_Close" xml:space="preserve">
+    <value>닫기</value>
+  </data>
+  <data name="Button_Delete" xml:space="preserve">
+    <value>삭제</value>
+    <comment>RecycleBinDialog</comment>
+  </data>
+  <data name="Button_Login" xml:space="preserve">
+    <value>로그인</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Button_OK" xml:space="preserve">
+    <value>확인</value>
+  </data>
+  <data name="Button_Restore" xml:space="preserve">
+    <value>복원</value>
+    <comment>RecycleBinDialog</comment>
+  </data>
+  <data name="Button_Search" xml:space="preserve">
+    <value>검색</value>
+  </data>
+  <data name="Calendar_Today" xml:space="preserve">
+    <value>오늘:</value>
+  </data>
+  <data name="ChangePasswordDialog_Text" xml:space="preserve">
+    <value>비밀번호 변경</value>
+    <comment>ChangePasswordDialog</comment>
+  </data>
+  <data name="Check_AutoLogin" xml:space="preserve">
+    <value>자동 로그인</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Check_AutoLoginSetting" xml:space="preserve">
+    <value>실행할 때 자동으로 로그인</value>
+    <comment>ConfigDialog</comment>
+  </data>
+  <data name="Check_AutoRun" xml:space="preserve">
+    <value>윈도우 시작 시 자동 실행</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Check_AutoRunSetting" xml:space="preserve">
+    <value>Windows를 시작할 때 자동으로 실행</value>
+    <comment>ConfigDialog</comment>
+  </data>
+  <data name="Column_CopyRights" xml:space="preserve">
+    <value>복사</value>
+    <comment>ViewPermissionsDialog</comment>
+  </data>
+  <data name="Column_CreateDirRights" xml:space="preserve">
+    <value>폴더 만들기</value>
+    <comment>ViewPermissionsDialog</comment>
+  </data>
+  <data name="Column_Date" xml:space="preserve">
+    <value>날짜</value>
+    <comment>ViewLogDialog</comment>
+  </data>
+  <data name="Column_DateDeleted" xml:space="preserve">
+    <value>삭제된 날짜</value>
+    <comment>RecycleBinDialog</comment>
+  </data>
+  <data name="Column_DeleteRights" xml:space="preserve">
+    <value>삭제</value>
+    <comment>ViewPermissionsDialog</comment>
+  </data>
+  <data name="Column_DirPath" xml:space="preserve">
+    <value>폴더 경로</value>
+    <comment>ViewPermissionsDialog</comment>
+  </data>
+  <data name="Column_DriveName" xml:space="preserve">
+    <value>드라이브</value>
+    <comment>ConfigDialog</comment>
+  </data>
+  <data name="Column_FileAction" xml:space="preserve">
+    <value>동작</value>
+    <comment>ViewLogDialog</comment>
+  </data>
+  <data name="Column_FileName" xml:space="preserve">
+    <value>이름</value>
+    <comment>RecycleBinDialog</comment>
+  </data>
+  <data name="Column_FilePath" xml:space="preserve">
+    <value>파일 경로</value>
+    <comment>ViewLogDialog</comment>
+  </data>
+  <data name="Column_NewFilePath" xml:space="preserve">
+    <value>새(대상) 파일 경로</value>
+    <comment>ViewLogDialog</comment>
+  </data>
+  <data name="Column_OriginalDirectory" xml:space="preserve">
+    <value>원래 위치</value>
+    <comment>RecycleBinDialog</comment>
+  </data>
+  <data name="Column_ReadRights" xml:space="preserve">
+    <value>읽기</value>
+    <comment>ViewPermissionsDialog</comment>
+  </data>
+  <data name="Column_RenameRights" xml:space="preserve">
+    <value>이름 바꾸기</value>
+    <comment>ViewPermissionsDialog</comment>
+  </data>
+  <data name="Column_SharedFolder" xml:space="preserve">
+    <value>공유 폴더</value>
+    <comment>ConfigDialog</comment>
+  </data>
+  <data name="Column_WriteRights" xml:space="preserve">
+    <value>쓰기</value>
+    <comment>ViewPermissionsDialog</comment>
+  </data>
+  <data name="ConfigDialog_Text" xml:space="preserve">
+    <value>환경 설정</value>
+    <comment>ConfigDialog</comment>
+  </data>
+  <data name="Config_ConnectionSetting" xml:space="preserve">
+    <value>연결</value>
+    <comment>ConfigDialog</comment>
+  </data>
+  <data name="Config_DriveSetting" xml:space="preserve">
+    <value>드라이브</value>
+    <comment>ConfigDialog</comment>
+  </data>
+  <data name="Config_GeneralSetting" xml:space="preserve">
+    <value>일반</value>
+    <comment>ConfigDialog</comment>
+  </data>
+  <data name="Desc_ServerConnSetting" xml:space="preserve">
+    <value>연결할 E-FAM 서버의 주소를 입력하십시오.</value>
+    <comment>ConfigDialog</comment>
+  </data>
+  <data name="EFAM_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resourcefiles\efam_icon.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Error_ChangePasswordFailure" xml:space="preserve">
+    <value>내부 오류가 발생하여 비밀번호를 변경하는데 실패했습니다.</value>
+    <comment>ChangePasswordDialog</comment>
+  </data>
+  <data name="Error_ExceptionThrowed" xml:space="preserve">
+    <value>예기치 못한 오류가 발생하여 작업이 중지되었습니다.</value>
+  </data>
+  <data name="Error_ExceptionThrowedInProgress" xml:space="preserve">
+    <value>{0} 오류가 발생하여 작업이 중지되었습니다.</value>
+    <comment>LoaderDialog</comment>
+  </data>
+  <data name="Error_InvalidUrlFormat" xml:space="preserve">
+    <value>서버의 주소가 잘못된 URL 형식입니다.</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Error_SoapExceptionThrowed" xml:space="preserve">
+    <value>서버에서 요청을 처리하지 못했습니다.</value>
+  </data>
+  <data name="Error_WebExceptionThrowed" xml:space="preserve">
+    <value>서버에 연결할 수 없습니다.</value>
+  </data>
+  <data name="Info_ApplySettingOnRelogin" xml:space="preserve">
+    <value>E-FAM Agent를 다시 시작해야 {0}값이 적용됩니다.</value>
+    <comment>ConfigDialog</comment>
+  </data>
+  <data name="Info_ChangePasswordSuccess" xml:space="preserve">
+    <value>비밀번호가 변경되었습니다.</value>
+    <comment>ChangePasswordDialog</comment>
+  </data>
+  <data name="Info_InProgress" xml:space="preserve">
+    <value>{0}...</value>
+    <comment>LoaderDialog</comment>
+  </data>
+  <data name="Label_All" xml:space="preserve">
+    <value>전체</value>
+    <comment>ViewLogDialog</comment>
+  </data>
+  <data name="Label_BeginDate" xml:space="preserve">
+    <value>시작일:</value>
+    <comment>ViewLogDialog</comment>
+  </data>
+  <data name="Label_ConfirmPassword" xml:space="preserve">
+    <value>새 비밀번호 확인</value>
+    <comment>ChangePasswordDialog</comment>
+  </data>
+  <data name="Label_EndDate" xml:space="preserve">
+    <value>종료일:</value>
+    <comment>ViewLogDialog</comment>
+  </data>
+  <data name="Label_FileAction" xml:space="preserve">
+    <value>동작:</value>
+    <comment>ViewLogDialog</comment>
+  </data>
+  <data name="Label_FileName" xml:space="preserve">
+    <value>파일명:</value>
+    <comment>ViewLogDialog</comment>
+  </data>
+  <data name="Label_NetworkDriveSetting" xml:space="preserve">
+    <value>공유 드라이브 설정</value>
+    <comment>ConfigDialog</comment>
+  </data>
+  <data name="Label_NewPassword" xml:space="preserve">
+    <value>새 비밀번호</value>
+    <comment>ChangePasswordDialog</comment>
+  </data>
+  <data name="Label_Password" xml:space="preserve">
+    <value>비밀번호</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Label_Period" xml:space="preserve">
+    <value>기간:</value>
+    <comment>RecycleBinDialog</comment>
+  </data>
+  <data name="Label_RunSetting" xml:space="preserve">
+    <value>실행 설정</value>
+    <comment>ConfigDialog</comment>
+  </data>
+  <data name="Label_ServerAddress" xml:space="preserve">
+    <value>주소 (URL):</value>
+    <comment>ConfigDialog</comment>
+  </data>
+  <data name="Label_ServerConnSetting" xml:space="preserve">
+    <value>서버 연결 설정</value>
+    <comment>ConfigDialog</comment>
+  </data>
+  <data name="Label_UserId" xml:space="preserve">
+    <value>아이디</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Login_Bottom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resourcefiles\login_bottom.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Login_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resourcefiles\login_logo.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Login_Top" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resourcefiles\login_top.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MainForm_Text" xml:space="preserve">
+    <value>E-FAM</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Menu_About" xml:space="preserve">
+    <value>E-FAM 정보 (&amp;A)</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Menu_ChangePassword" xml:space="preserve">
+    <value>비밀번호 변경</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Menu_Config" xml:space="preserve">
+    <value>환경 설정 (&amp;C)</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Menu_Exit" xml:space="preserve">
+    <value>프로그램 종료 (&amp;X)</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Menu_HelpDesk" xml:space="preserve">
+    <value>고객 센터 (&amp;H)</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Menu_Login" xml:space="preserve">
+    <value>로그인</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Menu_Logout" xml:space="preserve">
+    <value>로그아웃</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Menu_ManagePermissions" xml:space="preserve">
+    <value>사용자 권한 관리</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Menu_RecycleBin" xml:space="preserve">
+    <value>휴지통</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Menu_ViewLog" xml:space="preserve">
+    <value>로그 조회</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Menu_ViewPermissions" xml:space="preserve">
+    <value>권한 조회</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="MsgBox_Caption" xml:space="preserve">
+    <value>E-FAM</value>
+  </data>
+  <data name="NotifyText_LoggedIn" xml:space="preserve">
+    <value>E-FAM (로그인 됨)</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="NotifyText_LoggedOut" xml:space="preserve">
+    <value>E-FAM (로그아웃 됨)</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="NotifyTipTitle_LoggedIn" xml:space="preserve">
+    <value>E-FAM 로그인</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="NotifyTipTitle_LoggedOut" xml:space="preserve">
+    <value>E-FAM 로그아웃</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="NotifyTip_LoggedIn" xml:space="preserve">
+    <value>E-FAM에 로그인 되었습니다.</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="NotifyTip_LoggedOut" xml:space="preserve">
+    <value>E-FAM에서 로그아웃 되었습니다.</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Quest_OverwriteFile" xml:space="preserve">
+    <value>이동하는 파일로 대상 파일을 덮어쓰시겠습니까?</value>
+    <comment>RecycleBinDialog</comment>
+  </data>
+  <data name="RecycleBinDialog_Text" xml:space="preserve">
+    <value>휴지통</value>
+    <comment>RecycleBinDialog</comment>
+  </data>
+  <data name="RecycleBin_DeletingFile" xml:space="preserve">
+    <value>파일을 삭제하는 중</value>
+    <comment>RecycleBinDialog</comment>
+  </data>
+  <data name="RecycleBin_RestoringFile" xml:space="preserve">
+    <value>파일을 복원하는 중</value>
+    <comment>RecycleBinDialog</comment>
+  </data>
+  <data name="Step_ConnectingNetworkDrive" xml:space="preserve">
+    <value>공유 드라이브를 연결하는 중</value>
+    <comment>LoaderDialog</comment>
+  </data>
+  <data name="Step_DisconnectingNetworkDrive" xml:space="preserve">
+    <value>공유 드라이브의 연결을 끊는 중</value>
+    <comment>LoaderDialog</comment>
+  </data>
+  <data name="Step_GettingDataFromServer" xml:space="preserve">
+    <value>서버에서 정보를 가져오는 중</value>
+    <comment>LoaderDialog</comment>
+  </data>
+  <data name="Step_LoadingEFAM" xml:space="preserve">
+    <value>E-FAM을 로드하는 중</value>
+    <comment>LoaderDialog</comment>
+  </data>
+  <data name="Step_UnloadingEFAM" xml:space="preserve">
+    <value>E-FAM을 언로드하는 중</value>
+    <comment>LoaderDialog</comment>
+  </data>
+  <data name="Tray_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resourcefiles\tray_icon.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ViewLogDialog_Text" xml:space="preserve">
+    <value>로그 조회</value>
+    <comment>ViewLogDialog</comment>
+  </data>
+  <data name="ViewPermissionsDialog_Text" xml:space="preserve">
+    <value>권한 조회</value>
+    <comment>ViewPermissionsDialog</comment>
+  </data>
+  <data name="Warn_FileAlreadyExists" xml:space="preserve">
+    <value>원래 위치에 이미 '{0}' 파일이 있습니다.</value>
+    <comment>RecycleBinDialog</comment>
+  </data>
+  <data name="Warn_InputConfirmPassword" xml:space="preserve">
+    <value>새 비밀번호 확인을 입력하십시오.</value>
+    <comment>ChangePasswordDialog</comment>
+  </data>
+  <data name="Warn_InputNewPassword" xml:space="preserve">
+    <value>새 비밀번호를 입력하십시오.</value>
+    <comment>ChangePasswordDialog</comment>
+  </data>
+  <data name="Warn_InputStrongPassword" xml:space="preserve">
+    <value>비밀번호는 {0}자 이상의 영문자, 숫자 및 특수 문자를 사용해야 합니다.</value>
+    <comment>ChangePasswordDialog</comment>
+  </data>
+  <data name="Warn_InputUserId" xml:space="preserve">
+    <value>아이디를 입력하십시오.</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Warn_NewPwdAndConfirmPwdMismatch" xml:space="preserve">
+    <value>새 비밀번호와 비밀번호 확인이 일치하지 않습니다.</value>
+    <comment>ChangePasswordDialog</comment>
+  </data>
+  <data name="Warn_NewPwdIsEqualToUserId" xml:space="preserve">
+    <value>새 비밀번호가 사용자 ID와 같습니다. 다른 비밀번호를 입력하십시오.</value>
+    <comment>ChangePasswordDialog</comment>
+  </data>
+  <data name="Warn_SomeNetwkDrvIsNotConnected" xml:space="preserve">
+    <value>일부 공유 드라이브를 연결할 수 없습니다.</value>
+    <comment>LoaderDialog</comment>
+  </data>
+  <data name="Label_OldPassword" xml:space="preserve">
+    <value>현재 비밀번호</value>
+    <comment>ChangePasswordDialog</comment>
+  </data>
+  <data name="Warn_InputOldPassword" xml:space="preserve">
+    <value>현재 비밀번호를 입력하십시오.</value>
+    <comment>ChangePasswordDialog</comment>
+  </data>
+  <data name="Warn_NewPwdIsEqualToOldPwd" xml:space="preserve">
+    <value>새 비밀번호가 현재 비밀번호와 같습니다. 다른 비밀번호를 입력하십시오.</value>
+    <comment>ChangePasswordDialog</comment>
+  </data>
+  <data name="Error_WrongOldPassword" xml:space="preserve">
+    <value>비밀번호가 틀렸습니다. 현재 비밀번호를 다시 입력하십시오.</value>
+    <comment>ChangePasswordDialog</comment>
+  </data>
+  <data name="Error_PasswordExpired" xml:space="preserve">
+    <value>비밀번호가 만료되었습니다. 새 비밀번호로 변경하십시오.</value>
+    <comment>MainForm</comment>
+  </data>
+  <data name="Column_UseDrive" xml:space="preserve">
+    <value>사용</value>
+    <comment>ConfigDialog</comment>
+  </data>
+  <data name="Column_ListDirRights" xml:space="preserve">
+    <value>목록 보기</value>
+    <comment>ViewPermissionsDialog</comment>
+  </data>
+  <data name="Column_MoveRights" xml:space="preserve">
+    <value>이동</value>
+    <comment>ViewPermissionsDialog</comment>
+  </data>
+  <data name="Button_Empty" xml:space="preserve">
+    <value>비우기</value>
+    <comment>RecycleBinDialog</comment>
+  </data>
+  <data name="Column_Account" xml:space="preserve">
+    <value>사용자/그룹</value>
+    <comment>ViewPermissionsDialog</comment>
+  </data>
+  <data name="Column_NoInherit" xml:space="preserve">
+    <value>상속 안함</value>
+    <comment>ViewPermissionsDialog</comment>
+  </data>
+  <data name="Column_NoPropagate" xml:space="preserve">
+    <value>전파 안함</value>
+    <comment>ViewPermissionsDialog</comment>
+  </data>
+  <data name="SCSWork_FailedToSetSecureDriveInfo" xml:space="preserve">
+    <value>S-Work 보안 드라이브 정보를 설정하는 중 오류가 발생하여 작업이 중지되었습니다.</value>
+    <comment>SWork</comment>
+  </data>
+  <data name="SCSWork_NotInstalled" xml:space="preserve">
+    <value>S-Work이 설치되어 있지 않습니다. S-Work를 설치하십시오.</value>
+    <comment>SWork</comment>
+  </data>
+  <data name="SCSWork_NotLoggedIn" xml:space="preserve">
+    <value>S-Work에 로그인되어 있지 않습니다. S-Work에 로그인하십시오.</value>
+    <comment>SWork</comment>
+  </data>
+  <data name="SCSWork_FailedToGetInformation" xml:space="preserve">
+    <value>S-Work에 대한 정보를 가져오는 중 오류가 발생하였습니다.</value>
+    <comment>SWork</comment>
+  </data>
+  <data name="ToolTip_CannotChangeUse" xml:space="preserve">
+    <value>보안 공유 드라이브는 사용 여부를 변경할 수 없습니다.</value>
+    <comment>SWork</comment>
+  </data>
+  <data name="Label_Department" xml:space="preserve">
+    <value>부서/과:</value>
+    <comment>ManagerInfoDialog</comment>
+  </data>
+  <data name="Label_Email" xml:space="preserve">
+    <value>전자우편:</value>
+    <comment>ManagerInfoDialog</comment>
+  </data>
+  <data name="Label_JobTitle" xml:space="preserve">
+    <value>직함:</value>
+    <comment>ManagerInfoDialog</comment>
+  </data>
+  <data name="Label_Name" xml:space="preserve">
+    <value>이름:</value>
+    <comment>ManagerInfoDialog</comment>
+  </data>
+  <data name="Label_PhoneNumber" xml:space="preserve">
+    <value>전화번호:</value>
+    <comment>ManagerInfoDialog</comment>
+  </data>
+  <data name="ManagerInfoDialog_Text" xml:space="preserve">
+    <value>관리자 정보</value>
+    <comment>ManagerInfoDialog</comment>
+  </data>
+  <data name="Column_Manager" xml:space="preserve">
+    <value>관리자</value>
+    <comment>ViewPermissionsDialog</comment>
+  </data>
+  <data name="Label_Manager" xml:space="preserve">
+    <value>관리자</value>
+    <comment>ManagerInfoDialog</comment>
+  </data>
+  <data name="Warn_TooManySharedDrives" xml:space="preserve">
+    <value>연결할 수 있는 공유 드라이브의 개수가 초과되었습니다. 최대 {0}개의 공유 드라이브를 연결할 수 있습니다.</value>
+    <comment>LoaderDialog</comment>
+  </data>
+  <data name="Column_VolumeLabel" xml:space="preserve">
+    <value>볼륨 레이블</value>
+    <comment>ConfigDialog</comment>
+  </data>
+  <data name="ToolTip_CannotChangeDriveName" xml:space="preserve">
+    <value>드라이브 이름이 고정된 공유 드라이브입니다.</value>
+    <comment>ConfigDialog</comment>
+  </data>
+  <data name="Login_Logo_ADD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ResourceFiles\login_logo_add.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://124.137.245.171/EFAMServerAD/EFAMAgentWebService.asmx?disco" filename="EFAMAgentWebService.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://124.137.245.171/EFAMServerAD/EFAMAgentWebService.asmx?wsdl" filename="EFAMAgentWebService.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

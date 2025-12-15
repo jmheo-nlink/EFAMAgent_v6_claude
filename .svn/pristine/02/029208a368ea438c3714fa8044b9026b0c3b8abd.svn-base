@@ -1,0 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
+using Microsoft.VisualBasic.ApplicationServices;
+
+namespace Link.EFAM.Agent
+{
+    using Path = System.IO.Path;
+
+    static class Program
+    {
+        /// <summary>
+        /// 해당 응용 프로그램의 주 진입점입니다.
+        /// </summary>
+        [STAThread]
+        static void Main(string[] args)
+        {
+#if INTEROP_SWORK   // ============================================================================
+            string windowsDir = Path.GetDirectoryName(Environment.SystemDirectory);
+
+            NativeMethods.SetDllDirectory(Path.Combine(windowsDir, "softcamp\\SDK"));
+#endif  // INTEROP_SWORK ==========================================================================
+
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            // 단일 인스턴스 형태의 응용 프로그램을 시작한다.
+            AgentApplication.Instance.Run(args);
+        }
+    }
+}

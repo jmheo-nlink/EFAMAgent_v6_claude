@@ -1,0 +1,14 @@
+﻿
+• 조건부 컴파일 기호
+
+EFAMAgent_v5.1
+ - INTEROP_SWORK : 소프트캠프 S-Work 연동
+ - INTEROP_SWORK_HHISB : 소프트캠프 S-Work 연동 (현대중공업 조선사업부)
+ - HHISPECIAL : 현대중공업 특수선
+ ??? - HHISB : 현대중공업 조선사업부
+ - ADD : 국방과학연구소
+
+EFAMEngine
+ - INTEROP_SWORK : 소프트캠프 S-Work 연동
+ - INTEROP_SWORK_HHISB : 소프트캠프 S-Work 연동 (현대중공업 조선사업부)
+ ??? - FOOSUNG : 후성그룹

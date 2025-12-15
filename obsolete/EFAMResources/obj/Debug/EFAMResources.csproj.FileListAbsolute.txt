@@ -1,0 +1,8 @@
+D:\MyWorks\EFAM\EFAMAgent_v5.2\EFAMResources\obj\Debug\ResolveAssemblyReference.cache
+D:\MyWorks\EFAM\EFAMAgent_v5.2\EFAMResources\bin\Debug\EFAMResources.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.2\EFAMResources\bin\Debug\EFAMResources.pdb
+D:\MyWorks\EFAM\EFAMAgent_v5.2\EFAMResources\obj\Debug\EFAMResources.dll
+D:\MyWorks\EFAM\EFAMAgent_v5.2\EFAMResources\obj\Debug\EFAMResources.pdb
+D:\MyWorks\EFAM\EFAMAgent_v5.2\EFAMResources\obj\Debug\Link.EFAM.Resources.UIResources.resources
+D:\MyWorks\EFAM\EFAMAgent_v5.2\EFAMResources\obj\Debug\GenerateResource-ResGen.read.1.tlog
+D:\MyWorks\EFAM\EFAMAgent_v5.2\EFAMResources\obj\Debug\GenerateResource-ResGen.write.1.tlog

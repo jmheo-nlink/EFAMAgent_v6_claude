@@ -1,0 +1,83 @@
+﻿#region 변경 이력
+/*
+ * Author : Link mskoo (2011. 5. 24)
+ * 
+ * ====================================================================================================================
+ * Date         Name            Description of Change
+ * --------------------------------------------------------------------------------------------------------------------
+ * 2011-05-24   mskoo           최초 작성.
+ *                              IAccessRightsPolicy, IActionLogger 인터페이스들을 통합하여 새 인터페이스를 정의.
+ *                              
+ * 2011-09-23   mskoo           5.0 버전 릴리즈. (변경 이력 정리)
+ * 
+ * 2013-11-16   jake.9          네임스페이스를 Link.EFAM.Engine.Filter 에서 Link.EFAM.Core 로 변경.
+ * ====================================================================================================================
+ */
+#endregion
+
+namespace Link.EFAM.Core
+{
+    using Link.EFAM.Common;
+
+    /// <summary>
+    /// 액세스 제어(remote File Access Control) 미니필터 드라이버에서 요청하는 작업을 처리하는 어댑터를 정의한다.
+    /// </summary>
+    public interface IFacFilterAdapter
+    {
+        #region 메소드
+        
+        /// <summary>
+        /// 작업 스레드들이 시작된 후 호출된다.
+        /// </summary>
+        void OnWorkersStarted();
+
+        /// <summary>
+        /// 작업 스레드들이 종료된 후 호출된다.
+        /// </summary>
+        void OnWorkersExited();
+
+        /// <summary>
+        /// 새 프로세스가 생성된 후 호출된다.
+        /// </summary>
+        /// <param name="e">이벤트 데이터가 포함된 <see cref="ProcessCreatedEventArgs"/> 개체</param>
+        void OnProcessCreated(ProcessCreatedEventArgs e);
+
+        /// <summary>
+        /// 지정한 경로에 대해 허용되거나 거부된 액세스 권한을 가져온다.
+        /// </summary>
+        /// <param name="processId">액세스 권한을 요청한 프로세스에 할당된 프로세스 ID</param>
+        /// <param name="path">액세스 권한을 가져올 경로</param>
+        /// <param name="isDir">디렉토리의 경로이면 true, 파일의 경로이면 false</param>
+        /// <returns>허용되거나 거부된 액세스 권한을 나타내는 <see cref="FileAccessRights"/> 개체</returns>
+        FileAccessRights GetPermissions(int processId, string path, bool isDir);
+
+        /// <summary>
+        /// 지정한 프로세스의 종류를 가져온다.
+        /// </summary>
+        /// <param name="processId">프로세스에 할당된 프로세스 ID</param>
+        /// <returns>프로세스의 종류를 나타내는 <see cref="ProcessKind"/> 값 중 하나</returns>
+        ProcessKind GetProcessKind(int processId);
+
+        /// <summary>
+        /// 파일 또는 디렉토리에 대해 수행된 작업의 로그를 기록한다.
+        /// </summary>
+        /// <param name="processId">작업을 수행한 프로세스에 할당된 프로세스 ID</param>
+        /// <param name="path">파일 또는 디렉토리의 경로</param>
+        /// <param name="newPath">파일 또는 디렉토리의 새 경로</param>
+        /// <param name="action">
+        /// 파일 또는 디렉토리에 대해 수행된 작업을 지정하는 <see cref="FileAction"/> 값 중 하나
+        /// </param>
+        /// <remarks>
+        /// action 매개 변수가 다음의 값 중 하나일 경우 newPath 매개 변수는 다음과 같은 의미를 갖는다.<br/>
+        /// FileDeleted - 휴지통 디렉토리로 백업된 파일의 경로.<br/>
+        /// FileRenamed - 새 파일 이름.<br/>
+        /// FileMoved - 파일의 새 위치에 대한 경로.<br/>
+        /// FileCopied - 관리하는 네트워크 공유가 아닌 위치(로컬 디스크, 네트워크 공유 등)로 복사된 파일의 새 경로.<br/>
+        /// DirectoryRenamed - 새 디렉토리 이름.<br/>
+        /// DirectoryMoved - 디렉토리의 새 위치에 대한 경로.
+        /// </remarks>
+        void WriteLog(int processId, string path, string newPath, FileAction action);
+
+        #endregion
+    }
+}
