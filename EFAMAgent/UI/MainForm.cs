@@ -110,6 +110,7 @@ namespace Link.EFAM.Agent.UI
         private ViewPermissionsDialog m_dlgViewPerms = null;
         private ViewLogDialog m_dlgViewLog = null;
         private RecycleBinDialog m_dlgRecycleBin = null;
+        private FileSearchDialog m_dlgFileSearch = null;
         private ConfigDialog m_dlgConfig = null;
         private AgentCommands m_startupCommands = null;
 
@@ -269,6 +270,7 @@ namespace Link.EFAM.Agent.UI
             mnuViewPerms.Visible = authed;
             mnuViewLog.Visible = authed;
             mnuRecycleBin.Visible = (authed && credential != null && credential.UseRecycleBin);
+            mnuFileSearch.Visible = authed;
             mnuSeparator2.Visible = authed;
             mnuSeparator4.Visible = !isInSameDomain;
             mnuExit.Visible = !isInSameDomain;
@@ -880,6 +882,23 @@ namespace Link.EFAM.Agent.UI
                 m_dlgRecycleBin.Show(this);
             }
             if (m_dlgRecycleBin.CanFocus) m_dlgRecycleBin.Activate();
+        }
+
+        /// <summary>
+        /// "FileSearch" 메뉴를 클릭할 때 필요한 작업을 진행한다.
+        /// </summary>
+        internal void mnuFileSearch_Click(object sender, EventArgs e)
+        {
+            if (!AgentStore.Store.IsAuthenticated) return;
+
+            if (m_dlgFileSearch == null || m_dlgFileSearch.IsDisposed)
+            {
+                m_dlgFileSearch = new FileSearchDialog();
+                m_dlgFileSearch.Icon = Resources.EFAM_Icon;
+                m_dlgFileSearch.ShowInTaskbar = true;
+                m_dlgFileSearch.Show(this);
+            }
+            if (m_dlgFileSearch.CanFocus) m_dlgFileSearch.Activate();
         }
 
         /// <summary>

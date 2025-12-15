@@ -39,6 +39,7 @@
             this.mnuViewPerms = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuViewLog = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRecycleBin = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuFileSearch = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.mnuConfig = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -104,6 +105,7 @@
             this.mnuViewPerms,
             this.mnuViewLog,
             this.mnuRecycleBin,
+            this.mnuFileSearch,
             this.mnuSeparator2,
             this.mnuConfig,
             this.mnuSeparator3,
@@ -162,12 +164,19 @@
             this.mnuViewLog.Click += new System.EventHandler(this.mnuViewLog_Click);
             // 
             // mnuRecycleBin
-            // 
+            //
             this.mnuRecycleBin.Name = "mnuRecycleBin";
             this.mnuRecycleBin.Size = new System.Drawing.Size(216, 22);
             this.mnuRecycleBin.Text = "Menu_RecycleBin";
             this.mnuRecycleBin.Click += new System.EventHandler(this.mnuRecycleBin_Click);
-            // 
+            //
+            // mnuFileSearch
+            //
+            this.mnuFileSearch.Name = "mnuFileSearch";
+            this.mnuFileSearch.Size = new System.Drawing.Size(216, 22);
+            this.mnuFileSearch.Text = "파일 검색";
+            this.mnuFileSearch.Click += new System.EventHandler(this.mnuFileSearch_Click);
+            //
             // mnuSeparator2
             // 
             this.mnuSeparator2.Name = "mnuSeparator2";
@@ -504,6 +513,7 @@
         private System.Windows.Forms.ToolStripMenuItem mnuViewLog;
         private System.Windows.Forms.ToolStripMenuItem mnuViewPerms;
         private System.Windows.Forms.ToolStripMenuItem mnuRecycleBin;
+        private System.Windows.Forms.ToolStripMenuItem mnuFileSearch;
         private System.Windows.Forms.Timer tmrStartAutoReloader;
         private System.ComponentModel.BackgroundWorker bgCmdWorker;
     }

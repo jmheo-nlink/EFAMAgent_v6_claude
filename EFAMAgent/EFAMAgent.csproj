@@ -230,6 +230,12 @@
     <Compile Include="UI\RecycleBinDialog.Designer.cs">
       <DependentUpon>RecycleBinDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\FileSearchDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FileSearchDialog.Designer.cs">
+      <DependentUpon>FileSearchDialog.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -277,6 +283,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\RecycleBinDialog.resx">
       <DependentUpon>RecycleBinDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FileSearchDialog.resx">
+      <DependentUpon>FileSearchDialog.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config">
       <SubType>Designer</SubType>
