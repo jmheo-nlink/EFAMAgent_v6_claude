@@ -232,10 +232,22 @@ namespace Link.EFAM.Agent.UI
             {
                 string extension = Path.GetExtension(filePath).ToLower();
 
-                // Excel 파일 검색
+                // Office 파일 검색
                 if (extension == ".xlsx" || extension == ".xls")
                 {
                     return SearchExcelFile(filePath, keyword);
+                }
+                if (extension == ".docx")
+                {
+                    return SearchWordFile(filePath, keyword);
+                }
+                if (extension == ".pptx")
+                {
+                    return SearchPowerPointFile(filePath, keyword);
+                }
+                if (extension == ".pdf")
+                {
+                    return SearchPdfFile(filePath, keyword);
                 }
 
                 // 텍스트 파일 확장자만 검색
@@ -362,6 +374,136 @@ namespace Link.EFAM.Agent.UI
                         }
                     }
                 }
+
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Word 파일의 내용을 검색합니다. (.docx)
+        /// </summary>
+        private bool SearchWordFile(string filePath, string keyword)
+        {
+            try
+            {
+                // 파일 크기 제한 (20MB 이하만 검색)
+                FileInfo fileInfo = new FileInfo(filePath);
+                if (fileInfo.Length > 20 * 1024 * 1024)
+                    return false;
+
+                // .docx는 ZIP 압축된 XML 파일
+                using (var archive = System.IO.Compression.ZipFile.OpenRead(filePath))
+                {
+                    // document.xml에서 텍스트 검색 (문서 본문)
+                    var documentEntry = archive.Entries
+                        .FirstOrDefault(e => e.FullName.Contains("word/document.xml"));
+
+                    if (documentEntry != null)
+                    {
+                        using (StreamReader reader = new StreamReader(
+                            documentEntry.Open(), System.Text.Encoding.UTF8))
+                        {
+                            string content = reader.ReadToEnd();
+                            if (content.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0)
+                                return true;
+                        }
+                    }
+
+                    // header/footer XML도 검색
+                    foreach (var entry in archive.Entries)
+                    {
+                        if (entry.FullName.Contains("word/header") ||
+                            entry.FullName.Contains("word/footer"))
+                        {
+                            using (StreamReader reader = new StreamReader(
+                                entry.Open(), System.Text.Encoding.UTF8))
+                            {
+                                string content = reader.ReadToEnd();
+                                if (content.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0)
+                                    return true;
+                            }
+                        }
+                    }
+                }
+
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// PowerPoint 파일의 내용을 검색합니다. (.pptx)
+        /// </summary>
+        private bool SearchPowerPointFile(string filePath, string keyword)
+        {
+            try
+            {
+                // 파일 크기 제한 (30MB 이하만 검색)
+                FileInfo fileInfo = new FileInfo(filePath);
+                if (fileInfo.Length > 30 * 1024 * 1024)
+                    return false;
+
+                // .pptx는 ZIP 압축된 XML 파일
+                using (var archive = System.IO.Compression.ZipFile.OpenRead(filePath))
+                {
+                    // slide XML 파일들 검색 (슬라이드 내용)
+                    foreach (var entry in archive.Entries)
+                    {
+                        if (entry.FullName.Contains("ppt/slides/slide") ||
+                            entry.FullName.Contains("ppt/notesSlides/notesSlide"))
+                        {
+                            using (StreamReader reader = new StreamReader(
+                                entry.Open(), System.Text.Encoding.UTF8))
+                            {
+                                string content = reader.ReadToEnd();
+                                if (content.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0)
+                                    return true;
+                            }
+                        }
+                    }
+                }
+
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// PDF 파일의 내용을 검색합니다. (간단한 텍스트 추출)
+        /// </summary>
+        private bool SearchPdfFile(string filePath, string keyword)
+        {
+            try
+            {
+                // 파일 크기 제한 (10MB 이하만 검색)
+                FileInfo fileInfo = new FileInfo(filePath);
+                if (fileInfo.Length > 10 * 1024 * 1024)
+                    return false;
+
+                // PDF는 바이너리 형식이지만 텍스트 스트림이 포함되어 있음
+                // 간단한 텍스트 추출 시도
+                byte[] fileBytes = File.ReadAllBytes(filePath);
+                string fileContent = System.Text.Encoding.UTF8.GetString(fileBytes);
+
+                // PDF 내부의 텍스트 스트림 검색
+                // BT (Begin Text) ~ ET (End Text) 블록에서 텍스트 추출
+                if (fileContent.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0)
+                    return true;
+
+                // ASCII 인코딩으로도 시도
+                fileContent = System.Text.Encoding.ASCII.GetString(fileBytes);
+                if (fileContent.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0)
+                    return true;
 
                 return false;
             }
